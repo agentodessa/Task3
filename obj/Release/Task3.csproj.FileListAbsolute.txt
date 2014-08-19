@@ -1,0 +1,5 @@
+D:\Projects\Task3\Task3\bin\Task3.dll.config
+D:\Projects\Task3\Task3\bin\Task3.dll
+D:\Projects\Task3\Task3\bin\Task3.pdb
+D:\Projects\Task3\Task3\obj\Release\Task3.dll
+D:\Projects\Task3\Task3\obj\Release\Task3.pdb
