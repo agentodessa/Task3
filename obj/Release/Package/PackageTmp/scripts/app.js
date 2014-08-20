@@ -13,5 +13,11 @@
 		$(".container").css('display', 'none');
 		$("body").css('background-color', 'white');
 		$(".main_page").css('display', 'block');
+
 	});
+
+
+	$("#tabs").tabs();
+	$("#accordion").accordion();
+
 })

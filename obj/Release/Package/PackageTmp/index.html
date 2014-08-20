@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="normalize.css" type="text/css" />
     <link rel="stylesheet" href="style.css" type="text/css" />
 	<script type="text/javascript" src="scripts/jquery-1.11.1.js"></script>
+	<script type="text/javascript" src="scripts/jquery-ui.js"></script>
     <script src="scripts/app.js"></script>
 </head>
 <body>
-
-
+	<!-- Login page -->
 		<div class="container">
 			<img class="logo" src="images/Logo.png" />
 			<div class="input_elements">
@@ -24,25 +24,314 @@
 			</div>
 		</div>
 
-	
+	<!-- Navigation -->
 	<div class="main_page">
-		<nav class="nav_links">
-			<ul class="links">
-				<li><a class="nav_link">Maintain commissions</a></li>
-				<li><a class="nav_link">Upload download</a></li>
-				<li><a class="nav_link">Reports</a></li>
-				<li><a class="nav_link">Maintenance</a></li>
+		<nav id="tabs">
+			<ul class="ui-tabs-nav">
+				<li class="ui-tabs-active"><a href="#tabs-1">Maintain commissions</a></li>
+				<li><a href="#tabs-2">Upload download</a></li>
+				<li><a href="#tabs-3">Reports</a></li>
+				<li><a href="#tabs-4">Maintenance</a></li>
 			</ul>
 		</nav>
-		<div class="select_type">
-			<label class="label_for_type">Choose source type</label>
-			<select class="select_type">
-				<option>Mobility</option>
-			</select>
+		
+		
+		<!-- First Page -->
+		<div id="tabs-1">
+			<div class="select_type">
+				<label class="label_for_type">Choose source type</label>
+				<select class="select_type">
+					<option>Mobility</option>
+				</select>
+			</div>
+			<div class="wrap_form_and_tabs">
+				<div class="wrap_form">
+					<form class="search">
+						
+					</form>
+				</div>
+				<div class="wrap_tabs">
+					
+				</div>
+			</div>
+
+		
+			<!-- Accordion implementation -->
+			<div id="accordion">
+
+				<h3 class="ui-accordion-header">Customer #123456 Joe Doe (Doe Inc) Chicago IL</h3>
+				<div class="ui-accordion-content">
+					<div class="wrap_accordion_content">
+						<table class="element_table">
+							<tr class="table_headers">
+								<td><input type="checkbox" /></td>
+								<td>Payye type</td>
+								<td>Payye ID</td>
+								<td>Name</td>
+								<td>Start</td>
+								<td>End</td>
+								<td>%</td>
+								<td>Fixed</td>
+								<td>Per Unit</td>
+								<td>Type</td>
+								<td>Maint User</td>
+								<td>Maint Dt/Tm</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" /></td>
+								<td>Customer</td>
+								<td>753201</td>
+								<td>Greg Smith</td>
+								<td>12/12/2012</td>
+								<td>12/12/2012</td>
+								<td>10</td>
+								<td>-</td>
+								<td>-</td>
+								<td>Revenue</td>
+								<td>Greg 021</td>
+								<td>12/12/2012 17:15</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" /></td>
+								<td>Vendor</td>
+								<td>452919</td>
+								<td>Greg Smith</td>
+								<td>12/12/2012</td>
+								<td>12/12/2012</td>
+								<td>15</td>
+								<td>-</td>
+								<td>-</td>
+								<td>revenue</td>
+								<td>Greg 023</td>
+								<td>12/12/2012 17:15</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" /></td>
+								<td>Coworker</td>
+								<td>123456</td>
+								<td>Greg Jonson</td>
+								<td>12/12/2012</td>
+								<td>12/12/2012</td>
+								<td>30</td>
+								<td>-</td>
+								<td>-</td>
+								<td>Gross Profit</td>
+								<td>Greg 031</td>
+								<td>12/12/2012 17:15</td>
+							</tr>
+						</table>
+						<button class="delete_btn">Delete</button>
+						<button class="add_btn">Add</button>
+					</div>
+				</div>
+				<h3 class="ui-accordion-header">Customer #123456 Joe Doe (Doe Inc) Chicago IL</h3>
+				<div class="ui-accordion-content">
+					<div class="wrap_accordion_content">
+						<table class="element_table">
+							<tr class="table_headers">
+								<td><input type="checkbox" /></td>
+								<td>Payye type</td>
+								<td>Payye ID</td>
+								<td>Name</td>
+								<td>Start</td>
+								<td>End</td>
+								<td>%</td>
+								<td>Fixed</td>
+								<td>Per Unit</td>
+								<td>Type</td>
+								<td>Maint User</td>
+								<td>Maint Dt/Tm</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" /></td>
+								<td>Customer</td>
+								<td>753201</td>
+								<td>Greg Smith</td>
+								<td>12/12/2012</td>
+								<td>12/12/2012</td>
+								<td>10</td>
+								<td>-</td>
+								<td>-</td>
+								<td>Revenue</td>
+								<td>Greg 021</td>
+								<td>12/12/2012 17:15</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" /></td>
+								<td>Vendor</td>
+								<td>452919</td>
+								<td>Greg Smith</td>
+								<td>12/12/2012</td>
+								<td>12/12/2012</td>
+								<td>15</td>
+								<td>-</td>
+								<td>-</td>
+								<td>revenue</td>
+								<td>Greg 023</td>
+								<td>12/12/2012 17:15</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" /></td>
+								<td>Coworker</td>
+								<td>123456</td>
+								<td>Greg Jonson</td>
+								<td>12/12/2012</td>
+								<td>12/12/2012</td>
+								<td>30</td>
+								<td>-</td>
+								<td>-</td>
+								<td>Gross Profit</td>
+								<td>Greg 031</td>
+								<td>12/12/2012 17:15</td>
+							</tr>
+						</table>
+						<button class="delete_btn">Delete</button>
+						<button class="add_btn">Add</button>
+					</div>
+				</div>
+				<h3 class="ui-accordion-header">Line</h3>
+				<div class="ui-accordion-content">
+					<div class="wrap_accordion_content">
+						<table class="element_table">
+							<tr class="table_headers">
+								<td><input type="checkbox" /></td>
+								<td>Payye type</td>
+								<td>Payye ID</td>
+								<td>Name</td>
+								<td>Start</td>
+								<td>End</td>
+								<td>%</td>
+								<td>Fixed</td>
+								<td>Per Unit</td>
+								<td>Type</td>
+								<td>Maint User</td>
+								<td>Maint Dt/Tm</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" /></td>
+								<td>Customer</td>
+								<td>753201</td>
+								<td>Greg Smith</td>
+								<td>12/12/2012</td>
+								<td>12/12/2012</td>
+								<td>10</td>
+								<td>-</td>
+								<td>-</td>
+								<td>Revenue</td>
+								<td>Greg 021</td>
+								<td>12/12/2012 17:15</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" /></td>
+								<td>Vendor</td>
+								<td>452919</td>
+								<td>Greg Smith</td>
+								<td>12/12/2012</td>
+								<td>12/12/2012</td>
+								<td>15</td>
+								<td>-</td>
+								<td>-</td>
+								<td>revenue</td>
+								<td>Greg 023</td>
+								<td>12/12/2012 17:15</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" /></td>
+								<td>Coworker</td>
+								<td>123456</td>
+								<td>Greg Jonson</td>
+								<td>12/12/2012</td>
+								<td>12/12/2012</td>
+								<td>30</td>
+								<td>-</td>
+								<td>-</td>
+								<td>Gross Profit</td>
+								<td>Greg 031</td>
+								<td>12/12/2012 17:15</td>
+							</tr>
+						</table>
+						<button class="delete_btn">Delete</button>
+						<button class="add_btn">Add</button>
+					</div>
+				</div>
+				<h3 class="ui-accordion-header">Line # 564732 EDC: 123456 Amount: 300 MFG: PP45 MFG Part Number: PP45687</h3>
+				<div class="ui-accordion-content">
+					<div class="wrap_accordion_content">
+						<table class="element_table">
+							<tr class="table_headers">
+								<td><input type="checkbox" /></td>
+								<td>Payye type</td>
+								<td>Payye ID</td>
+								<td>Name</td>
+								<td>Start</td>
+								<td>End</td>
+								<td>%</td>
+								<td>Fixed</td>
+								<td>Per Unit</td>
+								<td>Type</td>
+								<td>Maint User</td>
+								<td>Maint Dt/Tm</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" /></td>
+								<td>Customer</td>
+								<td>753201</td>
+								<td>Greg Smith</td>
+								<td>12/12/2012</td>
+								<td>12/12/2012</td>
+								<td>10</td>
+								<td>-</td>
+								<td>-</td>
+								<td>Revenue</td>
+								<td>Greg 021</td>
+								<td>12/12/2012 17:15</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" /></td>
+								<td>Vendor</td>
+								<td>452919</td>
+								<td>Greg Smith</td>
+								<td>12/12/2012</td>
+								<td>12/12/2012</td>
+								<td>15</td>
+								<td>-</td>
+								<td>-</td>
+								<td>revenue</td>
+								<td>Greg 023</td>
+								<td>12/12/2012 17:15</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" /></td>
+								<td>Coworker</td>
+								<td>123456</td>
+								<td>Greg Jonson</td>
+								<td>12/12/2012</td>
+								<td>12/12/2012</td>
+								<td>30</td>
+								<td>-</td>
+								<td>-</td>
+								<td>Gross Profit</td>
+								<td>Greg 031</td>
+								<td>12/12/2012 17:15</td>
+							</tr>
+						</table>
+						<button class="delete_btn">Delete</button>
+						<button class="add_btn">Add</button>
+					</div>
+				</div>
+
+
+			</div>
 		</div>
-		<form class="search">
+		<div id="tabs-2">
 			
-		</form>
+		</div>
+		<div id="tabs-3">
+
+		</div>
+		<div id="tabs-4">
+
+		</div>
 	</div>
 </body>
 </html>
