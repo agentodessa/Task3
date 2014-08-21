@@ -87,7 +87,7 @@
 }*/
 
 .ui-tabs-nav {
-	width: 100%;
+	width: auto;
 	height: 50px;
 	margin: 0;
 	background-color:#191919;
