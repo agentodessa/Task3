@@ -18,6 +18,7 @@
 
 
 	$("#tabs").tabs();
+	$("#tabs_small").tabs();
 	$("#accordion").accordion();
 
 })
