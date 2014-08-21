@@ -10,9 +10,9 @@
 
 
 	$(".login_anonymous").click(function () {
-		$(".container").css('display', 'none');
+		//$(".container").css('display', 'none');
 		$("body").css('background-color', 'white');
-		$(".main_page").css('display', 'block');
+		//$(".main_page").css('display', 'block');
 
 	});
 

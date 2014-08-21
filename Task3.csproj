@@ -17,6 +17,7 @@
     <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="jquery-ui.css" />
     <Content Include="images\Logo.png" />
     <Content Include="normalize.css" />
     <Content Include="scripts\app.js" />
@@ -24,6 +25,7 @@
     <Content Include="scripts\jquery-1.11.1.js" />
     <Content Include="scripts\jquery-ui.js" />
     <Content Include="style.css" />
+    <Content Include="tabs.html" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
