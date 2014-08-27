@@ -10,13 +10,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/Task3.dll">
-      <publishTime>08/21/2014 12:14:57</publishTime>
+      <publishTime>08/27/2014 11:04:49</publishTime>
     </File>
     <File Include="images/Logo.png">
       <publishTime>08/18/2014 14:28:55</publishTime>
     </File>
     <File Include="index.html">
-      <publishTime>08/21/2014 18:14:51</publishTime>
+      <publishTime>08/27/2014 09:40:10</publishTime>
     </File>
     <File Include="jquery-ui.css">
       <publishTime>08/21/2014 11:42:47</publishTime>
@@ -27,14 +27,35 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="scripts/app.js">
       <publishTime>08/21/2014 15:46:55</publishTime>
     </File>
+    <File Include="scripts/app/app.js">
+      <publishTime>08/27/2014 10:59:37</publishTime>
+    </File>
+    <File Include="scripts/app/routers/router.js">
+      <publishTime>08/27/2014 11:00:06</publishTime>
+    </File>
+    <File Include="scripts/app/views/ViewController.js">
+      <publishTime>08/27/2014 10:55:34</publishTime>
+    </File>
+    <File Include="scripts/backbone/backbone.js">
+      <publishTime>08/26/2014 18:43:49</publishTime>
+    </File>
     <File Include="scripts/jquery-1.11.1.js">
       <publishTime>08/18/2014 12:51:57</publishTime>
     </File>
     <File Include="scripts/jquery-ui.js">
       <publishTime>08/21/2014 11:52:03</publishTime>
     </File>
+    <File Include="scripts/jquery/jquery-1.11.1.js">
+      <publishTime>08/18/2014 12:51:57</publishTime>
+    </File>
+    <File Include="scripts/jquery/jquery-ui.js">
+      <publishTime>08/21/2014 11:52:03</publishTime>
+    </File>
+    <File Include="scripts/underscore/underscore.js">
+      <publishTime>08/26/2014 15:11:33</publishTime>
+    </File>
     <File Include="style.css">
-      <publishTime>08/21/2014 18:20:52</publishTime>
+      <publishTime>08/26/2014 17:16:23</publishTime>
     </File>
     <File Include="tabs.html">
       <publishTime>08/21/2014 12:08:35</publishTime>

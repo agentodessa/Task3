@@ -6,9 +6,10 @@
     <title>CDW</title>
     <link rel="stylesheet" href="normalize.css" type="text/css" />
     <link rel="stylesheet" href="style.css" type="text/css" />
-	<script type="text/javascript" src="scripts/jquery-1.11.1.js"></script>
-	<script type="text/javascript" src="scripts/jquery-ui.js"></script>
-    <script src="scripts/app.js"></script>
+	<script type="text/javascript" src="scripts/jquery/jquery-1.11.1.js"></script>
+	<script src="scripts/underscore/underscore.js"></script>
+	<script src="scripts/backbone/backbone.js"></script>
+
 </head>
 <body>
 	<!-- Login page -->
@@ -48,31 +49,60 @@
 				<div class="wrap_form_and_tabs">
 					<div class="wrap_form">
 						<label class="search_type">Mobility search using:</label>
-						<form class="search_form">
+						<form class="search_form" method="POST">
 							<fieldset class="form_fieldset">
 								<p>
 									<label for="first">Castomer Number:</label>
-									<input type="text" id="first" class="input_search">
+									<input type="text" id="first" class="input_search1">
 
 								</p>
 								<p>
 									<label for="second">Order Number:</label>
-									<input type="text" id="second" class="input_search">
+									<input type="text" id="second" class="input_search2">
 								</p>
 								<p>
 									<label for="third">Line Number:</label>
-									<input type="text" id="third" class="input_search">
+									<input type="text" id="third" class="input_search3">
 								</p>
 								<p>
 									<label for="fourth">Device Number:</label>
-									<input type="text" id="fourth" class="input_search">
+									<input type="text" id="fourth" class="input_search4">
 								</p>
 							</fieldset>
 						</form>
 						<button class="search_btn" type="submit">Search</button>
 					</div>
 					<div class="wrap_tabs">
-
+						<nav id="tabs_small" class="tabs_div">
+							<ul class="tabs_list">
+								<li><a href="#fragment-order" class="tab_link">Order</a></li>
+								<li><a href="#fragment-customer" class="tab_link">Customer</a></li>
+								<li><a href="#fragment-line" class="tab_link">Line</a></li>
+								<li><a href="#fragment-device" class="tab_link">Device</a></li>
+							</ul>
+							<div id="fragment-order">
+								<p>
+									
+									Object: If the value is an object, then effect
+								</p>
+							</div>
+							<div id="fragment-customer">
+								<p>
+									t, then effect, delay, duration, and easing properties may be provided. If the effect property contains the name of a jQuery method, then that method will be used; otherwise it is assumed to be the name of a jQuery UI effect. When using a jQuery UI effect that supports additional settings, you may include those settings in the object and they will be passed to the effect. If duration or easing is omitted, then the default values will be used. If effect is omitted, then "fadeOut" will be used. If delay is omitted, then no delay is used.
+								</p>
+							</div>
+							<div id="fragment-line">
+								<p>
+									e dfsfsthe value is an object, then effect, delay, duration, and easing properties may be provided. If the effect property contains the name of a jQuery method, then that method will be used; otherwise it is assumed to be the name of a jQuery UI effect. When using a jQuery UI effect that supports additional settings, you may include those settings in the object and they will be passed to the effect. If duration or easing is omitted, then the default values will be used. If effect is omitted, then "fadeOut" will be used. If delay is omitted, then no delay is used.
+								</p>
+							</div>
+							<div id="fragment-device">
+								<p>
+									e hidden using the specified effect. The value can either be the name of a built-in jQuery animation method, such as "slideUp", or the name of a jQuery UI effect, such as "fold". In either case the effect will be used with the default duration and the default easing.
+									Object: If the value is an object, then effect, delay, duration, and easing properties may be provided. If the effect property contains the name of a jQuery method, then that method will be used; otherwise it is assumed to be the name of a jQuery UI effect. When using a jQuery UI effect that supports additional settings, you may include those settings in the object and they will be passed to the effect. If duration or easing is omitted, then the default values will be used. If effect is omitted, then "fadeOut" will be used. If delay is omitted, then no delay is used.
+								</p>
+							</div>
+						</nav>
 					</div>
 				</div>
 
@@ -368,5 +398,12 @@
 			</div>
 		</nav>
 	</div>
+
+
+	<script type="text/javascript" src="scripts/jquery/jquery-ui.js"></script>
+	<script src="scripts/app/views/ViewController.js"></script>
+	<script src="scripts/app/routers/router.js"></script>
+	<script src="scripts/app/app.js"></script>
+
 </body>
 </html>

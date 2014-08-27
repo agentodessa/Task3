@@ -85,7 +85,10 @@
 	height: 50px;
 	background-color:#191919;
 }*/
-
+.nav_link {
+	color: white;
+	text-decoration: none;
+}
 .ui-tabs-nav {
 	width: auto;
 	height: 50px;

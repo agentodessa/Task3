@@ -1,4 +1,5 @@
-﻿$(document).ready(function () {
+﻿var app = app || {};
+$(document).ready(function () {
 
 
     $(".input_name").click(function() {
@@ -16,8 +17,9 @@
 
 	});
 
-
 	$("#tabs").tabs();
+	$("#tabs_small").tabs();
 	$("#accordion").accordion();
+	new app.MaintainView();
 
 })

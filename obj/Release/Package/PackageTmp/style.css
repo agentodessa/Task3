@@ -87,7 +87,7 @@
 }*/
 
 .ui-tabs-nav {
-	width: 100%;
+	width: auto;
 	height: 50px;
 	margin: 0;
 	background-color:#191919;
@@ -127,6 +127,7 @@
 /*Form*/
 
 .wrap_form_and_tabs {
+	position: relative;
 	margin: 5px 40px 20px 40px;
 	border: 1px solid #bbbbbb;
 	border-radius: 5px;
@@ -153,7 +154,7 @@
 }
 
 
-.input_search {
+.input_search1,.input_search2, .input_search3, .input_search4 {
 
 	width: 172px;
 	border: 1px solid #bbbbbb;
@@ -170,9 +171,33 @@
 }
 
 .wrap_tabs {
+	position: absolute;
+	top: 0;
+	right: 0;
 	width: 50%;
 	height: 100%;
 }
+
+.tabs_div {
+	
+}
+.tabs_list {
+	list-style: none;
+
+}
+
+.tabs_list li {
+	display: inline-block;
+}
+
+.tab_link {
+	width: 78px;
+	text-decoration: none;
+}
+
+
+
+
 
 
 

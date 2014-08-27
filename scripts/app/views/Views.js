@@ -2,19 +2,19 @@
 
 
 (function($) {
-	app.MaintainView = Backbone.View.extend({
-		el: "#fragment-1",
+		//var MaintainView = Backbone.View.extend({
+		//el: '#maintain',
 
-		initialize: function () {
-			this.$select = this.$(".select_type");
-		},
+		////initialize: function () {
+		////	this.render();
+		////},
 
-		render:function() {
-			
-		}
-	});
-	app.UpDownloadView = Backbone.View.extend({
-		el: "#fragment-2",
+		//render:function() {
+		//	this.$el.html("HI!");
+		//}
+	//});
+	var UpDownloadView = Backbone.View.extend({
+		el: "#updownload",
 
 		initialize: function () {
 
@@ -25,7 +25,7 @@
 		}
 	});
 	app.ReportsView = Backbone.View.extend({
-		el: "#fragment-3",
+		el: "#reports",
 
 		initialize: function () {
 
@@ -36,7 +36,7 @@
 		}
 	});
 	app.MaintenanceView = Backbone.View.extend({
-		el: "#fragment-4",
+		el: "#maintenance",
 
 		initialize: function () {
 			route();
@@ -46,4 +46,6 @@
 
 		}
 	});
+
+	//app.maintain = new MaintainView();
 })(jQuery);

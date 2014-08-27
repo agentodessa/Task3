@@ -20,10 +20,14 @@
     <Content Include="jquery-ui.css" />
     <Content Include="images\Logo.png" />
     <Content Include="normalize.css" />
-    <Content Include="scripts\app.js" />
+    <Content Include="scripts\app\app.js" />
     <Content Include="index.html" />
-    <Content Include="scripts\jquery-1.11.1.js" />
-    <Content Include="scripts\jquery-ui.js" />
+    <Content Include="scripts\app\routers\router.js" />
+    <Content Include="scripts\app\views\Views.js" />
+    <Content Include="scripts\backbone\backbone.js" />
+    <Content Include="scripts\jquery\jquery-1.11.1.js" />
+    <Content Include="scripts\jquery\jquery-ui.js" />
+    <Content Include="scripts\underscore\underscore.js" />
     <Content Include="style.css" />
     <Content Include="tabs.html" />
     <Content Include="web.config" />
@@ -36,6 +40,9 @@
     <None Include="web.Release.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="scripts\app\models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
