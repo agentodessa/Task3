@@ -2,31 +2,35 @@
 
 
 (function () {
+
+
+
 	var ComissioinRouter = Backbone.Router.extend({
 		routes:
 		{
-			"maintain": "maintain",  //#maintain
-			"updownload" : "updownload",//#updownload
+			"maintain":"maintain",  //#maintain
+			"updownload" :"updownload",//#updownload
 			"reports"	 :"reports",	//#reports
 			"maintenance":"maintenance"//#maintenance
 		},
 
-		maintain: function (page) {
-			console.log("You are on maintain page");
-		},
-		updownload: function (page) {
-			console.log("You are on updownload page");
+		maintain: function () {
+			console.log(1);
 		},
 
+		updownload: function () {
+			console.log(2);
+		},
 		reports: function () {
-			
+			console.log(3);
+		},
+		maintenance: function () {
+			console.log(4);
 		},
 
-		maintenance:function() {
-			
-		}
-	});
 
-	var appRouter = new ComissioinRouter();
+
+	});
+	 app.appRouter = new ComissioinRouter();
 	Backbone.history.start();
 })();

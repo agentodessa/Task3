@@ -10,13 +10,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/Task3.dll">
-      <publishTime>08/27/2014 11:04:49</publishTime>
+      <publishTime>08/27/2014 17:18:31</publishTime>
     </File>
     <File Include="images/Logo.png">
       <publishTime>08/18/2014 14:28:55</publishTime>
     </File>
     <File Include="index.html">
-      <publishTime>08/27/2014 09:40:10</publishTime>
+      <publishTime>08/27/2014 14:38:43</publishTime>
     </File>
     <File Include="jquery-ui.css">
       <publishTime>08/21/2014 11:42:47</publishTime>
@@ -28,13 +28,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/21/2014 15:46:55</publishTime>
     </File>
     <File Include="scripts/app/app.js">
-      <publishTime>08/27/2014 10:59:37</publishTime>
+      <publishTime>08/27/2014 16:26:57</publishTime>
     </File>
     <File Include="scripts/app/routers/router.js">
-      <publishTime>08/27/2014 11:00:06</publishTime>
+      <publishTime>08/27/2014 17:25:36</publishTime>
     </File>
     <File Include="scripts/app/views/ViewController.js">
       <publishTime>08/27/2014 10:55:34</publishTime>
+    </File>
+    <File Include="scripts/app/views/Views.js">
+      <publishTime>08/27/2014 12:58:59</publishTime>
     </File>
     <File Include="scripts/backbone/backbone.js">
       <publishTime>08/26/2014 18:43:49</publishTime>
@@ -55,7 +58,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/26/2014 15:11:33</publishTime>
     </File>
     <File Include="style.css">
-      <publishTime>08/26/2014 17:16:23</publishTime>
+      <publishTime>08/27/2014 16:51:55</publishTime>
     </File>
     <File Include="tabs.html">
       <publishTime>08/21/2014 12:08:35</publishTime>

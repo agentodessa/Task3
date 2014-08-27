@@ -28,16 +28,16 @@
 	<div class="main_page">
 		<nav id="tabs" class="ui-tabs">
 			<ul class="ui-tabs-nav">
-				<li><a href="#fragment-1">Maintain commissions</a></li>
-				<li><a href="#fragment-2">Upload download</a></li>
-				<li><a href="#fragment-3">Reports</a></li>
-				<li><a href="#fragment-4">Maintenance</a></li>
+				<li><a class="nav_link" href="#maintain">Maintain commissions</a></li>
+				<li><a class="nav_link" href="#updownload">Upload download</a></li>
+				<li><a class="nav_link" href="#reports">Reports</a></li>
+				<li><a class="nav_link" href="#maintenance">Maintenance</a></li>
 			</ul>
 
 
 
 			<!-- First Page -->
-			<div id="fragment-1">
+			<div id="maintain">
 				<div class="select">
 					<label class="label_for_type">Choose source type:</label>
 					<select class="select_type">
@@ -82,7 +82,7 @@
 							</ul>
 							<div id="fragment-order">
 								<p>
-									
+
 									Object: If the value is an object, then effect
 								</p>
 							</div>
@@ -374,7 +374,7 @@
 
 				</div>
 			</div>
-			<div id="fragment-2" class=".ui-tabs-panel">
+			<div id="updownload" class=".ui-tabs-panel">
 				<p>
 					to true, the panel will fade out with the default duration and the default easing.
 					Number: The panel will fade out with the specified duration and the default easing.
@@ -382,13 +382,13 @@
 					Object: If the value is an object, then effect, delay, duration, and easing properties may be provided. If the effect property contains the name of a jQuery method, then that method will be used; otherwise it is assumed to be the name of a jQuery UI effect. When using a jQuery UI effect that supports additional settings, you may include those settings in the object and they will be passed to the effect. If duration or easing is omitted, then the default values will be used. If effect is omitted, then "fadeOut" will be used. If delay is omitted, then no delay is used.
 				</p>
 			</div>
-			<div id="fragment-3" class=".ui-tabs-panel">
+			<div id="reports" class=".ui-tabs-panel">
 				<p>
 					e hidden using the specified effect. The value can either be the name of a built-in jQuery animation method, such as "slideUp", or the name of a jQuery UI effect, such as "fold". In either case the effect will be used with the default duration and the default easing.
 					Object: If the value is an object, then effect, delay, duration, and easing properties may be provided. If the effect property contains the name of a jQuery method, then that method will be used; otherwise it is assumed to be the name of a jQuery UI effect. When using a jQuery UI effect that supports additional settings, you may include those settings in the object and they will be passed to the effect. If duration or easing is omitted, then the default values will be used. If effect is omitted, then "fadeOut" will be used. If delay is omitted, then no delay is used.
 				</p>
 			</div>
-			<div id="fragment-4" class=".ui-tabs-panel">
+			<div id="maintenance" class=".ui-tabs-panel">
 				<p>
 					to true, the panel will fade out with the default duration and the default easing.
 					Number: The panel will fade out with the specified duration and the default easing.
@@ -401,7 +401,7 @@
 
 
 	<script type="text/javascript" src="scripts/jquery/jquery-ui.js"></script>
-	<script src="scripts/app/views/ViewController.js"></script>
+	<script src="scripts/app/views/Views.js"></script>
 	<script src="scripts/app/routers/router.js"></script>
 	<script src="scripts/app/app.js"></script>
 

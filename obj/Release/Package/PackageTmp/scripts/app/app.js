@@ -17,9 +17,16 @@ $(document).ready(function () {
 
 	});
 
-	$("#tabs").tabs();
+		$(".nav_link").click(function (e) {
+			var pageurl = $(this).attr('href');
+			if(pageurl != window.location){
+				window.history.pushState(null, null, pageurl);
+			}
+		});
+
+
+
 	$("#tabs_small").tabs();
 	$("#accordion").accordion();
-	new app.MaintainView();
 
 })

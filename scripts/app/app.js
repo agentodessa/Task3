@@ -1,7 +1,7 @@
 ﻿var app = app || {};
 $(document).ready(function () {
 
-
+	var previous;
     $(".input_name").click(function() {
         $(this).val("");
     });
@@ -17,11 +17,11 @@ $(document).ready(function () {
 
 	});
 
-		$(".nav_link").click(function (e) {
-			var pageurl = $(this).attr('href');
-			if(pageurl != window.location){
-				window.history.pushState(null, null, pageurl);
-			}
+	$(".nav_link").click(function () {
+		//$(previous).addClass("hide");
+		//	var show = $(this).attr('href');
+		//	previous = show;
+		//	$(show).removeClass("hide");
 		});
 
 
