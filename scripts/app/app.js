@@ -23,8 +23,16 @@ $(document).ready(function () {
 		//	previous = show;
 		//	$(show).removeClass("hide");
 		});
+	$(".select_type").change(function () {
+		var page ="/"+ $(".select_type option:selected").text();
+		console.log(window.location.hash);
+		if (window.location.hash != (window.location.hash) + page){
+			window.location.hash+=page;
+		}
 
 
+
+	});
 
 	$("#tabs_small").tabs();
 	$("#accordion").accordion();
