@@ -8,7 +8,7 @@
 	var ComissioinRouter = Backbone.Router.extend({
 		routes:
 		{
-			"":"maintain",
+			"": "maintain",
 			"maintain": "maintain",  //#maintain
 			"maintain/:page": "maintaintype",  //#maintain
 			"updownload" :"updownload",//#updownload

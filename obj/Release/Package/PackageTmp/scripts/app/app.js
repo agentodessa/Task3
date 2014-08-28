@@ -23,14 +23,12 @@ $(document).ready(function () {
 		//	previous = show;
 		//	$(show).removeClass("hide");
 		});
-
 	$(".select_type").change(function () {
-		var url = window.location.pathname;
-		var page =url+ $(".select_type option:selected").text();
-		if (url != window.location) {
-			window.location.hash="/"+page;
+		var page ="/"+ $(".select_type option:selected").text();
+		console.log(window.location.hash);
+		if (window.location.hash != (window.location.hash) + page){
+			window.location.hash=page;
 		}
-		console.log(url);
 	});
 
 	$("#tabs_small").tabs();
