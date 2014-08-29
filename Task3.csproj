@@ -17,18 +17,19 @@
     <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="jquery-ui.css" />
+    <Content Include="css\jquery-ui.css" />
     <Content Include="images\Logo.png" />
-    <Content Include="normalize.css" />
+    <Content Include="css\normalize.css" />
     <Content Include="scripts\app\app.js" />
     <Content Include="index.html" />
-    <Content Include="scripts\app\routers\router.js" />
-    <Content Include="scripts\app\views\Views.js" />
-    <Content Include="scripts\backbone\backbone.js" />
-    <Content Include="scripts\jquery\jquery-1.11.1.js" />
-    <Content Include="scripts\jquery\jquery-ui.js" />
-    <Content Include="scripts\underscore\underscore.js" />
-    <Content Include="style.css" />
+    <Content Include="scripts\app\controllers\routecontroller.js" />
+    <Content Include="scripts\app\controllers\viewcontroller.js" />
+    <Content Include="scripts\app\views\views.js" />
+    <Content Include="scripts\common\backbone\backbone.js" />
+    <Content Include="scripts\common\jquery\jquery-1.11.1.js" />
+    <Content Include="scripts\common\jquery\jquery-ui.js" />
+    <Content Include="scripts\common\underscore\underscore.js" />
+    <Content Include="css\style.css" />
     <Content Include="tabs.html" />
     <Content Include="web.config" />
   </ItemGroup>

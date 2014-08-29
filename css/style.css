@@ -4,10 +4,12 @@
 	/*background-color:#191919;*/
 	cursor: default;
 }
+.hided {
 
-.hide {
-	display: none;
 }
+/*.active {
+	display: block;
+}*/
 
 .container {
 	display: none;

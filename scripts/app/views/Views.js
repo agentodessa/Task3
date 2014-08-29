@@ -1,48 +1,62 @@
 ﻿var app = app || {};
 
-(function($) {
-	app.MaintainView = Backbone.View.extend({
-		el: "#fragment-1",
+(function ($) {
+	var prevDiv = 0;
+	var MaintainView = Backbone.View.extend({
+		el: "#maintain",
 
 		initialize: function () {
-			
-		},
-
-		render:function() {
-			
-		}
-	});
-	app.UpDownloadView = Backbone.View.extend({
-		el: "#fragment-2",
-
-		initialize: function () {
-
+			this.render();
 		},
 
 		render: function () {
+			$(".main_page .hided").hide();
+			$(this.el).show();
 
 		}
 	});
-	app.ReportsView = Backbone.View.extend({
-		el: "#fragment-3",
+	var UpDownloadView = Backbone.View.extend({
+		el: "#updownload",
 
 		initialize: function () {
-
+			this.render();
 		},
 
 		render: function () {
+			$(".main_page .hided").hide();
+			$(this.el).show();
 
 		}
 	});
-	app.MaintenanceView = Backbone.View.extend({
-		el: "#fragment-4",
+	var ReportsView = Backbone.View.extend({
+		el: "#reports",
 
 		initialize: function () {
-			route();
+			this.render();
 		},
 
 		render: function () {
+			$(".main_page .hided").hide();
+			$(this.el).show();
 
 		}
 	});
+	var MaintenanceView = Backbone.View.extend({
+		el: "#maintenance",
+
+		initialize: function () {
+			this.render();
+		},
+
+		render: function () {
+			$(".main_page .hided").hide();
+			$(this.el).show();
+
+		}
+	});
+
+	app.maintain = new MaintainView();
+	app.updownload = new UpDownloadView();
+	app.reports = new ReportsView();
+	app.maintenance = new MaintenanceView();
 })(jQuery);

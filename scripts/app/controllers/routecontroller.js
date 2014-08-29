@@ -18,16 +18,20 @@
 
 		maintain: function () {
 			console.log(1);
+			app.maintain.initialize();
 		},
 
 		updownload: function () {
 			console.log(2);
+			app.updownload.initialize();
 		},
 		reports: function () {
 			console.log(3);
+			app.reports.initialize();
 		},
 		maintenance: function () {
 			console.log(4);
+			app.maintenance.initialize();
 		},
 		maintaintype: function(page) {
 			console.log(page);
