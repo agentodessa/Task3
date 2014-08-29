@@ -17,7 +17,6 @@
 		},
 
 		maintain: function () {
-
 			console.log(1);
 		},
 

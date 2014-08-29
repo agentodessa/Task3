@@ -24,10 +24,15 @@ $(document).ready(function () {
 		//	$(show).removeClass("hide");
 		});
 	$(".select_type").change(function () {
-		var page ="/"+ $(".select_type option:selected").text();
-		if (window.location.hash != (window.location.hash) + page){
-			window.location.hash=page;
-		}
+		var page = location.hash.split('#')[1] || '';
+		//var pagetype = location.hash.split('/')[1] || '';
+		window.location.hash = page + "/" + $(".select_type option:selected").text();
+
+		//if (window.location.hash !=("#"+url) ){
+		//window.location.hash= page+pagetype;
+		//}
+			//console.log(pagetype);
+	
 	});
 
 	$("#tabs_small").tabs();

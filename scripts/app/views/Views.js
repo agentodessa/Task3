@@ -1,6 +1,5 @@
 ﻿var app = app || {};
 
-
 (function($) {
 	app.MaintainView = Backbone.View.extend({
 		el: "#fragment-1",
