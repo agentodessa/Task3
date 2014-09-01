@@ -4,11 +4,12 @@
 <head>
     <meta charset="utf-8" />
     <title>CDW</title>
-    <link rel="stylesheet" href="normalize.css" type="text/css" />
-    <link rel="stylesheet" href="style.css" type="text/css" />
-	<script type="text/javascript" src="scripts/jquery/jquery-1.11.1.js"></script>
-	<script src="scripts/underscore/underscore.js"></script>
-	<script src="scripts/backbone/backbone.js"></script>
+    <link rel="stylesheet" href="css/normalize.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+	<script type="text/javascript" src="scripts/common/jquery/jquery-1.11.1.js"></script>
+	<script src="scripts/common/underscore/underscore.js"></script>
+	<script src="scripts/common/backbone/backbone.js"></script>
+	<meta name="viewport" content="minimum-scale=1, width=device-width, maximum-scale=1, user-scalable=no" />
 
 </head>
 <body>
@@ -34,18 +35,19 @@
 				<li><a class="nav_link" href="#maintenance">Maintenance</a></li>
 			</ul>
 		</nav>
-
+		<div class="select">
+			<label class="label_for_type">Choose source type:</label>
+			<select class="select_type">
+				<option class="select_option" selected="">Choose type</option>
+				<option class="select_option">Mobility</option>
+				<option class="select_option">Tablet</option>
+				<option class="select_option">PC</option>
+			</select>
+		</div>
 
 			<!-- First Page -->
-			<div id="maintain" class="">
-				<div class="select">
-					<label class="label_for_type">Choose source type:</label>
-					<select class="select_type">
-						<option value="1" class="select_option">Mobility</option>
-						<option value="2" class="select_option">Tablet</option>
-						<option value="3" class="select_option">PC</option>
-					</select>
-				</div>
+			<div id="maintain" class="hided" >
+			
 				<div class="wrap_form_and_tabs">
 					<div class="wrap_form">
 						<label class="search_type">Mobility search using:</label>
@@ -376,35 +378,35 @@
 
 				</div>
 			</div>
-			<div id="updownload" class="">
-				<p>
-					to true, the panel will fade out with the default duration and the default easing.
-					Number: The panel will fade out with the specified duration and the default easing.
-					String: The panel will be hidden using the specified effect. The value can either be the name of a built-in jQuery animation method, such as "slideUp", or the name of a jQuery UI effect, such as "fold". In either case the effect will be used with the default duration and the default easing.
-					Object: If the value is an object, then effect, delay, duration, and easing properties may be provided. If the effect property contains the name of a jQuery method, then that method will be used; otherwise it is assumed to be the name of a jQuery UI effect. When using a jQuery UI effect that supports additional settings, you may include those settings in the object and they will be passed to the effect. If duration or easing is omitted, then the default values will be used. If effect is omitted, then "fadeOut" will be used. If delay is omitted, then no delay is used.
-				</p>
-			</div>
-			<div id="reports" class="">
-				<p>
-					e hidden using the specified effect. The value can either be the name of a built-in jQuery animation method, such as "slideUp", or the name of a jQuery UI effect, such as "fold". In either case the effect will be used with the default duration and the default easing.
-					Object: If the value is an object, then effect, delay, duration, and easing properties may be provided. If the effect property contains the name of a jQuery method, then that method will be used; otherwise it is assumed to be the name of a jQuery UI effect. When using a jQuery UI effect that supports additional settings, you may include those settings in the object and they will be passed to the effect. If duration or easing is omitted, then the default values will be used. If effect is omitted, then "fadeOut" will be used. If delay is omitted, then no delay is used.
-				</p>
-			</div>
-			<div id="maintenance" class="">
-				<p>
-					to true, the panel will fade out with the default duration and the default easing.
-					Number: The panel will fade out with the specified duration and the default easing.
-					String: The panel . The value can either be the name of a built-in jQuery animation method, such as "slideUp", or the name of a jQuery UI effect, such as "fold". In either case the effect will be used with the default duration and the default easing.
-					Object: If the value is an object, then effect, delay, duration, and easing properties may be provided. If the effect property contains the name of a jQuery method, then that method will be used; otherwise it is assumed to be the name of a jQuery UI effect. When using a jQuery UI effect that supports additional settings, you may include those settings in the object and they will be passed to the effect. If duration or easing is omitted, then the default values will be used. If effect is omitted, then "fadeOut" will be used. If delay is omitted, then no delay is used.
-				</p>
-			</div>
+		<div id="updownload" class="hided">
+			<p>
+				to true, the panel will fade out with the default duration and the default easing.
+				Number: The panel will fade out with the specified duration and the default easing.
+				String: The panel will be hidden using the specified effect. The value can either be the name of a built-in jQuery animation method, such as "slideUp", or the name of a jQuery UI effect, such as "fold". In either case the effect will be used with the default duration and the default easing.
+				Object: If the value is an object, then effect, delay, duration, and easing properties may be provided. If the effect property contains the name of a jQuery method, then that method will be used; otherwise it is assumed to be the name of a jQuery UI effect. When using a jQuery UI effect that supports additional settings, you may include those settings in the object and they will be passed to the effect. If duration or easing is omitted, then the default values will be used. If effect is omitted, then "fadeOut" will be used. If delay is omitted, then no delay is used.
+			</p>
+		</div>
+		<div id="reports" class="hided">
+			<p>
+				e hidden using the specified effect. The value can either be the name of a built-in jQuery animation method, such as "slideUp", or the name of a jQuery UI effect, such as "fold". In either case the effect will be used with the default duration and the default easing.
+				Object: If the value is an object, then effect, delay, duration, and easing properties may be provided. If the effect property contains the name of a jQuery method, then that method will be used; otherwise it is assumed to be the name of a jQuery UI effect. When using a jQuery UI effect that supports additional settings, you may include those settings in the object and they will be passed to the effect. If duration or easing is omitted, then the default values will be used. If effect is omitted, then "fadeOut" will be used. If delay is omitted, then no delay is used.
+			</p>
+		</div>
+		<div id="maintenance" class="hided">
+			<p>
+				to true, the panel will fade out with the default duration and the default easing.
+				Number: The panel will fade out with the specified duration and the default easing.
+				String: The panel . The value can either be the name of a built-in jQuery animation method, such as "slideUp", or the name of a jQuery UI effect, such as "fold". In either case the effect will be used with the default duration and the default easing.
+				Object: If the value is an object, then effect, delay, duration, and easing properties may be provided. If the effect property contains the name of a jQuery method, then that method will be used; otherwise it is assumed to be the name of a jQuery UI effect. When using a jQuery UI effect that supports additional settings, you may include those settings in the object and they will be passed to the effect. If duration or easing is omitted, then the default values will be used. If effect is omitted, then "fadeOut" will be used. If delay is omitted, then no delay is used.
+			</p>
+		</div>
 
 	</div>
 
 
-	<script type="text/javascript" src="scripts/jquery/jquery-ui.js"></script>
-	<script src="scripts/app/views/Views.js"></script>
-	<script src="scripts/app/routers/router.js"></script>
+	<script type="text/javascript" src="scripts/common/jquery/jquery-ui.js"></script>
+	<script src="scripts/app/views/views.js"></script>
+	<script src="scripts/app/controllers/routecontroller.js"></script>
 	<script src="scripts/app/app.js"></script>
 
 </body>

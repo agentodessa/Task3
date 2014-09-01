@@ -25,14 +25,13 @@ $(document).ready(function () {
 		});
 	$(".select_type").change(function () {
 		var page = location.hash.split('#')[1] || '';
-		//var pagetype = location.hash.split('/')[1] || '';
-		window.location.hash = page + "/" + $(".select_type option:selected").text();
+		var newpage=page.split('/')[0] || '';
+		var pageType =$(".select_type option:selected").text();
+		var url = newpage +"/"+ pageType;
 
-		//if (window.location.hash !=("#"+url) ){
-		//window.location.hash= page+pagetype;
-		//}
-			//console.log(pagetype);
-	
+		if (window.location.hash!=url) {
+			window.location.hash = url;
+		}
 	});
 
 	$("#tabs_small").tabs();

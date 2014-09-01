@@ -9,6 +9,7 @@
 	<script type="text/javascript" src="scripts/common/jquery/jquery-1.11.1.js"></script>
 	<script src="scripts/common/underscore/underscore.js"></script>
 	<script src="scripts/common/backbone/backbone.js"></script>
+	<meta name="viewport" content="minimum-scale=1, width=device-width, maximum-scale=1, user-scalable=no" />
 
 </head>
 <body>
@@ -34,18 +35,19 @@
 				<li><a class="nav_link" href="#maintenance">Maintenance</a></li>
 			</ul>
 		</nav>
-
+		<div class="select">
+			<label class="label_for_type">Choose source type:</label>
+			<select class="select_type">
+				<option class="select_option" selected="">Choose type</option>
+				<option class="select_option">Mobility</option>
+				<option class="select_option">Tablet</option>
+				<option class="select_option">PC</option>
+			</select>
+		</div>
 
 			<!-- First Page -->
 			<div id="maintain" class="hided" >
-				<div class="select">
-					<label class="label_for_type">Choose source type:</label>
-					<select class="select_type">
-						<option value="1" class="select_option">Mobility</option>
-						<option value="2" class="select_option">Tablet</option>
-						<option value="3" class="select_option">PC</option>
-					</select>
-				</div>
+			
 				<div class="wrap_form_and_tabs">
 					<div class="wrap_form">
 						<label class="search_type">Mobility search using:</label>

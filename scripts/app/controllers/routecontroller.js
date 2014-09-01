@@ -8,33 +8,38 @@
 	var ComissioinRouter = Backbone.Router.extend({
 		routes:
 		{
-			"": "maintain",
+			"": "defaultOp",
 			"maintain": "maintain",  //#maintain
-			"maintain/:page": "maintaintype",  //#maintain
+			"maintain/:page": "maintaintype",  //#maintaintype
 			"updownload" :"updownload",//#updownload
 			"reports"	 :"reports",	//#reports
-			"maintenance":"maintenance"//#maintenance
+			"maintenance": "maintenance",//#maintenance
+			"*unknown:page": "defaultOp",
 		},
+		defaultOp: function (page) {
+			console.log(0);
+			app.defaultop.render(page);
 
+		},
 		maintain: function () {
 			console.log(1);
-			app.maintain.initialize();
+			app.maintain.render();
 		},
 
 		updownload: function () {
 			console.log(2);
-			app.updownload.initialize();
+			app.updownload.render();
 		},
 		reports: function () {
 			console.log(3);
-			app.reports.initialize();
+			app.reports.render();
 		},
 		maintenance: function () {
 			console.log(4);
-			app.maintenance.initialize();
+			app.maintenance.render();
 		},
-		maintaintype: function(page) {
-			console.log(page);
+		maintaintype: function (page) {
+			app.maintaintype.render(page);
 		}
 
 	});

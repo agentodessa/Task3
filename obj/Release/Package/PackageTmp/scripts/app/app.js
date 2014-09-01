@@ -24,10 +24,13 @@ $(document).ready(function () {
 		//	$(show).removeClass("hide");
 		});
 	$(".select_type").change(function () {
-		var page ="/"+ $(".select_type option:selected").text();
-		console.log(window.location.hash);
-		if (window.location.hash != (window.location.hash) + page){
-			window.location.hash=page;
+		var page = location.hash.split('#')[1] || '';
+		var newpage=page.split('/')[0] || '';
+		var pageType =$(".select_type option:selected").text();
+		var url = newpage +"/"+ pageType;
+
+		if (window.location.hash!=url) {
+			window.location.hash = url;
 		}
 	});
 
