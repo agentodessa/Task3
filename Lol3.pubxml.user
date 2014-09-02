@@ -10,7 +10,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/Task3.dll">
-      <publishTime>09/01/2014 12:57:48</publishTime>
+      <publishTime>09/02/2014 15:44:59</publishTime>
     </File>
     <File Include="css/jquery-ui.css">
       <publishTime>08/21/2014 11:42:47</publishTime>
@@ -25,7 +25,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/18/2014 14:28:55</publishTime>
     </File>
     <File Include="index.html">
-      <publishTime>01/09/2014 17:17:43</publishTime>
+      <publishTime>09/02/2014 15:44:23</publishTime>
     </File>
     <File Include="jquery-ui.css">
       <publishTime>08/21/2014 11:42:47</publishTime>
@@ -37,10 +37,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/21/2014 15:46:55</publishTime>
     </File>
     <File Include="scripts/app/app.js">
-      <publishTime>09/01/2014 11:55:18</publishTime>
+      <publishTime>02/09/2014 13:53:19</publishTime>
     </File>
     <File Include="scripts/app/controllers/routecontroller.js">
-      <publishTime>09/01/2014 18:23:28</publishTime>
+      <publishTime>09/02/2014 13:44:23</publishTime>
     </File>
     <File Include="scripts/app/controllers/viewcontroller.js">
       <publishTime>08/29/2014 19:07:28</publishTime>
@@ -52,13 +52,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/27/2014 10:55:34</publishTime>
     </File>
     <File Include="scripts/app/views/Views.js">
-      <publishTime>09/01/2014 18:18:13</publishTime>
+      <publishTime>09/02/2014 12:34:49</publishTime>
     </File>
     <File Include="scripts/backbone/backbone.js">
       <publishTime>08/26/2014 18:43:49</publishTime>
     </File>
     <File Include="scripts/common/backbone/backbone.js">
       <publishTime>08/26/2014 18:43:49</publishTime>
+    </File>
+    <File Include="scripts/common/backbone/backbone.queryparams.js">
+      <publishTime>09/02/2014 15:44:42</publishTime>
     </File>
     <File Include="scripts/common/jquery/jquery-1.11.1.js">
       <publishTime>08/18/2014 12:51:57</publishTime>

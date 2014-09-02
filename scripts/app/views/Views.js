@@ -2,16 +2,16 @@
 
 (function ($) {
 
-	var DefaultView = Backbone.View.extend(
-	{
-		render: function (page) {
+	//var DefaultView = Backbone.View.extend(
+	//{
+	//	render: function (page) {
 
-			$(".main_page .hided").hide();
-			$(".select").show();
-			$(this.el).show();
-			$(".select_type").val(page);
-		}
-	});
+	//		$(".main_page .hided").hide();
+	//		$(".select").show();
+	//		$(this.el).show();
+	//		$(".select_type").val(page);
+	//	}
+	//});
 	var MaintainView = Backbone.View.extend({
 		el: "#maintain",
 
@@ -19,6 +19,7 @@
 			$(".main_page .hided").hide();
 			$(".select").show();
 			$("#accordion").hide();
+			$(".select_type").val("Choose tepe").attr("selected", "selected");
 			$(".wrap_form_and_tabs").hide();
 			$(this.el).show();
 
@@ -30,10 +31,9 @@
 		el: "#maintain",
 
 		render: function (page) {
-			console.log(page);
 			$(".main_page .hided").hide();
 			$(this.el).show();
-			$(".select_type").val(page);
+			$(".select_type").val(page).attr("selected", "selected");
 			$(".wrap_form_and_tabs").show();
 
 		}
@@ -72,7 +72,7 @@
 
 
 
-	app.defaultop = new DefaultView();
+	//app.defaultop = new DefaultView();
 	app.maintain = new MaintainView();
 	app.updownload = new UpDownloadView();
 	app.reports = new ReportsView();

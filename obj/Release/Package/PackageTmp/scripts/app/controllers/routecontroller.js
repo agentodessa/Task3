@@ -8,40 +8,46 @@
 	var ComissioinRouter = Backbone.Router.extend({
 		routes:
 		{
-			"": "defaultOp",
+			"": "maintain",
 			"maintain": "maintain",  //#maintain
+
 			"maintain/:page": "maintaintype",  //#maintaintype
 			"updownload" :"updownload",//#updownload
 			"reports"	 :"reports",	//#reports
 			"maintenance": "maintenance",//#maintenance
-			"*unknown:page": "defaultOp",
-		},
-		defaultOp: function (page) {
-			console.log(0);
-			app.defaultop.render(page);
 
+			":page": "maintaintype",// like  #/ or #// and other 
+			"*unknownurl:page": "error",
 		},
+		//defaultOp: function (page) {
+		//	console.log(0);
+		//	app.defaultop.render(page);
+
+		//},
 		maintain: function () {
-			console.log(1);
+			console.log("Source:maintain");
 			app.maintain.render();
 		},
 
 		updownload: function () {
-			console.log(2);
+			console.log("Source:updownload");
 			app.updownload.render();
 		},
 		reports: function () {
-			console.log(3);
+			console.log("Source:reports");
 			app.reports.render();
 		},
 		maintenance: function () {
-			console.log(4);
+			console.log("Source:maintenance");
 			app.maintenance.render();
 		},
 		maintaintype: function (page) {
+			console.log("Source:maintain "+" type "+page);
 			app.maintaintype.render(page);
-		}
-
+		},
+		error: function () {
+			console.log("EROR 404");
+		},
 	});
 	 app.appRouter = new ComissioinRouter();
 	Backbone.history.start();

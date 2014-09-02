@@ -26,6 +26,7 @@
     <Content Include="scripts\app\controllers\viewcontroller.js" />
     <Content Include="scripts\app\views\views.js" />
     <Content Include="scripts\common\backbone\backbone.js" />
+    <Content Include="scripts\common\backbone\backbone.queryparams.js" />
     <Content Include="scripts\common\jquery\jquery-1.11.1.js" />
     <Content Include="scripts\common\jquery\jquery-ui.js" />
     <Content Include="scripts\common\underscore\underscore.js" />
