@@ -22,7 +22,6 @@
 			$(".select_type").val("Choose tepe").attr("selected", "selected");
 			$(".wrap_form_and_tabs").hide();
 			$(this.el).show();
-
 		}
 	});
 

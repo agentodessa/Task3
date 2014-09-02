@@ -3,15 +3,12 @@
 
 (function () {
 
-
-
 	var ComissioinRouter = Backbone.Router.extend({
 		routes:
 		{
 			"": "maintain",
 			"maintain": "maintain",  //#maintain
-
-			"maintain/:page": "maintaintype",  //#maintaintype
+			"#maintain/:page": "maintaintype",  //#maintaintype
 			"updownload" :"updownload",//#updownload
 			"reports"	 :"reports",	//#reports
 			"maintenance": "maintenance",//#maintenance
@@ -44,6 +41,7 @@
 		maintaintype: function (page) {
 			console.log("Source:maintain "+" type "+page);
 			app.maintaintype.render(page);
+
 		},
 		error: function () {
 			console.log("EROR 404");
