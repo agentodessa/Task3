@@ -19,6 +19,7 @@
 			$(".main_page .hided").hide();
 			$(".select").show();
 			$("#accordion").hide();
+			$(".wrap_form_and_tabs").hide();
 			$(this.el).show();
 
 		}
@@ -33,6 +34,7 @@
 			$(".main_page .hided").hide();
 			$(this.el).show();
 			$(".select_type").val(page);
+			$(".wrap_form_and_tabs").show();
 
 		}
 	});
