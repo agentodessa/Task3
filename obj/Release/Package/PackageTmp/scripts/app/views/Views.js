@@ -1,17 +1,7 @@
 ﻿var app = app || {};
-
 (function ($) {
 
-	//var DefaultView = Backbone.View.extend(
-	//{
-	//	render: function (page) {
 
-	//		$(".main_page .hided").hide();
-	//		$(".select").show();
-	//		$(this.el).show();
-	//		$(".select_type").val(page);
-	//	}
-	//});
 	var MaintainView = Backbone.View.extend({
 		el: "#maintain",
 
@@ -22,7 +12,12 @@
 			$(".select_type").val("Choose tepe").attr("selected", "selected");
 			$(".wrap_form_and_tabs").hide();
 			$(this.el).show();
-
+		},
+		show:function(){
+			
+		},
+		hide:function(){
+			
 		}
 	});
 
@@ -30,11 +25,29 @@
 	var MaintainTypeView = Backbone.View.extend({
 		el: "#maintain",
 
-		render: function (page) {
+		render: function (page,params) {
 			$(".main_page .hided").hide();
 			$(this.el).show();
 			$(".select_type").val(page).attr("selected", "selected");
 			$(".wrap_form_and_tabs").show();
+			if (params) {
+				$(".input_search1").val(params[$(".input_search1").attr('name').toString()]);
+				$(".input_search2").val(params[$(".input_search2").attr('name').toString()]);
+				$(".input_search3").val(params[$(".input_search3").attr('name').toString()]);
+				$(".input_search4").val(params[$(".input_search4").attr('name').toString()]);
+			} else {
+				$(".input_search1").val("");
+				$(".input_search2").val("");
+				$(".input_search3").val("");
+				$(".input_search4").val("");
+			};
+			
+
+		},
+		show: function () {
+
+		},
+		hide: function () {
 
 		}
 	});
@@ -47,6 +60,12 @@
 			$(".select").hide();
 			$(this.el).show();
 
+		},
+		show: function () {
+
+		},
+		hide: function () {
+
 		}
 	});
 	var ReportsView = Backbone.View.extend({
@@ -57,6 +76,12 @@
 			$(".select").hide();
 			$(this.el).show();
 
+		},
+		show: function () {
+
+		},
+		hide: function () {
+
 		}
 	});
 	var MaintenanceView = Backbone.View.extend({
@@ -66,6 +91,12 @@
 			$(".main_page .hided").hide();
 			$(".select").hide();
 			$(this.el).show();
+
+		},
+		show: function () {
+
+		},
+		hide: function () {
 
 		}
 	});

@@ -24,14 +24,22 @@ $(document).ready(function () {
 		//	$(show).removeClass("hide");
 		});
 	$(".select_type").change(function () {
-		var page = location.hash.split('#')[1] || '';
-		var newpage=page.split('/')[0] || '';
+		var page = location.hash.split('#')[1] || 'maintain';
+		var newpage = page.split('/')[0] || '';
 		var pageType =$(".select_type option:selected").text();
-		var url = newpage +"/"+ pageType;
+		var url = newpage + "/" + pageType;
 
 		if (window.location.hash!=url) {
 			window.location.hash = url;
 		}
+	});
+
+	$(".search_btn").click(function () {
+		var queryparams = page.split('?')[1] || '';
+		var pageType = $(".select_type option:selected").text();
+		var url = pagetype + "/" + pageType;
+
+		return false;
 	});
 
 	$("#tabs_small").tabs();

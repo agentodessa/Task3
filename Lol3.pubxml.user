@@ -10,13 +10,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/Task3.dll">
-      <publishTime>09/02/2014 15:44:59</publishTime>
+      <publishTime>03/09/2014 17:59:29</publishTime>
     </File>
     <File Include="css/jquery-ui.css">
       <publishTime>08/21/2014 11:42:47</publishTime>
     </File>
     <File Include="css/normalize.css">
-      <publishTime>08/18/2014 14:30:29</publishTime>
+      <publishTime>03/09/2014 17:32:51</publishTime>
     </File>
     <File Include="css/style.css">
       <publishTime>08/29/2014 18:36:42</publishTime>
@@ -25,7 +25,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/18/2014 14:28:55</publishTime>
     </File>
     <File Include="index.html">
-      <publishTime>09/02/2014 15:44:23</publishTime>
+      <publishTime>09/03/2014 11:03:14</publishTime>
     </File>
     <File Include="jquery-ui.css">
       <publishTime>08/21/2014 11:42:47</publishTime>
@@ -37,10 +37,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/21/2014 15:46:55</publishTime>
     </File>
     <File Include="scripts/app/app.js">
-      <publishTime>02/09/2014 13:53:19</publishTime>
+      <publishTime>09/03/2014 18:35:51</publishTime>
+    </File>
+    <File Include="scripts/app/controllers/data.service.js">
+      <publishTime>09/03/2014 19:10:06</publishTime>
     </File>
     <File Include="scripts/app/controllers/routecontroller.js">
-      <publishTime>09/02/2014 13:44:23</publishTime>
+      <publishTime>09/03/2014 19:15:54</publishTime>
     </File>
     <File Include="scripts/app/controllers/viewcontroller.js">
       <publishTime>08/29/2014 19:07:28</publishTime>
@@ -52,16 +55,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/27/2014 10:55:34</publishTime>
     </File>
     <File Include="scripts/app/views/Views.js">
-      <publishTime>09/02/2014 12:34:49</publishTime>
+      <publishTime>03/09/2014 16:28:31</publishTime>
     </File>
     <File Include="scripts/backbone/backbone.js">
       <publishTime>08/26/2014 18:43:49</publishTime>
     </File>
     <File Include="scripts/common/backbone/backbone.js">
-      <publishTime>08/26/2014 18:43:49</publishTime>
+      <publishTime>09/02/2014 17:26:56</publishTime>
     </File>
     <File Include="scripts/common/backbone/backbone.queryparams.js">
-      <publishTime>09/02/2014 15:44:42</publishTime>
+      <publishTime>02/09/2014 15:44:42</publishTime>
     </File>
     <File Include="scripts/common/jquery/jquery-1.11.1.js">
       <publishTime>08/18/2014 12:51:57</publishTime>
@@ -83,6 +86,66 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="scripts/jquery/jquery-ui.js">
       <publishTime>08/21/2014 11:52:03</publishTime>
+    </File>
+    <File Include="scripts/JSon/determineUserRights.json">
+      <publishTime>09/02/2014 16:37:20</publishTime>
+    </File>
+    <File Include="scripts/JSon/fileUpload.json">
+      <publishTime>09/02/2014 16:37:20</publishTime>
+    </File>
+    <File Include="scripts/JSon/getAllocations.json">
+      <publishTime>09/02/2014 16:37:20</publishTime>
+    </File>
+    <File Include="scripts/JSon/lookupCoworker.json">
+      <publishTime>09/02/2014 16:37:20</publishTime>
+    </File>
+    <File Include="scripts/JSon/lookupCoworkerPagination.json">
+      <publishTime>09/02/2014 16:37:20</publishTime>
+    </File>
+    <File Include="scripts/JSon/lookupCustomer.json">
+      <publishTime>09/02/2014 16:37:20</publishTime>
+    </File>
+    <File Include="scripts/JSon/lookupCustomerPagination.json">
+      <publishTime>09/02/2014 16:37:20</publishTime>
+    </File>
+    <File Include="scripts/JSon/lookupVendor.json">
+      <publishTime>09/02/2014 16:37:20</publishTime>
+    </File>
+    <File Include="scripts/JSon/lookupVendorPagination.json">
+      <publishTime>09/02/2014 16:37:20</publishTime>
+    </File>
+    <File Include="scripts/JSon/retrieveAllocationsByTier.json">
+      <publishTime>09/02/2014 16:37:20</publishTime>
+    </File>
+    <File Include="scripts/JSon/retrieveAvailableSources.json">
+      <publishTime>09/02/2014 16:37:20</publishTime>
+    </File>
+    <File Include="scripts/JSon/retrieveNestedAllocationsByTier.json">
+      <publishTime>09/02/2014 16:37:20</publishTime>
+    </File>
+    <File Include="scripts/JSon/retrieveTierDetails.json">
+      <publishTime>09/02/2014 16:37:20</publishTime>
+    </File>
+    <File Include="scripts/JSon/retrieveTierDetailsMobile.json">
+      <publishTime>09/02/2014 16:37:20</publishTime>
+    </File>
+    <File Include="scripts/JSon/retrieveTierDetailsSlam.json">
+      <publishTime>09/02/2014 16:37:20</publishTime>
+    </File>
+    <File Include="scripts/JSon/saveChanges.json">
+      <publishTime>09/02/2014 16:37:59</publishTime>
+    </File>
+    <File Include="scripts/JSon/validateTier.json">
+      <publishTime>09/02/2014 16:37:20</publishTime>
+    </File>
+    <File Include="scripts/JSon/validateTierMobile.json">
+      <publishTime>09/02/2014 16:37:20</publishTime>
+    </File>
+    <File Include="scripts/JSon/validateTierMobileError.json">
+      <publishTime>09/02/2014 16:37:20</publishTime>
+    </File>
+    <File Include="scripts/JSon/validateTierSlam.json">
+      <publishTime>09/02/2014 16:37:20</publishTime>
     </File>
     <File Include="scripts/underscore/underscore.js">
       <publishTime>08/26/2014 15:11:33</publishTime>

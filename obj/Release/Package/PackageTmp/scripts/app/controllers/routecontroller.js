@@ -3,27 +3,18 @@
 
 (function () {
 
-
-
 	var ComissioinRouter = Backbone.Router.extend({
 		routes:
 		{
 			"": "maintain",
 			"maintain": "maintain",  //#maintain
-
-			"maintain/:page": "maintaintype",  //#maintaintype
+			"maintain/:page": "maintaintype",  //#maintain/type
 			"updownload" :"updownload",//#updownload
 			"reports"	 :"reports",	//#reports
 			"maintenance": "maintenance",//#maintenance
 
-			":page": "maintaintype",// like  #/ or #// and other 
 			"*unknownurl:page": "error",
 		},
-		//defaultOp: function (page) {
-		//	console.log(0);
-		//	app.defaultop.render(page);
-
-		//},
 		maintain: function () {
 			console.log("Source:maintain");
 			app.maintain.render();
@@ -41,14 +32,17 @@
 			console.log("Source:maintenance");
 			app.maintenance.render();
 		},
-		maintaintype: function (page) {
-			console.log("Source:maintain "+" type "+page);
-			app.maintaintype.render(page);
+		maintaintype: function (page, params) {
+			console.log("Source:maintain " + " type " + page);
+			console.log(params);
+			app.maintaintype.render(page, params);
+			app.getSourceType();
+			
 		},
 		error: function () {
-			console.log("EROR 404");
+			console.log("ERROR 404");
 		},
 	});
-	 app.appRouter = new ComissioinRouter();
+	app.appRouter = new ComissioinRouter();
 	Backbone.history.start();
 })();
