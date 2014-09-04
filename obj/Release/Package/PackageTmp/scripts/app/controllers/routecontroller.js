@@ -37,7 +37,6 @@
 			console.log(params);
 			app.maintaintype.render(page, params);
 			app.getSourceType();
-			
 		},
 		error: function () {
 			console.log("ERROR 404");

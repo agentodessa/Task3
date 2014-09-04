@@ -18,6 +18,9 @@
 		maintain: function () {
 			console.log("Source:maintain");
 			app.maintain.render();
+			$.when(app.getSourceType()).done(function (data) {
+				console.log(data);
+			});
 		},
 
 		updownload: function () {
@@ -34,10 +37,11 @@
 		},
 		maintaintype: function (page, params) {
 			console.log("Source:maintain " + " type " + page);
-			console.log(params);
 			app.maintaintype.render(page, params);
-			app.getSourceType();
-			
+			$.when(app.validateTierMobile()).done(function (data) {
+				console.log(data);
+			});
+
 		},
 		error: function () {
 			console.log("ERROR 404");

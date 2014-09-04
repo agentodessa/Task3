@@ -17,12 +17,12 @@ $(document).ready(function () {
 
 	});
 
-	$(".nav_link").click(function () {
-		//$(previous).addClass("hide");
-		//	var show = $(this).attr('href');
-		//	previous = show;
-		//	$(show).removeClass("hide");
-		});
+	//$(".nav_link").click(function () {
+	//	$(previous).addClass("hide");
+	//		var show = $(this).attr('href');
+	//		previous = show;
+	//		$(show).removeClass("hide");
+	//	});
 	$(".select_type").change(function () {
 		var page = location.hash.split('#')[1] || 'maintain';
 		var newpage = page.split('/')[0] || '';
@@ -35,9 +35,9 @@ $(document).ready(function () {
 	});
 
 	$(".search_btn").click(function () {
-		var queryparams = page.split('?')[1] || '';
-		var pageType = $(".select_type option:selected").text();
-		var url = pagetype + "/" + pageType;
+		//var queryparams = page.split('?')[1] || '';
+		//var pageType = $(".select_type option:selected").text();
+		//var url = pagetype + "/" + pageType;
 
 		return false;
 	});

@@ -1,6 +1,6 @@
 D:\Projects\Task3\Task3\bin\Task3.dll.config
 D:\Projects\Task3\Task3\bin\Task3.dll
 D:\Projects\Task3\Task3\bin\Task3.pdb
-D:\Projects\Task3\Task3\obj\Debug\Task3.csprojResolveAssemblyReference.cache
 D:\Projects\Task3\Task3\obj\Debug\Task3.dll
 D:\Projects\Task3\Task3\obj\Debug\Task3.pdb
+D:\Projects\Task3\Task3\obj\Debug\Task3.csprojResolveAssemblyReference.cache

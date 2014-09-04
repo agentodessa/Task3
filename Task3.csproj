@@ -37,26 +37,26 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Lol3.pubxml" />
-    <Content Include="scripts\JSon\determineUserRights.json" />
-    <Content Include="scripts\JSon\fileUpload.json" />
-    <Content Include="scripts\JSon\getAllocations.json" />
-    <Content Include="scripts\JSon\lookupCoworker.json" />
-    <Content Include="scripts\JSon\lookupCoworkerPagination.json" />
-    <Content Include="scripts\JSon\lookupCustomer.json" />
-    <Content Include="scripts\JSon\lookupCustomerPagination.json" />
-    <Content Include="scripts\JSon\lookupVendor.json" />
-    <Content Include="scripts\JSon\lookupVendorPagination.json" />
-    <Content Include="scripts\JSon\retrieveAllocationsByTier.json" />
-    <Content Include="scripts\JSon\retrieveAvailableSources.json" />
-    <Content Include="scripts\JSon\retrieveNestedAllocationsByTier.json" />
-    <Content Include="scripts\JSon\retrieveTierDetails.json" />
-    <Content Include="scripts\JSon\retrieveTierDetailsMobile.json" />
-    <Content Include="scripts\JSon\retrieveTierDetailsSlam.json" />
-    <Content Include="scripts\JSon\saveChanges.json" />
-    <Content Include="scripts\JSon\validateTier.json" />
-    <Content Include="scripts\JSon\validateTierMobile.json" />
-    <Content Include="scripts\JSon\validateTierMobileError.json" />
-    <Content Include="scripts\JSon\validateTierSlam.json" />
+    <Content Include="JSon\determineUserRights.json" />
+    <Content Include="JSon\fileUpload.json" />
+    <Content Include="JSon\getAllocations.json" />
+    <Content Include="JSon\lookupCoworker.json" />
+    <Content Include="JSon\lookupCoworkerPagination.json" />
+    <Content Include="JSon\lookupCustomer.json" />
+    <Content Include="JSon\lookupCustomerPagination.json" />
+    <Content Include="JSon\lookupVendor.json" />
+    <Content Include="JSon\lookupVendorPagination.json" />
+    <Content Include="JSon\retrieveAllocationsByTier.json" />
+    <Content Include="JSon\retrieveAvailableSources.json" />
+    <Content Include="JSon\retrieveNestedAllocationsByTier.json" />
+    <Content Include="JSon\retrieveTierDetails.json" />
+    <Content Include="JSon\retrieveTierDetailsMobile.json" />
+    <Content Include="JSon\retrieveTierDetailsSlam.json" />
+    <Content Include="JSon\saveChanges.json" />
+    <Content Include="JSon\validateTier.json" />
+    <Content Include="JSon\validateTierMobile.json" />
+    <Content Include="JSon\validateTierMobileError.json" />
+    <Content Include="JSon\validateTierSlam.json" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
