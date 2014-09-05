@@ -12,14 +12,12 @@
 			"updownload" :"updownload",//#updownload
 			"reports"	 :"reports",	//#reports
 			"maintenance": "maintenance",//#maintenance
-
 			"*unknownurl:page": "error",
 		},
 		maintain: function () {
 			console.log("Source:maintain");
-			app.maintain.render();
-			$.when(app.getSourceType()).done(function (data) {
-				console.log(data);
+			app.getSourceType().done(function (data) {
+				app.maintain.render(data);
 			});
 		},
 
@@ -38,7 +36,7 @@
 		maintaintype: function (page, params) {
 			console.log("Source:maintain " + " type " + page);
 			app.maintaintype.render(page, params);
-			$.when(app.validateTierMobile()).done(function (data) {
+			app.validateTierMobile().done(function (data) {
 				console.log(data);
 			});
 

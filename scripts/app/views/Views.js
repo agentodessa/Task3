@@ -4,20 +4,25 @@
 
 	var MaintainView = Backbone.View.extend({
 		el: "#maintain",
+	
+		render: function (data) {
+			var select = $(".select_type");
 
-		render: function () {
-			$(".main_page .hided").hide();
+			for (var key in data.response.sources) {
+				select.append("<option>"+data.response.sources[key]+"</option>");
+			}
+			$(".select_type").val("Choose type").attr("selected", "selected");
+			this.hide();
+			this.show();
+		},
+		show: function () {
 			$(".select").show();
-			$("#accordion").hide();
-			$(".select_type").val("Choose tepe").attr("selected", "selected");
-			$(".wrap_form_and_tabs").hide();
 			$(this.el).show();
 		},
-		show:function(){
-			
-		},
-		hide:function(){
-			
+		hide: function () {
+			$(".wrap_form_and_tabs").hide();
+			$(".main_page .hided").hide();
+			$("#accordion").hide();
 		}
 	});
 
@@ -26,10 +31,11 @@
 		el: "#maintain",
 
 		render: function (page,params) {
-			$(".main_page .hided").hide();
-			$(this.el).show();
 			$(".select_type").val(page).attr("selected", "selected");
-			$(".wrap_form_and_tabs").show();
+			$(".search_type").text(page + " search using:");
+			this.hide();
+			this.show();
+
 			if (params) {
 				$(".input_search1").val(params[$(".input_search1").attr('name').toString()]);
 				$(".input_search2").val(params[$(".input_search2").attr('name').toString()]);
@@ -45,10 +51,11 @@
 
 		},
 		show: function () {
-
+			$(this.el).show();
+			$(".wrap_form_and_tabs").show();
 		},
 		hide: function () {
-
+			$(".main_page .hided").hide();
 		}
 	});
 
@@ -56,48 +63,51 @@
 		el: "#updownload",
 
 		render: function () {
-			$(".main_page .hided").hide();
-			$(".select").hide();
-			$(this.el).show();
 
+
+			this.hide();
+			this.show();
 		},
 		show: function () {
-
+			$(this.el).show();
 		},
 		hide: function () {
-
+			$(".main_page .hided").hide();
+			$(".select").hide();
 		}
 	});
 	var ReportsView = Backbone.View.extend({
 		el: "#reports",
 
 		render: function () {
-			$(".main_page .hided").hide();
-			$(".select").hide();
-			$(this.el).show();
+
+			this.hide();
+			this.show();
 
 		},
 		show: function () {
-
+			$(this.el).show();
 		},
 		hide: function () {
-
+			$(".main_page .hided").hide();
+			$(".select").hide();
 		}
 	});
 	var MaintenanceView = Backbone.View.extend({
 		el: "#maintenance",
 
 		render: function () {
-			$(".main_page .hided").hide();
-			$(".select").hide();
-			$(this.el).show();
 
+
+			this.hide();
+			this.show();
 		},
 		show: function () {
-
+			$(this.el).show();
 		},
 		hide: function () {
-
+			$(".main_page .hided").hide();
+			$(".select").hide();
 		}
 	});
 
