@@ -7,11 +7,12 @@
 	
 		render: function (data) {
 			var select = $(".select_type");
-
+			select.empty();
+			select.append("<option>Choose type</option>").attr("selected", "selected");
 			for (var key in data.response.sources) {
 				select.append("<option>"+data.response.sources[key]+"</option>");
 			}
-			$(".select_type").val("Choose type").attr("selected", "selected");
+			
 			this.hide();
 			this.show();
 		},
@@ -30,28 +31,43 @@
 	var MaintainTypeView = Backbone.View.extend({
 		el: "#maintain",
 
-		render: function (page,params) {
+		render:function() {
+			
+		},
+		renderWithParams: function (page, params,data) {
+			var select = $(".select_type");
+			select.empty();
+			select.append("<option>Choose type</option>").attr("selected", "selected");
+			for (var key in data.response.sources) {
+				select.append("<option>" + data.response.sources[key] + "</option>");
+			}
+
 			$(".select_type").val(page).attr("selected", "selected");
 			$(".search_type").text(page + " search using:");
 			this.hide();
 			this.show();
-
+			//enter data 
 			if (params) {
+				$(".input_search0").val(params[$(".input_search0").attr('name').toString()]);
 				$(".input_search1").val(params[$(".input_search1").attr('name').toString()]);
 				$(".input_search2").val(params[$(".input_search2").attr('name').toString()]);
 				$(".input_search3").val(params[$(".input_search3").attr('name').toString()]);
-				$(".input_search4").val(params[$(".input_search4").attr('name').toString()]);
+				$("#accordion").show();
+				$(".wrap_tabs").show();
 			} else {
+				$(".input_search0").val("");
 				$(".input_search1").val("");
 				$(".input_search2").val("");
 				$(".input_search3").val("");
-				$(".input_search4").val("");
+				$("#accordion").hide();
+				$(".wrap_tabs").hide();
 			};
 			
 
 		},
 		show: function () {
 			$(this.el).show();
+			$(".select").show();
 			$(".wrap_form_and_tabs").show();
 		},
 		hide: function () {
@@ -113,7 +129,6 @@
 
 
 
-	//app.defaultop = new DefaultView();
 	app.maintain = new MaintainView();
 	app.updownload = new UpDownloadView();
 	app.reports = new ReportsView();

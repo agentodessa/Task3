@@ -12,7 +12,7 @@
 }*/
 
 .container {
-	display: none;
+	display: none;/*switch to block*/
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -80,7 +80,7 @@
 
 /*Login page*/
 .main_page {
-	/*display: none;*/
+	display: block;
 	position: relative;
 }
 
@@ -167,22 +167,25 @@
 .row {
 	position: relative;
 	margin-bottom: 30px;
-	text-align: right;
-	clear: both;
 }
 .form_label {
-	float: left;
+	display: inline-block;
+	width: 300px;
 }
 
-.input_search1,.input_search2, .input_search3, .input_search4 {
+.input_search0,.input_search1, .input_search2, .input_search3 {
 
 	width: 168px;
 	height: 28px;
 	border: 1px solid #bbbbbb;
 	border-radius: 5px;
 }
-.search_btn {
 
+.input_search0:invalid,.input_search1:invalid,
+.input_search2:invalid,.input_search3:invalid {
+	border-color: red;
+}
+.search_btn {
 	min-width: 170px;
 	min-height: 36px;
 	margin-bottom: 10px;
