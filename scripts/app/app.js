@@ -56,7 +56,7 @@ $(document).ready(function () {
 
 
 
-	$("#tabs_small").tabs();
-	$("#accordion").accordion();
+	//$("#tabs_small").tabs();
+	//$("#accordion").accordion();
 
 })

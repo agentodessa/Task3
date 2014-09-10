@@ -18,6 +18,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="css\jquery-ui.css" />
+    <Content Include="images\close_btn.png" />
     <Content Include="images\Logo.png" />
     <Content Include="css\normalize.css" />
     <Content Include="scripts\app\app.js" />

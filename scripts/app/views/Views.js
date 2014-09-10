@@ -34,7 +34,9 @@
 		render:function() {
 			
 		},
-		renderWithParams: function (page, params,data) {
+		renderWithParams: function (page, params, data) {
+
+			console.log(1);
 			var select = $(".select_type");
 			select.empty();
 			select.append("<option>Choose type</option>").attr("selected", "selected");
@@ -134,4 +136,9 @@
 	app.reports = new ReportsView();
 	app.maintenance = new MaintenanceView();
 	app.maintaintype = new MaintainTypeView();
+
+
+
+
+
 })(jQuery);

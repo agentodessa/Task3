@@ -275,3 +275,20 @@
 	border: 1px solid #bbbbbb;
 	border-radius: 5px;
 }
+
+.download_file_info {
+	position: relative;
+	width: 100%;
+	height: 40px;
+	background-color: #ddf1da;
+	color: #39884c;
+}
+
+.close_btn {
+	width: 10px;
+	height: 15px;
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	background: url(/images/close_btn.png) no-repeat center;
+}

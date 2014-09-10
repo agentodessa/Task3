@@ -5,9 +5,6 @@
 		"type: 'GET'"+	
 		"dataType: 'json'";
 
-
-
-
 	app.getSourceType = function () {
 	var response =$.ajax({
 		url: 'http://10.40.170.134/JSon/retrieveAvailableSources.json',
@@ -57,6 +54,4 @@
 		}, query);
 		return response;
 	}
-
-
 })(app);
