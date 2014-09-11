@@ -23,6 +23,7 @@
     <Content Include="css\normalize.css" />
     <Content Include="scripts\app\app.js" />
     <Content Include="index.html" />
+    <Content Include="scripts\app\controllers\common.module.js" />
     <Content Include="scripts\app\controllers\data.service.js" />
     <Content Include="scripts\app\controllers\routecontroller.js" />
     <Content Include="scripts\app\controllers\viewcontroller.js" />

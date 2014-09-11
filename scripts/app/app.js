@@ -49,14 +49,16 @@ $(document).ready(function () {
 			} 
 		} else {
 			window.location.hash = "";
-
+			
 		}
 	
 	});
 
+	$(".upload").change = function () {
+		$(".uploadFile").value = this.value;
+	};
 
-
-	//$("#tabs_small").tabs();
-	//$("#accordion").accordion();
+	$("#tabs_small").tabs();
+	$("#accordion").accordion();
 
 })

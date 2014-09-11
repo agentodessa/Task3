@@ -1,7 +1,6 @@
 ﻿var app = app || {};
 (function ($) {
 
-
 	var MaintainView = Backbone.View.extend({
 		el: "#maintain",
 	
@@ -36,7 +35,6 @@
 		},
 		renderWithParams: function (page, params, data) {
 
-			console.log(1);
 			var select = $(".select_type");
 			select.empty();
 			select.append("<option>Choose type</option>").attr("selected", "selected");

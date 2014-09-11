@@ -129,8 +129,13 @@
 .select_type {
 	width: 300px;
 	height: 42px;
-	margin-left: 15px;
 	font-size: 18px;
+}
+
+.label_for_type {
+	display: inline-block;
+	margin-right: 20px;
+
 }
 
 
@@ -142,11 +147,11 @@
 	margin: 5px 40px 20px 40px;
 	border: 1px solid #bbbbbb;
 	border-radius: 5px;
+	padding-left: 1%;
 }
 
 .wrap_form {
-
-	width: 50%;
+	display: inline-block;
 
 }
 
@@ -197,17 +202,15 @@
 }
 
 .wrap_tabs {
-	position: absolute;
-	top: 0;
-	right: 0;
+	display: inline-block;
 	width: 50%;
-	height: 100%;
 }
 
 .tabs_div {
 	
 }
 .tabs_list {
+	padding: 0;
 	list-style: none;
 
 }
@@ -228,6 +231,10 @@
 
 
 /*Accordion*/
+
+#accordion {
+	margin-bottom: 100px;
+}
 .ui-accordion-header {
 	margin: 10px 40px;
 	width: auto;
@@ -237,12 +244,32 @@
 	color: #1190cf;
 }
 .ui-accordion-content {
-
+	margin: 0 40px;
 }
+
+.ui-accordion-header-active {
+	margin-bottom: 0;
+	border-color: #aabdbb;
+	background-color: #f0f3f5;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+.ui-accordion-content-active {
+	border: 1px solid #aabdbb;
+	border-top: none;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	background-color: #f0f3f5;
+}
+
+
+
 .wrap_accordion_content {
 	padding: 1.2em;
 	margin: 0 40px;
 }
+
+
 
 .element_table {
 	margin-bottom: 56px;
@@ -276,14 +303,24 @@
 	border-radius: 5px;
 }
 
+
+/*Updownload*/
+
+
 .download_file_info {
+	/*display: table-cell;
+	vertical-align: middle;*/
 	position: relative;
 	width: 100%;
 	height: 40px;
 	background-color: #ddf1da;
+	border-radius: 5px;
 	color: #39884c;
 }
-
+.wrapper_updownload {
+	position: relative;
+	margin: 0 50px;
+}
 .close_btn {
 	width: 10px;
 	height: 15px;
@@ -291,4 +328,55 @@
 	top: 50%;
 	right: 20px;
 	background: url(/images/close_btn.png) no-repeat center;
+}
+
+.wrap_upload {
+	width: 100%;
+	height: 130px;
+	border-bottom: 1px solid #bbbbbb;
+	border-top: 1px solid #bbbbbb;
+	margin-bottom: 20px;
+}
+.uploadFile {
+	width: 70%;
+	height: 35px;
+}
+.fileUpload {
+	position: relative;
+	overflow: hidden;
+}
+.btn_find {
+
+	width: 138px;
+	height: 34px;
+	border: 1px solid #bbbbbb;
+	border-radius: 5px;
+}
+.fileUpload input.upload {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	right: 0;
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	cursor: pointer;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+.wrap_confirm_btn {
+	position: relative;
+}
+.confirm_upload_btn {
+	position: absolute;
+	right: 0;
+	top: 0;
+	border: 1px solid #419db8;
+	width: 143px;
+	height: 36px;
+	background-color: #42a8c6;
+	border-radius: 5px;
+	color: white;
+	cursor: default;
 }
