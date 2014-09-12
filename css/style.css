@@ -101,8 +101,9 @@
 
 }
 .nav_list li {
-	display: inline-table;
+	display: inline-block;
 	margin-left: 30px;
+	vertical-align: bottom;
 }
 .nav_link {
 	display: block;
