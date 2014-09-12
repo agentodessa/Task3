@@ -3,9 +3,10 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>CDW</title>
-    <link rel="stylesheet" href="css/normalize.css" type="text/css" />
-    <link rel="stylesheet" href="css/style.css" type="text/css" />
+	<title>CDW</title>
+	<link rel="shortcut icon" href="/images/Logo.png" type="image/x-icon">
+	<link rel="stylesheet" href="css/normalize.css" type="text/css" />
+	<link rel="stylesheet" href="css/style.css" type="text/css" />
 	<script type="text/javascript" src="scripts/common/jquery/jquery-1.11.1.js"></script>
 	<script src="scripts/common/underscore/underscore.js"></script>
 	<script src="scripts/common/backbone/backbone.js"></script>
@@ -85,10 +86,28 @@
 								<li><a href="#fragment-device" class="tab_link">Device</a></li>
 							</ul>
 							<div id="fragment-order">
-								<p>
-
-									Object: If the value is an object, then effect
-								</p>
+								<table class="inform_table">
+									<tr class="inform_table_row">
+										<td>1</td>
+										<td>2</td>
+									</tr>
+									<tr class="inform_table_row">
+										<td>3</td>
+										<td>4</td>
+									</tr>
+									<tr class="inform_table_row">
+										<td>5</td>
+										<td>6</td>
+									</tr>
+									<tr class="inform_table_row">
+										<td>7</td>
+										<td>8</td>
+									</tr>
+									<tr class="inform_table_row">
+										<td>9</td>
+										<td>10</td>
+									</tr>
+								</table>
 							</div>
 							<div id="fragment-customer">
 								<p>
@@ -380,8 +399,8 @@
 		<div id="updownload" class="hided">
 			<div class="wrapper_updownload">
 				<div class="download_file_info">
-					<p><strong>Well done!</strong> File successfully uploaded.</p>
-					<button class="close_btn"></button>
+					<div><p class="success_text"><strong>Well done!</strong> File successfully uploaded.</p></div>
+					<i class="close_icon"></i>
 				</div>
 				<p>
 					to true, the panel will fade out with the default duration and the default easing.
@@ -390,12 +409,17 @@
 					Object: If the value is an object, then effect, delay, duration, and easing properties may be provided. If the effect property contains the name of a jQuery method, then that method will be used; otherwise it is assumed to be the name of a jQuery UI effect. When using a jQuery UI effect that supports additional settings, you may include those settings in the object and they will be passed to the effect. If duration or easing is omitted, then the default values will be used. If effect is omitted, then "fadeOut" will be used. If delay is omitted, then no delay is used.
 				</p>
 
-				<div class="wrap_upload">
+				<div class="uploader">
+					<div class="wrap_upload">
+						<span>File:</span>
+						<input type="text" class="uploadFile" placeholder="Choose file" disabled="disabled" />
+						<div class="fileUpload">
+							<button class="btn_find">Find</button>
+							<input type="file" class="upload" />
+						</div>
+					</div>
+					<div class="uploaded_files">
 
-					<input class="uploadFile" placeholder="Choose File" disabled="disabled" />
-					<div class="fileUpload">
-						<button class="btn_find">Find</button>
-						<input  type="file" class="upload" />
 					</div>
 				</div>
 				<div class="wrap_confirm_btn">

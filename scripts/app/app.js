@@ -49,14 +49,21 @@ $(document).ready(function () {
 			} 
 		} else {
 			window.location.hash = "";
-			
 		}
-	
+	});
+	$(".close_icon").click(function() {
+		$(".download_file_info").fadeOut();
 	});
 
-	$(".upload").change = function () {
-		$(".uploadFile").value = this.value;
-	};
+	$(".confirm_upload_btn").click(function() {
+		$(".download_file_info").fadeIn();
+	});
+
+
+	$(".upload").change(function () {
+		var filename = $(this).val();
+		$(".uploadFile").attr('placeholder',filename);
+	});
 
 	$("#tabs_small").tabs();
 	$("#accordion").accordion();
