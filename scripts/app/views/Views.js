@@ -36,6 +36,8 @@
 		renderWithParams: function (page, params, data) {
 
 			var select = $(".select_type");
+			var customerTable = $(".customer_table");
+			var orderTable = $(".order_table");
 			select.empty();
 			select.append("<option>Choose type</option>").attr("selected", "selected");
 			for (var key in data.response.sources) {

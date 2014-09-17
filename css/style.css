@@ -238,6 +238,7 @@
 
 }
 
+
 .tabs_list {
 	width: 328px;
 	padding: 0;
@@ -275,19 +276,20 @@
 }
 
 
-.inform_table {
+.customer_table,.order_table {
 	width: 100%;
 }
 
-.inform_table tr {
+.customer_table tr,.order_table tr {
 	border-bottom: 1px solid #bbbbbb;
 }
-.inform_table td {
+.customer_table td,.order_table {
 	width: 50%;
 	height: 36px;
 }
 
-.inform_table tr:nth-child(2n+2) {
+.customer_table tr:nth-child(2n+2),
+.order_table tr:nth-child(2n+2) {
 	background-color: #f9f9f9;
 }
 
