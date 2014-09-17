@@ -93,7 +93,7 @@ module.exports = function (grunt) {
 		},
 		watch: {
 			scripts: {
-				files: 'scripts/app/**/*.js',
+				files: ['scripts/app/**/*.js', 'css/**/*.css'],
 				tasks: ['jshint'],
 				options: {
 					interrupt: true,
