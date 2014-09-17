@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<BuildDependsOn>
+			InstallGrunt;
+			$(BuildDependsOn)
+		</BuildDependsOn>
+		<NodeModulesGruntCli>$(SolutionDir)node_modules\grunt-cli\bin\grunt</NodeModulesGruntCli>
+		<NodeModulesGrunt>$(SolutionDir)node_modules\grunt\package.json</NodeModulesGrunt>
+	</PropertyGroup>
+	<Target Name="InstallGrunt">
+		<Message Text="Installing Grunt..."/>
+		<Exec Condition=" !Exists('$(NodeModulesGrunt)')" Command="&quot;$(MSBuildThisFileDirectory)..\tools\npm.cmd&quot; install grunt --save-dev" WorkingDirectory="$(SolutionDir)" />
+		<Exec Condition=" !Exists('$(NodeModulesGruntCli)')" Command="&quot;$(MSBuildThisFileDirectory)..\tools\npm.cmd&quot; install grunt-cli --save-dev" WorkingDirectory="$(SolutionDir)" />
+		<Message Text="Grunt installed!"/>
+	</Target>
+</Project>
