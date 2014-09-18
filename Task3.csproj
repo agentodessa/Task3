@@ -37,6 +37,8 @@
     <Content Include="scripts\common\underscore\underscore.js" />
     <Content Include="css\style.css" />
     <Content Include="tabs.html" />
+    <Content Include="tests\index.html" />
+    <Content Include="tests\tests.js" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>

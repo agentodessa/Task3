@@ -1,25 +1,25 @@
 ﻿var app= app|| {};
-(function (app) {
+(function(app) {
 	var query = "async: true" +
-		"contentType: 'application/json; charset=UTF-8'"+
-		"type: 'GET'"+	
+		"contentType: 'application/json; charset=UTF-8'" +
+		"type: 'GET'" +
 		"dataType: 'json'";
 
-	app.getSourceType = function () {
-	var response =$.ajax({
-		url: 'http://10.40.170.134/JSon/retrieveAvailableSources.json',
-	},query);
+	app.getSourceType = function() {
+		var response = $.ajax({
+			url: 'http://10.40.170.134/JSon/retrieveAvailableSources.json',
+		}, query);
 		return response;
 	}
 	//retrievedata
-	app.retrieveTierDetails = function () {
+	app.retrieveTierDetails = function() {
 		var response = $.ajax({
 			url: 'http://10.40.170.134/JSon/retrieveTierDetails.json',
 		}, query);
 		return response;
 	}
 
-	app.retrieveTierDetailsMobile = function () {
+	app.retrieveTierDetailsMobile = function() {
 		var response = $.ajax({
 			url: 'http://10.40.170.134/JSon/retrieveTierDetailsMobile.json',
 		}, query);
@@ -27,28 +27,28 @@
 	}
 
 
-	app.retrieveTierDetailsSlam = function () {
+	app.retrieveTierDetailsSlam = function() {
 		var response = $.ajax({
 			url: 'http://10.40.170.134/JSon/retrieveTierDetailsSlam.json',
 		}, query);
 		return response;
 	}
 	//validatedata
-	app.validateTierMobile = function () {
+	app.validateTierMobile = function() {
 		var response = $.ajax({
 			url: 'http://10.40.170.134/JSon/validateTierMobile.json',
-		},query);
+		}, query);
 		return response;
 	}
 
-	app.validateTierSlam = function () {
+	app.validateTierSlam = function() {
 		var response = $.ajax({
 			url: 'http://10.40.170.134/JSon/validateTierSlam.json',
 		}, query);
 		return response;
 	}
 
-	app.validateTier = function () {
+	app.validateTier = function() {
 		var response = $.ajax({
 			url: 'http://10.40.170.134/JSon/validateTier.json',
 		}, query);
