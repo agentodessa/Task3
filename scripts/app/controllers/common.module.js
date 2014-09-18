@@ -1,6 +1,5 @@
 ﻿var app = app || {};
 
-
 (function(app){
 	app.callView = function(page,params) {
 		if (params) {
@@ -11,7 +10,7 @@
 						console.log(validdata);
 					});
 					app.getSourceType().done(function (data) {
-						app.maintaintype && app.maintaintype.renderWithParams(page, params, data);
+						app.maintainTypeView && app.maintainTypeView.renderWithParams(page, params, data);
 						console.log(data);
 					});
 					break;
@@ -20,7 +19,7 @@
 						console.log(validdata);
 					});
 					app.getSourceType().done(function (data) {
-						app.maintaintype && app.maintaintype.renderWithParams(page, params, data);
+						app.maintainTypeView && app.maintainTypeView.renderWithParams(page, params, data);
 						console.log(data);
 					});
 					break;
@@ -29,7 +28,7 @@
 						console.log(validdata);
 					});
 					app.getSourceType().done(function (data) {
-						app.maintaintype && app.maintaintype.renderWithParams(page, params, data);
+						app.maintainTypeView && app.maintainTypeView.renderWithParams(page, params, data);
 						console.log(data);
 					});
 					break;
@@ -46,7 +45,7 @@
 					});
 					app.getSourceType().done(function (data) {
 						console.log(data);
-						app.maintaintype && app.maintaintype.renderWithParams(page, params, data);
+						app.maintainTypeView && app.maintainTypeView.renderWithParams(page, params, data);
 					});
 					break;
 				case 'Mobile':
@@ -54,7 +53,7 @@
 						console.log(validdata);
 					});
 					app.getSourceType().done(function (data) {
-						app.maintaintype && app.maintaintype.renderWithParams(page, params, data);
+						app.maintainTypeView && app.maintainTypeView.renderWithParams(page, params, data);
 						console.log(data);
 					});
 					break;
@@ -63,7 +62,7 @@
 						console.log(validdata);
 					});
 					app.getSourceType().done(function (data) {
-						app.maintaintype && app.maintaintype.renderWithParams(page, params, data);
+						app.maintainTypeView && app.maintainTypeView.renderWithParams(page, params, data);
 						console.log(data);
 					});
 					break;

@@ -19,14 +19,14 @@
 
 			app.getSourceType().done(function (data) {
 				console.log(data);
-				app.maintain && app.maintain.render(data);
+				app.maintainView && app.maintainView.render(data);
 
 			});
 		},
 
 		updownload: function () {
 			console.log("Source:updownload");
-			app.updownload && app.updownload.render();
+			app.updownloadView && app.updownloadView.render();
 		},
 
 		reports: function () {
@@ -35,7 +35,7 @@
 		},
 		maintenance: function () {
 			console.log("Source:maintenance");
-			app.maintenance && app.maintenance.render();
+			app.maintenanceView && app.maintenanceView.render();
 		},
 
 		maintaintype: function (page, params) {

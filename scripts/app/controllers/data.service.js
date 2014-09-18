@@ -18,15 +18,12 @@
 		}, query);
 		return response;
 	}
-
 	app.retrieveTierDetailsMobile = function() {
 		var response = $.ajax({
 			url: 'http://10.40.170.134/JSon/retrieveTierDetailsMobile.json',
 		}, query);
 		return response;
 	}
-
-
 	app.retrieveTierDetailsSlam = function() {
 		var response = $.ajax({
 			url: 'http://10.40.170.134/JSon/retrieveTierDetailsSlam.json',
@@ -47,7 +44,6 @@
 		}, query);
 		return response;
 	}
-
 	app.validateTier = function() {
 		var response = $.ajax({
 			url: 'http://10.40.170.134/JSon/validateTier.json',

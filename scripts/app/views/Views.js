@@ -3,7 +3,7 @@
 
 	var MaintainView = Backbone.View.extend({
 		el: "#maintain",
-	
+
 		render: function (data) {
 			var select = $(".select_type");
 			select.empty();
@@ -131,11 +131,11 @@
 
 
 
-	app.maintain = new MaintainView();
-	app.updownload = new UpDownloadView();
-	app.reports = new ReportsView();
-	app.maintenance = new MaintenanceView();
-	app.maintaintype = new MaintainTypeView();
+	app.maintainView = new MaintainView();
+	app.updownloadView = new UpDownloadView();
+	app.reportsView = new ReportsView();
+	app.maintenanceView = new MaintenanceView();
+	app.maintainTypeView = new MaintainTypeView();
 
 
 

@@ -1,14 +1,5 @@
-﻿QUnit.test("Data Service", function (assert) {
-	assert.ok(app !== undefined, "Passed! app !== undefined");
-	assert.ok(app !== null, "Passed!app !== null ");
-
-	var sourceType = app.getSourceType();
-	assert.ok(sourceType !== {}, "Passed! Source types not an empty object");
-	assert.ok(sourceType.response !== null, "Passed! Source types not a null");
-});
-
+﻿QUnit.module("Group E");
 QUnit.asyncTest("Ajax test: one second later!", function (assert) {
-
 	setTimeout(function () {	
 	app.getSourceType().done(function(data) {
 		assert.ok(data !== null, "Ajax getSourceType passed");
@@ -48,6 +39,7 @@ QUnit.asyncTest("Ajax test: one second later!", function (assert) {
 			assert.ok(data === null, "Ajax retrieveTierDetailsMobile failed");
 			QUnit.start();
 		});
+
 	}, 1000);
 
 
@@ -92,8 +84,6 @@ QUnit.asyncTest("Ajax test: one second later!", function (assert) {
 		});
 	}, 1000);
 
-
-
 	setTimeout(function () {
 		app.validateTier().done(function (data) {
 			assert.ok(data !== null, "Ajax validateTier passed");
@@ -107,3 +97,4 @@ QUnit.asyncTest("Ajax test: one second later!", function (assert) {
 		});
 	}, 1000);
 });
+
