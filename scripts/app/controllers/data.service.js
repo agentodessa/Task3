@@ -50,4 +50,11 @@
 		}, query);
 		return response;
 	}
+
+	app.retrieveAllocationsByTier = function () {
+		var response = $.ajax({
+			url: 'http://10.40.170.134/JSon/retrieveAllocationsByTier.json',
+		}, query);
+		return response;
+	}
 })(app);

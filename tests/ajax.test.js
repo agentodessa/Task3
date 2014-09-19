@@ -70,6 +70,17 @@ QUnit.asyncTest("Ajax test: one second later!", function(assert) {
 		assert.ok(data === null, "Ajax validateTier failed");
 	});
 
+
+
+
+	app.retrieveAllocationsByTier().done(function (data) {
+		assert.ok(data !== null, "Ajax retrieveAllocationsByTier passed");
+	});
+
+	app.retrieveAllocationsByTier().error(function (data) {
+		assert.ok(data === null, "Ajax retrieveAllocationsByTier failed");
+	});
+
 	setTimeout(function() {
 		QUnit.start();
 	});

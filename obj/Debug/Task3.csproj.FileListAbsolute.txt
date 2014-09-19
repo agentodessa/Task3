@@ -4,3 +4,13 @@ D:\Projects\Task3\Task3\bin\Task3.pdb
 D:\Projects\Task3\Task3\obj\Debug\Task3.dll
 D:\Projects\Task3\Task3\obj\Debug\Task3.pdb
 D:\Projects\Task3\Task3\obj\Debug\Task3.csprojResolveAssemblyReference.cache
+D:\Repos\Task3\bin\Task3.dll.config
+D:\Repos\Task3\bin\Task3.dll
+D:\Repos\Task3\bin\Task3.pdb
+D:\Repos\Task3\bin\DotNetBuild.Core.dll
+D:\Repos\Task3\bin\DotNetBuild.Runner.dll
+D:\Repos\Task3\bin\DotNetBuild.Runner.ScriptCs.dll
+D:\Repos\Task3\bin\ScriptCs.Contracts.dll
+D:\Repos\Task3\obj\Debug\Task3.csprojResolveAssemblyReference.cache
+D:\Repos\Task3\obj\Debug\Task3.dll
+D:\Repos\Task3\obj\Debug\Task3.pdb

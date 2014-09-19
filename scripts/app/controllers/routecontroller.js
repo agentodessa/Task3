@@ -1,49 +1,48 @@
 ﻿var app = app || {};
 
 
-(function () {
+(function() {
 
 	var ComissioinRouter = Backbone.Router.extend({
 		routes:
 		{
 			"": "maintain",
-			"maintain": "maintain",  //#maintain
-			"maintain/:page": "maintaintype",  //#maintain/type
-			"updownload" :"updownload",//#updownload
-			"reports"	 :"reports",	//#reports
-			"maintenance": "maintenance",//#maintenance
+			"maintain": "maintain", //#maintain
+			"maintain/:page": "maintaintype", //#maintain/type
+			"updownload": "updownload", //#updownload
+			"reports": "reports", //#reports
+			"maintenance": "maintenance", //#maintenance
 			"*unknownurl:page": "error",
 		},
-		maintain: function () {
+		maintain: function() {
 			console.log("Source:maintain");
 
-			app.getSourceType().done(function (data) {
+			app.getSourceType().done(function(data) {
 				console.log(data);
 				app.maintainView && app.maintainView.render(data);
 
 			});
 		},
-
-		updownload: function () {
+		updownload: function() {
 			console.log("Source:updownload");
 			app.updownloadView && app.updownloadView.render();
 		},
 
-		reports: function () {
+		reports: function() {
 			console.log("Source:reports");
-			app.reports && app.reports.render();
+			app.reportsView && app.reportsView.render();
 		},
-		maintenance: function () {
+		maintenance: function() {
 			console.log("Source:maintenance");
 			app.maintenanceView && app.maintenanceView.render();
 		},
 
-		maintaintype: function (page, params) {
+		maintaintype: function(page, params) {
 			console.log("Source:maintain " + " type " + page);
-			//call view with or without params 
-			app.callView(page,params);
+			//retrieveDataFromServer 
+			app.retrieveDataFromServer(page, params);
 		},
-		error: function () {
+		error: function() {
 			console.log("ERROR 404");
 		},
 	});

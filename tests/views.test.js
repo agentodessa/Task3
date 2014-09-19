@@ -14,13 +14,13 @@ QUnit.test("Views", function (assert) {
 	assert.ok(app.maintainTypeView.render !== undefined, "Passed! app.maintainTypeView.render  !== undefined");
 	assert.ok(app.maintainTypeView.show !== undefined, "Passed! app.maintainTypeView.show !== undefined");
 	assert.ok(app.maintainTypeView.hide !== undefined, "Passed! app.maintainTypeView.hide !== undefined");
-	assert.ok(app.maintainTypeView.renderWithParams !== undefined, "Passed! app.maintainTypeView.renderWithParams !== undefined");
+	assert.ok(app.maintainTypeView.renderForm !== undefined, "Passed! app.maintainTypeView.renderForm !== undefined");
 
 	assert.ok(app.maintainTypeView.render !== null, "Passed! app.maintainTypeView.render  !== null");
 	assert.ok(app.maintainTypeView.el !== null, "Passed! app.maintainTypeView.el !== null");
 	assert.ok(app.maintainTypeView.show !== null, "Passed! app.maintainTypeView.show !== null");
 	assert.ok(app.maintainTypeView.hide !== null, "Passed! app.maintainTypeView.hide !== null");
-	assert.ok(app.maintainTypeView.renderWithParams !== null, "Passed! app.maintainTypeView.renderWithParams !== null");
+	assert.ok(app.maintainTypeView.renderForm !== null, "Passed! app.maintainTypeView.renderForm !== null");
 
 	//updownloadView
 	assert.ok(app.updownloadView.render !== undefined, "Passed! app.updownloadView.render  !== undefined");

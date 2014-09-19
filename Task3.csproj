@@ -37,8 +37,12 @@
     <Content Include="scripts\common\underscore\underscore.js" />
     <Content Include="css\style.css" />
     <Content Include="tabs.html" />
+    <Content Include="tests\common.module.test.js" />
+    <Content Include="tests\data.service.test.js" />
     <Content Include="tests\index.html" />
-    <Content Include="tests\tests.js" />
+    <Content Include="tests\route.controller.test.js" />
+    <Content Include="tests\ajax.test.js" />
+    <Content Include="tests\views.test.js" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
