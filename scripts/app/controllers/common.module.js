@@ -13,6 +13,7 @@
 			switch (page) {
 				case 'All sources':
 					app.validateTier().done(function (validdata) {
+						console.log(data);
 						console.log(validdata);
 						app.maintainTypeView && app.maintainTypeView.render(page, params, data, validdata);
 					});
@@ -20,6 +21,7 @@
 					break;
 				case 'Mobile':
 					app.validateTierMobile().done(function (validdata) {
+						console.log(data);
 						console.log(validdata);
 						app.maintainTypeView && app.maintainTypeView.render(page, params, data, validdata);
 					});
@@ -27,6 +29,7 @@
 					break;
 				case 'SLAM':
 					app.validateTierSlam().done(function (validdata) {
+						console.log(data);
 						console.log(validdata);
 						app.maintainTypeView && app.maintainTypeView.render(page, params, data, validdata);
 					});
@@ -63,6 +66,8 @@
 				default:
 					console.log("Error");
 			}
+
+			console.log(12312313123);
 		}
 	}
 
