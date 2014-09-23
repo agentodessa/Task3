@@ -111,7 +111,8 @@
 	vertical-align: bottom;
 }
 .nav_link {
-	display: block;
+	display: table-cell;
+	vertical-align: middle;
 	width: 150px;
 	height: 45px;
 	text-decoration: none;
@@ -243,7 +244,6 @@
 	width: 328px;
 	padding: 0;
 	list-style: none;
-	border-bottom: 1px solid #bbbbbb;
 }
 
 .tabs_list li {
@@ -252,12 +252,14 @@
 }
 
 .tab_link {
-	display: block;
+	display: table-cell;
+	vertical-align: middle;
 	width: 78px;
 	height: 40px;
 	text-decoration: none;
 	text-align: center;
 	color: #1190cf;
+	border-bottom: 1px solid #bbbbbb;
 
 }
 .tab_link:focus {
@@ -278,12 +280,13 @@
 
 .customer_table,.order_table {
 	width: 100%;
+	margin-bottom: 20px;
 }
 
 .customer_table tr,.order_table tr {
 	border-bottom: 1px solid #bbbbbb;
 }
-.customer_table td,.order_table {
+.customer_table td,.order_table td {
 	width: 50%;
 	height: 36px;
 }
@@ -338,14 +341,20 @@
 } 
 
 .wrap_accordion_content {
-	padding: 1.2em;
+	position: relative;
+	padding: 1em 0 3em 0;
 	margin: 0 40px;
+	box-sizing: content-box;
+
 }
 
 
 
 .element_table {
-	margin-bottom: 56px;
+	width: 100%;
+	height: auto;
+	margin-bottom: 10px;
+	background-color: white;
 }
 .element_table td {
 	padding: 5px;
@@ -354,27 +363,59 @@
 	vertical-align: middle;
 }
 
+.element_table tr:nth-child(2n+2),
+.element_table tr:nth-child(2n+2) {
+	background-color: #f9f9f9;
+}
+.element_table tr:hover {
+	cursor: pointer;
+}
+
 .table_headers {
 	font-weight: bold;
 }
 
 
 .delete_btn {
+	position: absolute;
+	left: 0;
+	bottom: auto;
 	width: 134px;
 	height: 34px;
 	background-color: #d14741;
 	border: 1px solid #c44741;
 	border-radius: 5px;
 	color: white;
+	cursor: default;
 }
 
 .add_btn {
+	position: absolute;
+	right: 0;
+	bottom: auto;
 	width: 134px;
 	height: 34px;
 	background-color: #f3f3f3;
 	border: 1px solid #bbbbbb;
 	border-radius: 5px;
+	cursor: default;
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*Updownload*/

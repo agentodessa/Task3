@@ -12,6 +12,12 @@
 			//if params !=null
 			switch (page) {
 				case 'All sources':
+					app.retrieveAllocationsByTier().done(function (accordionData) {
+						console.log(accordionData);
+					});
+					app.retrieveTierDetails().done(function (validdata) {
+						console.log(validdata);
+					});
 					app.validateTier().done(function (validdata) {
 						console.log(data);
 						console.log(validdata);
@@ -20,19 +26,33 @@
 
 					break;
 				case 'Mobile':
+					app.retrieveAllocationsByTier().done(function (accordionData) {
+						console.log(accordionData);
+					});
+					app.retrieveTierDetails().done(function (validdata) {
+						console.log(validdata);
+					});
 					app.validateTierMobile().done(function (validdata) {
 						console.log(data);
 						console.log(validdata);
 						app.maintainTypeView && app.maintainTypeView.render(page, params, data, validdata);
 					});
+
 				
 					break;
 				case 'SLAM':
+					app.retrieveAllocationsByTier().done(function (accordionData) {
+						console.log(accordionData);
+					});
+					app.retrieveTierDetails().done(function (validdata) {
+						console.log(validdata);
+					});
 					app.validateTierSlam().done(function (validdata) {
 						console.log(data);
 						console.log(validdata);
 						app.maintainTypeView && app.maintainTypeView.render(page, params, data, validdata);
 					});
+
 					
 					break;
 				default:
@@ -40,8 +60,10 @@
 			}
 
 		} else {
+			console.log("Params null");
 			switch (page) {
 				//if params null
+	
 				case 'All sources':
 					app.retrieveTierDetails().done(function (validdata) {
 						console.log(validdata);
@@ -54,7 +76,6 @@
 						console.log(validdata);
 						app.maintainTypeView && app.maintainTypeView.render(page, params, data, validdata);
 					});
-
 					break;
 				case 'SLAM':
 					app.retrieveTierDetailsSlam().done(function (validdata) {
@@ -67,7 +88,6 @@
 					console.log("Error");
 			}
 
-			console.log(12312313123);
 		}
 	}
 

@@ -51,6 +51,15 @@ $(document).ready(function () {
 			window.location.hash = "";
 		}
 	});
+
+	$(".element_table tr").click(function() {
+		console.log($(this).children());
+	});
+
+
+
+
+
 	$(".close_icon").click(function() {
 		$(".download_file_info").fadeOut();
 	});

@@ -24,6 +24,7 @@
 			$(".main_page .hided").hide();
 			$("#accordion").hide();
 		}
+
 	});
 
 
@@ -94,10 +95,21 @@
 		renderTabsTables: function(validdata) {
 			var customerTable = $(".customer_table");
 			var orderTable = $(".order_table");
+			customerTable.empty();
+			orderTable.empty();
+			var tempCustomerTable = validdata.response.tiers[0].displayDetails;
+			var tempOrderTable = validdata.response.tiers[2].displayDetails;
 
-			var tempCustomerTable = validdata.response;
+			for (var key in tempCustomerTable) {
+				customerTable.append("<tr><td>" + key + "</td>" +"<td>"+ tempCustomerTable [key]+"</td>"+ "</tr>");
+			}
+			for (var key in tempOrderTable) {
+				orderTable.append("<tr><td>" + key + "</td>" + "<td>" + tempOrderTable[key] + "</td>" + "</tr>");
+			}
 
 
+			//console.log(tempCustomerTable);
+			//console.log(tempOrderTable);
 		},
 
 
