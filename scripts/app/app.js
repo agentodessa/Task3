@@ -69,6 +69,10 @@ $(document).ready(function () {
 	});
 
 
+	$(".close_form_icon").click(function() {
+		
+	});
+
 	$(".upload").change(function () {
 		var filename = $(this).val();
 		$(".uploadFile").attr('placeholder',filename);
