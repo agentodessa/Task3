@@ -67,6 +67,24 @@ $(document).ready(function () {
 
 	});
 
+	//Delete Row
+	$(".delete_btn").click(function () {
+
+		if ($(".ui-accordion-content-active .element_table tr")
+			.find("input:checked").parent().parent().index() != 0) {
+			$(".ui-accordion-content-active .element_table tr")
+			.find("input:checked").parent().parent().remove();
+		}
+	});
+
+	$(".add_btn").click(function() {
+		
+	});
+
+
+
+
+	//UpdonloadPage
 
 	$(".close_icon").click(function() {
 		$(".download_file_info").fadeOut();

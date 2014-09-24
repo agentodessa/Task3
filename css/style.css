@@ -5,12 +5,6 @@
 	cursor: default;
 }
 
-
-
-
-
-
-
 /**/
 .hided {
 
@@ -38,6 +32,7 @@
 	top:0;
 	right:auto;
 	display:inline-block;
+	vertical-align: top
 }
 
 .input_name {
@@ -88,7 +83,7 @@
 
 /*Login page*/
 .main_page {
-	display: block;
+	display: block;/*switch*/
 	position: relative;
 }
 
@@ -523,4 +518,11 @@
 /*Edit Form*/
 .wrap_edit {
 	display: none;
+	background-color: black;
+}
+
+.edit_form {
+	width: 50%;
+	height: auto;
+	background-color: white;
 }

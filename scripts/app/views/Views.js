@@ -31,18 +31,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 	//maintainType
 	var MaintainTypeView = Backbone.View.extend({
 		el: "#maintain",
@@ -57,7 +45,6 @@
 			this.renderTabsTables(validdata);
 		},
 
-
 		renderWithoutParams: function (page, params, data) {
 			this.hide();
 			this.show();
@@ -67,13 +54,7 @@
 
 		},
 
-
-
 		renderForm: function(params) {
-
-
-
-
 
 			//enter data 
 			if (params) {
@@ -95,10 +76,6 @@
 
 
 
-
-
-
-
 		renderTabsTables: function(validdata) {
 			var customerTable = $(".customer_table");
 			var orderTable = $(".order_table");
@@ -114,26 +91,13 @@
 				orderTable.append("<tr><td>" + key + "</td>" + "<td>" + tempOrderTable[key] + "</td>" + "</tr>");
 			}
 
-
 			//console.log(tempCustomerTable);
 			//console.log(tempOrderTable);
 		},
 
-
-
-
-
-
-
 		renderTables: function(data) {
 
-
 		},
-
-
-
-
-
 
 		renderSelect: function(page, data) {
 			var select = $(".select_type");
@@ -144,10 +108,6 @@
 			}
 			$(".select_type").val(page).attr("selected", "selected");
 		},
-
-
-
-
 
 		//common methods
 		setInputValueHelper: function(inputClassName, params) {
@@ -161,10 +121,6 @@
 		},
 
 
-
-
-
-
 		//show
 		show: function() {
 			$(this.el).show();
@@ -175,18 +131,6 @@
 			$(".main_page .hided").hide();
 		}
 	});
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
