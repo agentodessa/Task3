@@ -125,9 +125,9 @@
 
 @media (max-width:1024px) {
 	.nav_link {
-	display: block;
 	width: 100px;
 	height: 35px;
+	font-size: 11px;
 	}
 }
 
@@ -513,4 +513,14 @@
 	border-radius: 5px;
 	color: white;
 	cursor: default;
+}
+
+
+
+
+/*Forms*/
+
+/*Edit Form*/
+.wrap_edit {
+	display: none;
 }

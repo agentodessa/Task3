@@ -20,7 +20,6 @@
 			app.getSourceType().done(function(data) {
 				console.log(data);
 				app.maintainView && app.maintainView.render(data);
-
 			});
 		},
 		updownload: function() {
@@ -37,7 +36,8 @@
 			app.maintenanceView && app.maintenanceView.render();
 		},
 
-		maintaintype: function(page, params) {
+		maintaintype: function (page, params) {
+			console.log(params);
 			console.log("Source:maintain " + " type " + page);
 			//retrieveDataFromServer 
 			app.retrieveDataFromServer(page, params);

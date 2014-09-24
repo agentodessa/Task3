@@ -58,7 +58,14 @@
 		},
 
 
+		renderWithoutParams: function (page, params, data) {
+			this.hide();
+			this.show();
+			$(".search_type").text(page + " search using:");
+			this.renderForm(params);
+			this.renderSelect(page, data);
 
+		},
 
 
 
