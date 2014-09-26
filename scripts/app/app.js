@@ -15,6 +15,9 @@ $(document).ready(function () {
 		//$(".main_page").css('display', 'block');
 	});
 
+	//Spinner
+
+
 	//Form submit
 		$(".search_form").submit(function(event) {
 			event.preventDefault();

@@ -3,9 +3,6 @@
 (function(app){
 	app.retrieveDataFromServer = function (page, params) {
 
-
-
-
 		if (params) {
 			app.getSourceType().done(function (data) {
 				switch (page) {
@@ -34,6 +31,7 @@
 							console.log(data);
 							console.log(validdata);
 							app.maintainTypeView && app.maintainTypeView.render(page, params, data, validdata);
+
 						});
 						break;
 					case 'SLAM':
@@ -47,6 +45,7 @@
 							console.log(data);
 							console.log(validdata);
 							app.maintainTypeView && app.maintainTypeView.render(page, params, data, validdata);
+
 						});
 						break;
 					default:
@@ -61,14 +60,17 @@
 				switch (page) {
 					case 'All sources':
 						app.maintainTypeView && app.maintainTypeView.renderWithoutParams(page, params, data);
+
 						break;
 
 					case 'Mobile':
 						app.maintainTypeView && app.maintainTypeView.renderWithoutParams(page, params, data);
+
 						break;
 					case 'SLAM':
 
 						app.maintainTypeView && app.maintainTypeView.renderWithoutParams(page, params, data);
+
 						break;
 					default:
 						console.log("Error");

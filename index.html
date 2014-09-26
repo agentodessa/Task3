@@ -16,17 +16,22 @@
 </head>
 <body>
 	<!-- Login page -->
-		<div class="container">
-			<img class="logo" src="images/Logo.png" />
-			<div class="input_elements">
-				<input type="text" class="input_name" value="Enter username" />
-				<button class="login_btn">Login</button>
-				<div class="splitter">
-					<div class="line"></div> Or <div class="line"></div>
-				</div>
-				<button class="login_anonymous">Login Anonymously</button>
+	<div class="container">
+		<img class="logo" src="images/Logo.png" />
+		<div class="input_elements">
+			<input type="text" class="input_name" value="Enter username" />
+			<button class="login_btn">Login</button>
+			<div class="splitter">
+				<div class="line"></div> Or <div class="line"></div>
 			</div>
+			<button class="login_anonymous">Login Anonymously</button>
 		</div>
+	</div>
+	<div class="wrap_spinner">
+		<div class="spinner">
+
+		</div>
+	</div>
 	<!-- Navigation -->
 	<div class="main_page">
 		<nav class="page_navigate">
@@ -37,6 +42,7 @@
 				<li><a class="nav_link" href="#maintenance">Maintenance</a></li>
 			</ul>
 		</nav>
+
 		<div class="select">
 			<label class="label_for_type">Choose source type:</label>
 			<select class="select_type">
@@ -463,7 +469,10 @@
 
 
 	<script type="text/javascript" src="scripts/common/jquery/jquery-ui.js"></script>
+	<script type="text/javascript" src="scripts/common/jquery/jquery.rotate.js"></script>
+	<script src="scripts/app/controllers/rotate.spin.controller.js"></script>
 	<script src="scripts/app/views/views.js"></script>
+
 	<script src="scripts/app/controllers/data.service.js"></script>
 	<script src="scripts/app/controllers/common.module.js"></script>
 	<script src="scripts/app/controllers/routecontroller.js"></script>
