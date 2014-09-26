@@ -17,11 +17,13 @@
 		},
 		show: function() {
 			$(".select").show();
-			$(this.el).show();
+			$(".main_page .active").css("display", "none");
+			$(".main_page .active").removeClass("active");
+			$(this.el).addClass("active");
+			$(".main_page .active").css("display", "block");
 		},
 		hide: function() {
 			$(".wrap_form_and_tabs").hide();
-			$(".main_page .hided").hide();
 			$("#accordion").hide();
 		}
 
@@ -123,7 +125,10 @@
 
 		//show
 		show: function() {
-			$(this.el).show();
+			$(".main_page .active").css("display", "none");
+			$(".main_page .active").removeClass("active");
+			$(this.el).addClass("active");
+			$(".main_page .active").css("display", "block");
 			$(".select").show();
 			$(".wrap_form_and_tabs").show();
 		},
@@ -151,13 +156,18 @@
 			this.show();
 		},
 		show: function() {
-			$(this.el).show();
+			$(".main_page .active").css("display", "none");
+			$(".main_page .active").removeClass("active");
+			$(this.el).addClass("active");
+			$(".main_page .active").css("display", "block");
 		},
 		hide: function() {
 			$(".main_page .hided").hide();
 			$(".select").hide();
 		}
 	});
+
+	//Reports
 	var ReportsView = Backbone.View.extend({
 		el: "#reports",
 
@@ -168,13 +178,18 @@
 
 		},
 		show: function() {
-			$(this.el).show();
+			$(".main_page .active").css("display", "none");
+			$(".main_page .active").removeClass("active");
+			$(this.el).addClass("active");
+			$(".main_page .active").css("display", "block");
 		},
 		hide: function() {
 			$(".main_page .hided").hide();
 			$(".select").hide();
 		}
 	});
+
+	//Maintenance
 	var MaintenanceView = Backbone.View.extend({
 		el: "#maintenance",
 
@@ -184,8 +199,11 @@
 			this.hide();
 			this.show();
 		},
-		show: function() {
-			$(this.el).show();
+		show: function () {
+			$(".main_page .active").css("display","none");
+			$(".main_page .active").removeClass("active");
+			$(this.el).addClass("active");
+			$(".main_page .active").css("display", "block");
 		},
 		hide: function() {
 			$(".main_page .hided").hide();

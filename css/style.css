@@ -6,12 +6,6 @@
 }
 
 /**/
-.hided {
-
-}
-/*.active {
-	display: block;
-}*/
 
 .container {
 	display: none;/*switch to block*/
@@ -168,7 +162,9 @@
 }
 
 /*Form*/
-
+#maintain {
+	display: none;
+}
 .wrap_form_and_tabs {
 	position: relative;
 	margin: 5px 40px 20px 40px;
@@ -437,7 +433,9 @@
 
 /*Updownload*/
 
-
+#updownload {
+	display: none;
+}
 .download_file_info {
 	display: none;
 	position: relative;
@@ -547,4 +545,13 @@
 	width: 50%;
 	height: auto;
 	background-color: white;
+}
+
+
+#reports {
+	display: none;
+}
+
+#maintenance {
+	display: none;
 }
