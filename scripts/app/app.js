@@ -50,15 +50,14 @@ $(document).ready(function () {
 		if ($(".select_type option:selected").text() != "Choose type") {
 			var page = location.hash.split('#')[1] || 'maintain';
 			var newpage = page.split('/')[0] || '';
+			$(".search_type").text($(".select_type option:selected").text() + " search using:");
 			var pageType = $(".select_type option:selected").text();
 			var url = newpage + "/" + pageType;
 
 			if (window.location.hash != url) {
 				window.location.hash = url;
 			} 
-		} else {
-			window.location.hash = "";
-		}
+		} 
 	});
 
 
