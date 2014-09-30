@@ -16,15 +16,14 @@
 		},
 		maintain: function() {
 			console.log("Source:maintain");
-			//GetSourcesViewModel();
 			//app.getSourceType().done(function(data) {
 			//	console.log(data);
 			//	app.maintainView && app.maintainView.render(data);
 			//});
+			app.viewModel.showMaintain=true;
 		},
 		updownload: function() {
 			console.log("Source:updownload");
-			app.showPage.showUpDownload = ko.observable(true);
 		},
 
 		reports: function() {
