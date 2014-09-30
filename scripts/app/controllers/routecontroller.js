@@ -16,15 +16,15 @@
 		},
 		maintain: function() {
 			console.log("Source:maintain");
-			//GetSourcesViewModel();
-			//app.getSourceType().done(function(data) {
-			//	console.log(data);
-			//	app.maintainView && app.maintainView.render(data);
-			//});
+
+			app.getSourceType().done(function(data) {
+				console.log(data);
+				app.maintainView && app.maintainView.render(data);
+			});
 		},
 		updownload: function() {
 			console.log("Source:updownload");
-			app.showPage.showUpDownload = ko.observable(true);
+			app.updownloadView && app.updownloadView.render();
 		},
 
 		reports: function() {
@@ -37,7 +37,9 @@
 		},
 
 		maintaintype: function (page, params) {
+			console.log(params);
 			console.log("Source:maintain " + " type " + page);
+			//retrieveDataFromServer 
 			app.retrieveDataFromServer(page, params);
 		},
 		error: function() {
