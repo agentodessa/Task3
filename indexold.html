@@ -1,7 +1,8 @@
 ﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+
+<html lang="en">
 <head>
-	<meta charset="utf-8" />
+    <meta charset="utf-8" />
 	<title>CDW</title>
 	<link rel="shortcut icon" href="/images/Logo.png" type="image/x-icon">
 	<link rel="stylesheet" href="css/normalize.css" type="text/css" />
@@ -10,54 +11,53 @@
 	<script src="scripts/common/underscore/underscore.js"></script>
 	<script src="scripts/common/backbone/backbone.js"></script>
 	<script src="scripts/common/backbone/backbone.queryparams.js"></script>
-	<script src="scripts/common/knockout/knockout-3.2.0.js"></script>
 	<meta name="viewport" content="minimum-scale=1, width=device-width, maximum-scale=1, user-scalable=no" />
 	<script src="//localhost:3000/livereload.js"></script>
 </head>
-	<body>
-		<!-- Login page -->
-		<div class="container">
-			<img class="logo" src="images/Logo.png" />
-			<div class="input_elements">
-				<input type="text" class="input_name" value="Enter username" />
-				<button class="login_btn">Login</button>
-				<div class="splitter">
-					<div class="line"></div> Or <div class="line"></div>
-				</div>
-				<button class="login_anonymous">Login Anonymously</button>
+<body>
+	<!-- Login page -->
+	<div class="container">
+		<img class="logo" src="images/Logo.png" />
+		<div class="input_elements">
+			<input type="text" class="input_name" value="Enter username" />
+			<button class="login_btn">Login</button>
+			<div class="splitter">
+				<div class="line"></div> Or <div class="line"></div>
 			</div>
+			<button class="login_anonymous">Login Anonymously</button>
 		</div>
-		<div class="wrap_spinner">
-			<div class="spinner">
+	</div>
+	<div class="wrap_spinner">
+		<div class="spinner">
 
-			</div>
 		</div>
-		<!-- Navigation -->
-		<div class="main_page">
-			<nav class="page_navigate">
-				<ul class="nav_list">
-					<li><a class="nav_link" href="#maintain">Maintain commissions</a></li>
-					<li><a class="nav_link" href="#updownload">Upload download</a></li>
-					<li><a class="nav_link" href="#reports">Reports</a></li>
-					<li><a class="nav_link" href="#maintenance">Maintenance</a></li>
-				</ul>
-			</nav>
+	</div>
+	<!-- Navigation -->
+	<div class="main_page">
+		<nav class="page_navigate">
+			<ul class="nav_list">
+				<li><a class="nav_link" href="#maintain">Maintain commissions</a></li>
+				<li><a class="nav_link" href="#updownload">Upload download</a></li>
+				<li><a class="nav_link" href="#reports">Reports</a></li>
+				<li><a class="nav_link" href="#maintenance">Maintenance</a></li>
+			</ul>
+		</nav>
 
-			<div class="select">
-				<label class="label_for_type">Choose source type:</label>
-				<select class="select_type">
-					<option>Choose type</option>
-				</select>
-			</div>
+
 
 			<!-- First Page -->
-			<div id="maintain" class="hided">
-
+			<div id="maintain" >
+				<div class="select">
+					<label class="label_for_type">Choose source type:</label>
+					<select class="select_type">
+						<option>Choose type</option>
+					</select>
+				</div>
 				<div class="wrap_form_and_tabs">
 					<div class="wrap_form">
 						<label class="search_type"></label>
 						<form class="search_form">
-
+							
 							<div class="row">
 								<label class="form_label" for="first">Castomer Number:</label>
 								<input name="val0" type="text" pattern="^\d+$" id="first" class="input_search0">
@@ -79,9 +79,9 @@
 								<label class="form_label"></label>
 								<button class="search_btn" type="submit">Search</button>
 							</div>
-
+							
 						</form>
-
+						
 					</div>
 					<div class="wrap_tabs">
 						<nav id="tabs_small" class="tabs_div">
@@ -92,10 +92,14 @@
 								<li><a href="#fragment-device" class="tab_link">Device</a></li>
 							</ul>
 							<div id="fragment-customer">
-								<table class="customer_table"></table>
+								<table class="customer_table">
+									
+								</table>
 							</div>
 							<div id="fragment-order">
-								<table class="order_table"></table>
+								<table class="order_table">
+
+								</table>
 							</div>
 
 							<div id="fragment-line">
@@ -380,60 +384,60 @@
 
 				</div>
 			</div>
-			<div id="updownload" class="hided">
-				<div class="wrapper_updownload">
-					<div class="download_file_info">
-						<div><p class="success_text"><strong>Well done!</strong> File successfully uploaded.</p></div>
-						<i class="close_icon"></i>
-					</div>
-					<p>
-						to true, the panel will fade out with the default duration and the default easing.
-						Number: The panel will fade out with the specified duration and the default easing.
-						String: The panel will be hidden using the specified effect. The value can either be the name of a built-in jQuery animation method, such as "slideUp", or the name of a jQuery UI effect, such as "fold". In either case the effect will be used with the default duration and the default easing.
-						Object: If the value is an object, then effect, delay, duration, and easing properties may be provided. If the effect property contains the name of a jQuery method, then that method will be used; otherwise it is assumed to be the name of a jQuery UI effect. When using a jQuery UI effect that supports additional settings, you may include those settings in the object and they will be passed to the effect. If duration or easing is omitted, then the default values will be used. If effect is omitted, then "fadeOut" will be used. If delay is omitted, then no delay is used.
-					</p>
-
-					<div class="uploader">
-						<div class="wrap_upload">
-							<span>File:</span>
-							<input type="text" class="uploadFile" placeholder="Choose file" disabled="disabled" />
-							<div class="fileUpload">
-								<button class="btn_find">Find</button>
-								<input type="file" class="upload" />
-							</div>
-						</div>
-						<div class="uploaded_files">
-
-						</div>
-					</div>
-					<div class="wrap_confirm_btn">
-						<button class="confirm_upload_btn">Upload</button>
-					</div>
+		<div id="updownload">
+			<div class="wrapper_updownload">
+				<div class="download_file_info">
+					<div><p class="success_text"><strong>Well done!</strong> File successfully uploaded.</p></div>
+					<i class="close_icon"></i>
 				</div>
-
-
-			</div>
-
-			<div id="reports" class="hided">
-				<p>
-					e hidden using the specified effect. The value can either be the name of a built-in jQuery animation method, such as "slideUp", or the name of a jQuery UI effect, such as "fold". In either case the effect will be used with the default duration and the default easing.
-					Object: If the value is an object, then effect, delay, duration, and easing properties may be provided. If the effect property contains the name of a jQuery method, then that method will be used; otherwise it is assumed to be the name of a jQuery UI effect. When using a jQuery UI effect that supports additional settings, you may include those settings in the object and they will be passed to the effect. If duration or easing is omitted, then the default values will be used. If effect is omitted, then "fadeOut" will be used. If delay is omitted, then no delay is used.
-				</p>
-			</div>
-			<div id="maintenance" class="hided">
 				<p>
 					to true, the panel will fade out with the default duration and the default easing.
 					Number: The panel will fade out with the specified duration and the default easing.
-					String: The panel . The value can either be the name of a built-in jQuery animation method, such as "slideUp", or the name of a jQuery UI effect, such as "fold". In either case the effect will be used with the default duration and the default easing.
+					String: The panel will be hidden using the specified effect. The value can either be the name of a built-in jQuery animation method, such as "slideUp", or the name of a jQuery UI effect, such as "fold". In either case the effect will be used with the default duration and the default easing.
 					Object: If the value is an object, then effect, delay, duration, and easing properties may be provided. If the effect property contains the name of a jQuery method, then that method will be used; otherwise it is assumed to be the name of a jQuery UI effect. When using a jQuery UI effect that supports additional settings, you may include those settings in the object and they will be passed to the effect. If duration or easing is omitted, then the default values will be used. If effect is omitted, then "fadeOut" will be used. If delay is omitted, then no delay is used.
 				</p>
-			</div>
-			<div class="wrap_edit">
-				<div class="edit">
-					<div class="form_name">
-						<p>Edit Employee</p>
-						<i class="close_form_icon"></i>
+
+				<div class="uploader">
+					<div class="wrap_upload">
+						<span>File:</span>
+						<input type="text" class="uploadFile" placeholder="Choose file" disabled="disabled" />
+						<div class="fileUpload">
+							<button class="btn_find">Find</button>
+							<input type="file" class="upload" />
+						</div>
 					</div>
+					<div class="uploaded_files">
+
+					</div>
+				</div>
+				<div class="wrap_confirm_btn">
+					<button class="confirm_upload_btn">Upload</button>
+				</div>
+			</div>
+
+			
+		</div>
+			
+		<div id="reports" >
+			<p>
+				e hidden using the specified effect. The value can either be the name of a built-in jQuery animation method, such as "slideUp", or the name of a jQuery UI effect, such as "fold". In either case the effect will be used with the default duration and the default easing.
+				Object: If the value is an object, then effect, delay, duration, and easing properties may be provided. If the effect property contains the name of a jQuery method, then that method will be used; otherwise it is assumed to be the name of a jQuery UI effect. When using a jQuery UI effect that supports additional settings, you may include those settings in the object and they will be passed to the effect. If duration or easing is omitted, then the default values will be used. If effect is omitted, then "fadeOut" will be used. If delay is omitted, then no delay is used.
+			</p>
+		</div>
+		<div id="maintenance">
+			<p>
+				to true, the panel will fade out with the default duration and the default easing.
+				Number: The panel will fade out with the specified duration and the default easing.
+				String: The panel . The value can either be the name of a built-in jQuery animation method, such as "slideUp", or the name of a jQuery UI effect, such as "fold". In either case the effect will be used with the default duration and the default easing.
+				Object: If the value is an object, then effect, delay, duration, and easing properties may be provided. If the effect property contains the name of a jQuery method, then that method will be used; otherwise it is assumed to be the name of a jQuery UI effect. When using a jQuery UI effect that supports additional settings, you may include those settings in the object and they will be passed to the effect. If duration or easing is omitted, then the default values will be used. If effect is omitted, then "fadeOut" will be used. If delay is omitted, then no delay is used.
+			</p>
+		</div>
+		<div class="wrap_edit">
+			<div class="edit">
+				<div class="form_name">
+					<p>Edit Employee</p>
+					<i class="close_form_icon"></i>
+				</div>
 					<form class="edit_form">
 						<div class="row">
 							<label class="form_label" for="first">Castomer Number:</label>
@@ -458,40 +462,22 @@
 						</div>
 					</form>
 
-				</div>
 			</div>
-
 		</div>
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
+	</div>
 
 
-		<!--<a href="#maintain">maintain </a>
-		<a href="#maintain/All sources">All sources</a>
-		<a href="##maintain/Mobile">Mobile</a>
-		<a href="#maintain/SLAM">SLAM</a>
-		<a href="#updownload">updownload</a>
-		<a href="#reports">reports</a>
-		<a href="#maintenance">maintenance</a>-->
-		<script type="text/javascript" src="scripts/common/jquery/jquery-ui.js"></script>
-		<script type="text/javascript" src="scripts/common/jquery/jquery.rotate.js"></script>
-		<script src="scripts/app/controllers/rotate.spin.controller.js"></script>
-		<!--<script src="scripts/app/views/views.js"></script>-->
+	<script type="text/javascript" src="scripts/common/jquery/jquery-ui.js"></script>
+	<script type="text/javascript" src="scripts/common/jquery/jquery.rotate.js"></script>
+	<script src="scripts/app/controllers/rotate.spin.controller.js"></script>
+	<script src="scripts/app/views/views.js"></script>
 
-		<script src="scripts/app/controllers/data.service.js"></script>
-		<script src="scripts/app/controllers/common.module.js"></script>
-		<script src="scripts/app/controllers/routecontroller.js"></script>
+	<script src="scripts/app/controllers/data.service.js"></script>
+	<script src="scripts/app/controllers/common.module.js"></script>
+	<script src="scripts/app/controllers/routecontroller.js"></script>
 
-		<script src="scripts/app/app.js"></script>
+	<script src="scripts/app/app.js"></script>
 
-	</body>
+</body>
 </html>
