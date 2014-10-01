@@ -9,14 +9,14 @@ function GetSourcesViewModel() {
 			}
 		});
 
-		self.showMaintain = ko.observable(true);
-		self.showUpDownload = ko.observable(false);
-		self.showReports = ko.observable(false);
-		self.showMaintenance = ko.observable(false);
+
+	showMaintain = ko.observable(true);
+	showUpdownload = ko.observable(false);
+	showReports = ko.observable(false);
+	showMaintenance = ko.observable(false);
 
 
 };
 
-app.viewModel = new GetSourcesViewModel();
-
+	app.viewModel = new GetSourcesViewModel();
 ko.applyBindings(app.viewModel);

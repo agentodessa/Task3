@@ -151,6 +151,7 @@
 	opacity: 0.85;
 }
 
+
 .spinner {
 	position: absolute;
 	top: 50%;
@@ -163,7 +164,7 @@
 
 /*Form*/
 #maintain {
-	display: none;
+	display: block;
 }
 .wrap_form_and_tabs {
 	position: relative;
@@ -423,18 +424,10 @@
 
 
 
-
-
-
-
-
-
-
-
 /*Updownload*/
 
 #updownload {
-	display: none;
+	display: block;
 }
 .download_file_info {
 	display: none;
@@ -538,20 +531,27 @@
 /*Edit Form*/
 .wrap_edit {
 	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	opacity: 0.85;
 	background-color: black;
 }
 
 .edit_form {
-	width: 50%;
-	height: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: 0 auto;
 	background-color: white;
 }
 
 
 #reports {
-	display: none;
+	display: block;
 }
 
 #maintenance {
-	display: none;
+	display: block;
 }

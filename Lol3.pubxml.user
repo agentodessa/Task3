@@ -9,8 +9,20 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <_PublishTargetUrl>D:\IIS_Sites\Task3</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
+    <File Include="bin/DotNetBuild.Core.dll">
+      <publishTime>09/17/2014 15:18:14</publishTime>
+    </File>
+    <File Include="bin/DotNetBuild.Runner.dll">
+      <publishTime>09/17/2014 15:18:14</publishTime>
+    </File>
+    <File Include="bin/DotNetBuild.Runner.ScriptCs.dll">
+      <publishTime>09/17/2014 15:18:15</publishTime>
+    </File>
+    <File Include="bin/ScriptCs.Contracts.dll">
+      <publishTime>09/17/2014 15:18:14</publishTime>
+    </File>
     <File Include="bin/Task3.dll">
-      <publishTime>09/04/2014 12:54:31</publishTime>
+      <publishTime>10/01/2014 12:20:35</publishTime>
     </File>
     <File Include="css/jquery-ui.css">
       <publishTime>08/21/2014 11:42:47</publishTime>
@@ -19,13 +31,22 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/03/2014 17:32:51</publishTime>
     </File>
     <File Include="css/style.css">
-      <publishTime>08/29/2014 18:36:42</publishTime>
+      <publishTime>09/26/2014 15:55:55</publishTime>
+    </File>
+    <File Include="images/close_btn.png">
+      <publishTime>09/10/2014 10:17:12</publishTime>
     </File>
     <File Include="images/Logo.png">
       <publishTime>08/18/2014 14:28:55</publishTime>
     </File>
+    <File Include="images/spinner.png">
+      <publishTime>09/25/2014 15:34:43</publishTime>
+    </File>
     <File Include="index.html">
-      <publishTime>04/09/2014 13:02:46</publishTime>
+      <publishTime>10/01/2014 12:07:06</publishTime>
+    </File>
+    <File Include="indexold.html">
+      <publishTime>09/30/2014 12:42:00</publishTime>
     </File>
     <File Include="jquery-ui.css">
       <publishTime>08/21/2014 11:42:47</publishTime>
@@ -52,7 +73,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/02/2014 16:37:20</publishTime>
     </File>
     <File Include="JSon/lookupVendor.json">
-      <publishTime>09/02/2014 16:37:20</publishTime>
+      <publishTime>09/23/2014 13:03:29</publishTime>
     </File>
     <File Include="JSon/lookupVendorPagination.json">
       <publishTime>09/02/2014 16:37:20</publishTime>
@@ -61,7 +82,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/02/2014 16:37:20</publishTime>
     </File>
     <File Include="JSon/retrieveAvailableSources.json">
-      <publishTime>09/02/2014 16:37:20</publishTime>
+      <publishTime>09/30/2014 12:41:59</publishTime>
     </File>
     <File Include="JSon/retrieveNestedAllocationsByTier.json">
       <publishTime>09/02/2014 16:37:20</publishTime>
@@ -82,7 +103,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/02/2014 16:37:20</publishTime>
     </File>
     <File Include="JSon/validateTierMobile.json">
-      <publishTime>09/02/2014 16:37:20</publishTime>
+      <publishTime>09/15/2014 17:10:47</publishTime>
     </File>
     <File Include="JSon/validateTierMobileError.json">
       <publishTime>09/02/2014 16:37:20</publishTime>
@@ -93,17 +114,32 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="normalize.css">
       <publishTime>08/18/2014 14:30:29</publishTime>
     </File>
+    <File Include="npmPlaceholder.txt">
+      <publishTime>09/17/2014 15:07:08</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>09/17/2014 15:18:18</publishTime>
+    </File>
     <File Include="scripts/app.js">
       <publishTime>08/21/2014 15:46:55</publishTime>
     </File>
     <File Include="scripts/app/app.js">
-      <publishTime>09/03/2014 19:23:59</publishTime>
+      <publishTime>09/30/2014 12:41:59</publishTime>
+    </File>
+    <File Include="scripts/app/controllers/common.module.js">
+      <publishTime>09/30/2014 12:40:41</publishTime>
     </File>
     <File Include="scripts/app/controllers/data.service.js">
-      <publishTime>09/04/2014 13:12:23</publishTime>
+      <publishTime>09/25/2014 17:10:53</publishTime>
+    </File>
+    <File Include="scripts/app/controllers/rotate.spin.controller.js">
+      <publishTime>09/25/2014 17:55:55</publishTime>
     </File>
     <File Include="scripts/app/controllers/routecontroller.js">
-      <publishTime>04/09/2014 13:05:03</publishTime>
+      <publishTime>10/01/2014 12:17:38</publishTime>
+    </File>
+    <File Include="scripts/app/controllers/validate.controller.js">
+      <publishTime>09/26/2014 12:03:32</publishTime>
     </File>
     <File Include="scripts/app/controllers/viewcontroller.js">
       <publishTime>08/29/2014 19:07:28</publishTime>
@@ -111,17 +147,23 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="scripts/app/routers/router.js">
       <publishTime>08/28/2014 18:14:27</publishTime>
     </File>
+    <File Include="scripts/app/ViewModels/GetSourcesViewModel.js">
+      <publishTime>10/01/2014 12:07:27</publishTime>
+    </File>
+    <File Include="scripts/app/ViewModels/ShowPageViewModel.js">
+      <publishTime>09/30/2014 18:30:29</publishTime>
+    </File>
     <File Include="scripts/app/views/ViewController.js">
       <publishTime>08/27/2014 10:55:34</publishTime>
     </File>
     <File Include="scripts/app/views/Views.js">
-      <publishTime>09/03/2014 16:28:31</publishTime>
+      <publishTime>09/26/2014 16:27:55</publishTime>
     </File>
     <File Include="scripts/backbone/backbone.js">
       <publishTime>08/26/2014 18:43:49</publishTime>
     </File>
     <File Include="scripts/common/backbone/backbone.js">
-      <publishTime>02/09/2014 17:26:56</publishTime>
+      <publishTime>09/02/2014 17:26:56</publishTime>
     </File>
     <File Include="scripts/common/backbone/backbone.queryparams.js">
       <publishTime>09/02/2014 15:44:42</publishTime>
@@ -131,6 +173,15 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="scripts/common/jquery/jquery-ui.js">
       <publishTime>08/21/2014 11:52:03</publishTime>
+    </File>
+    <File Include="scripts/common/jquery/jquery.rotate.js">
+      <publishTime>09/25/2014 15:48:01</publishTime>
+    </File>
+    <File Include="scripts/common/knockout/knockout-3.2.0.debug.js">
+      <publishTime>09/30/2014 12:41:59</publishTime>
+    </File>
+    <File Include="scripts/common/knockout/knockout-3.2.0.js">
+      <publishTime>09/25/2014 12:31:01</publishTime>
     </File>
     <File Include="scripts/common/underscore/underscore.js">
       <publishTime>08/26/2014 15:11:33</publishTime>
@@ -216,8 +267,26 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="tabs.html">
       <publishTime>08/21/2014 12:08:35</publishTime>
     </File>
+    <File Include="tests/ajax.test.js">
+      <publishTime>09/19/2014 14:45:20</publishTime>
+    </File>
+    <File Include="tests/common.module.test.js">
+      <publishTime>09/19/2014 13:00:15</publishTime>
+    </File>
+    <File Include="tests/data.service.test.js">
+      <publishTime>09/18/2014 16:40:05</publishTime>
+    </File>
+    <File Include="tests/index.html">
+      <publishTime>09/18/2014 16:37:37</publishTime>
+    </File>
+    <File Include="tests/route.controller.test.js">
+      <publishTime>09/18/2014 16:30:30</publishTime>
+    </File>
+    <File Include="tests/views.test.js">
+      <publishTime>09/19/2014 10:48:42</publishTime>
+    </File>
     <File Include="web.config">
-      <publishTime>09/04/2014 12:54:32</publishTime>
+      <publishTime>10/01/2014 12:20:36</publishTime>
     </File>
   </ItemGroup>
 </Project>

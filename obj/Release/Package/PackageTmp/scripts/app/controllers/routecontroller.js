@@ -1,44 +1,45 @@
 ﻿var app = app || {};
 
 
-(function () {
+(function() {
 
 	var ComissioinRouter = Backbone.Router.extend({
 		routes:
 		{
 			"": "maintain",
-			"maintain": "maintain",  //#maintain
-			"maintain/:page": "maintaintype",  //#maintain/type
-			"updownload" :"updownload",//#updownload
-			"reports"	 :"reports",	//#reports
-			"maintenance": "maintenance",//#maintenance
-
+			"maintain": "maintain", //#maintain
+			"maintain/:page": "maintaintype", //#maintain/type
+			"updownload": "updownload", //#updownload
+			"reports": "reports", //#reports
+			"maintenance": "maintenance", //#maintenance
 			"*unknownurl:page": "error",
 		},
-		maintain: function () {
+		maintain: function() {
 			console.log("Source:maintain");
-			app.maintain.render();
+			//app.getSourceType().done(function(data) {
+			//	console.log(data);
+			//	app.maintainView && app.maintainView.render(data);
+			//});
+			app.viewModel.showMaintain = ko.observable(true);
+		},
+		updownload: function() {
+			console.log("Source:updownload");
 		},
 
-		updownload: function () {
-			console.log("Source:updownload");
-			app.updownload.render();
-		},
-		reports: function () {
+		reports: function() {
 			console.log("Source:reports");
-			app.reports.render();
+			app.reportsView && app.reportsView.render();
 		},
-		maintenance: function () {
+		maintenance: function() {
 			console.log("Source:maintenance");
-			app.maintenance.render();
+			app.maintenanceView && app.maintenanceView.render();
 		},
+
 		maintaintype: function (page, params) {
 			console.log("Source:maintain " + " type " + page);
-			console.log(params);
-			app.maintaintype.render(page, params);
-			app.getSourceType();
+			app.retrieveDataFromServer(page, params);
 		},
-		error: function () {
+		error: function() {
 			console.log("ERROR 404");
 		},
 	});

@@ -16,26 +16,25 @@
 		},
 		maintain: function() {
 			console.log("Source:maintain");
-			//app.getSourceType().done(function(data) {
-			//	console.log(data);
-			//	app.maintainView && app.maintainView.render(data);
-			//});
-			app.viewModel.showMaintain=true;
+			console.info(app.viewModel.showMaintain());
+			app.viewModel.showMaintain(true);
+			console.info(app.viewModel.showMaintain());
 		},
 		updownload: function() {
 			console.log("Source:updownload");
+			app.viewModel.showUpdownload(true);
 		},
 
 		reports: function() {
 			console.log("Source:reports");
-			app.reportsView && app.reportsView.render();
+			app.viewModel.showReports(true);
 		},
 		maintenance: function() {
 			console.log("Source:maintenance");
-			app.maintenanceView && app.maintenanceView.render();
+			app.viewModel.showMaintenance(true);
 		},
 
-		maintaintype: function (page, params) {
+		maintaintype: function(page, params) {
 			console.log("Source:maintain " + " type " + page);
 			app.retrieveDataFromServer(page, params);
 		},
