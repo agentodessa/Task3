@@ -1,6 +1,6 @@
 ﻿var app = app || {};
 
-var AppSourcesViewModel= function() {
+var AppViewModel= function() {
 	console.info("Call Knockout");
 	var self = this;
 	self.showMaintain = ko.observable(false);
@@ -15,9 +15,17 @@ var AppSourcesViewModel= function() {
 			self.dataArray.push(data.response.sources[key]);
 		}
 	});
+	self.showPage= function(navigation) {
+
+	}
+
+	self.maintainType = {
+		showForm: ko.observable(false),
+		showTabs: ko.observable(false),
+		showAccordion: ko.observable(false)
+}
 
 };
 
-app.viewModel = new AppSourcesViewModel();
+app.viewModel = new AppViewModel();
 ko.applyBindings(app.viewModel);
-

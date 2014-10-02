@@ -52,8 +52,8 @@
 					<label class="label_for_type">Choose source type:</label>
 					<select class="select_type" data-bind="options: dataArray "></select>
 				</div>
-				<div class="wrap_form_and_tabs">
-					<div class="wrap_form">
+				<div class="wrap_form_and_tabs" data-bind="visible: maintainType.showForm">
+					<div class="wrap_form" data-bind="visible: maintainType.showForm">
 						<label class="search_type"></label>
 						<form class="search_form">
 
@@ -82,7 +82,7 @@
 						</form>
 
 					</div>
-					<div class="wrap_tabs">
+					<div class="wrap_tabs" data-bind="visible:maintainType.showTabs">
 						<nav id="tabs_small" class="tabs_div">
 							<ul class="tabs_list">
 								<li><a href="#fragment-customer" class="tab_link">Customer</a></li>
@@ -113,7 +113,7 @@
 
 
 				<!-- Accordion implementation -->
-				<div id="accordion" class="accordion">
+				<div id="accordion" class="accordion" data-bind="visible: maintainType.showAccordion">
 
 					<h3 class="ui-accordion-header">Customer #123456 Joe Doe (Doe Inc) Chicago IL</h3>
 					<div class="ui-accordion-content">

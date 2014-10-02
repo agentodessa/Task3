@@ -4,6 +4,7 @@ $(document).ready(function () {
     $(".input_name").click(function() {
         $(this).val("");
     });
+
 	$(".login_btn").click(function () {
 
 	});
@@ -16,7 +17,6 @@ $(document).ready(function () {
 	});
 
 	//Spinner
-
 
 	//Form submit
 		$(".search_form").submit(function(event) {
@@ -39,7 +39,6 @@ $(document).ready(function () {
 		var len = $(".search_form input").length;
 		var paramString = "", i = 0;
 		for (i = 0; i < len; ++i) {
-
 				paramString += $(".search_form input")[i].name + "=" + $(".input_search" + [i]).val() + "&";
 		}
 		return paramString.substring(0, paramString.length - 1);;
@@ -47,11 +46,12 @@ $(document).ready(function () {
 
 	//Select search type
 	$(".select_type").change(function () {
-		if ($(".select_type option:selected").text() != "Choose type") {
+		var selectedOption = $(".select_type option:selected");
+		if (selectedOption.text() != "Choose type") {
 			var page = location.hash.split('#')[1] || 'maintain';
 			var newpage = page.split('/')[0] || '';
-			$(".search_type").text($(".select_type option:selected").text() + " search using:");
-			var pageType = $(".select_type option:selected").text();
+			$(".search_type").text(selectedOption.text() + " search using:");
+			var pageType = selectedOption.text();
 			var url = newpage + "/" + pageType;
 
 			if (window.location.hash != url) {
@@ -66,16 +66,14 @@ $(document).ready(function () {
 		if ($(this).index() != 0) {
 			console.log($(this).children());
 		}
-
 	});
 
 	//Delete Row
 	$(".delete_btn").click(function () {
-
-		if ($(".ui-accordion-content-active .element_table tr")
-			.find("input:checked").parent().parent().index() != 0) {
-			$(".ui-accordion-content-active .element_table tr")
-			.find("input:checked").parent().parent().remove();
+		var checkedInputs = $(".ui-accordion-content-active .element_table tr")
+							.find("input:checked").parent().parent();
+		if (checkedInputs.index() != 0) {
+			checkedInputs.remove();
 		}
 	});
 
