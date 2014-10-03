@@ -18,6 +18,7 @@ $(document).ready(function () {
 
 	//Spinner
 
+
 	//Form submit
 		$(".search_form").submit(function(event) {
 			event.preventDefault();
@@ -80,9 +81,6 @@ $(document).ready(function () {
 	$(".add_btn").click(function() {
 		
 	});
-
-
-
 
 	//UpdonloadPage
 

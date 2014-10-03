@@ -16,6 +16,8 @@
 		
 		<script src="//localhost:3000/livereload.js"></script>
 		
+
+
 	</head>
 	<body>
 		<!-- Login page -->
@@ -35,15 +37,17 @@
 
 			</div>
 		</div>
-		<!-- Navigation -->
+
+		
+		<!--Template for page tab--> 
+		<script type="text/html" id="pageTab-template">
+			<li><a class="nav_link" data-bind="attr: { href: link}, text: name"></a></li>
+		</script>
+
 		<div class="main_page">
+			<!-- Navigation -->
 			<nav class="page_navigate">
-				<ul class="nav_list">
-					<li><a class="nav_link" href="#maintain">Maintain commissions</a></li>
-					<li><a class="nav_link" href="#updownload">Upload download</a></li>
-					<li><a class="nav_link" href="#reports">Reports</a></li>
-					<li><a class="nav_link" href="#maintenance">Maintenance</a></li>
-				</ul>
+				<ul class="nav_list" data-bind="template: { name: 'pageTab-template', foreach: pageTabsArray}"></ul>
 			</nav>
 
 			<!-- First Page -->
@@ -52,36 +56,78 @@
 					<label class="label_for_type">Choose source type:</label>
 					<select class="select_type" data-bind="options: dataArray "></select>
 				</div>
+				
+				
+				
+
+				
+				
+				<!--Template for form row-->
+				<script type="text/html" id="formRow-template">
+					<div class="row">
+						<label class="form_label" data-bind="attr:{ for:tierLevel },text:descriptiveName"></label>
+						<input name="val0" pattern="^\d+$" id="first"
+							   data-bind="tag:inputFieldType,attr:{type: type,id:tierLevel,class:tierLevel}">
+					</div>
+				</script>	
+				<!-- --------------------------------------------------------- -->
+				
+				<!-- Implementation -->
+
 				<div class="wrap_form_and_tabs" data-bind="visible: maintainType.showForm">
 					<div class="wrap_form" data-bind="visible: maintainType.showForm">
 						<label class="search_type"></label>
-						<form class="search_form">
-
-							<div class="row">
-								<label class="form_label" for="first">Castomer Number:</label>
-								<input name="val0" type="text" pattern="^\d+$" id="first" class="input_search0">
-
-							</div>
-							<div class="row">
-								<label class="form_label" for="second">Order Number:</label>
-								<input name="val1" type="text" pattern="^\d+$" id="second" class="input_search1">
-							</div>
-							<div class="row">
-								<label class="form_label" for="third">Line Number:</label>
-								<input name="val2" type="text" pattern="^\d+$" id="third" class="input_search2">
-							</div>
-							<div class="row">
-								<label class="form_label" for="fourth">Device Number:</label>
-								<input name="val3" type="text" pattern="^\d+$" id="fourth" class="input_search3">
-							</div>
-							<div class="row">
-								<label class="form_label"></label>
-								<button class="search_btn" type="submit">Search</button>
-							</div>
-
+						<form class="search_form" data-bind="template:{name:'formRow-template',foreach: formFieldsArray }">
+							
+							
+							
+						
 						</form>
 
 					</div>
+					
+					<!-- --------------------------------------------------------- -->
+					
+					
+					
+					
+					
+					
+					
+					
+
+					
+					<form class="search_form" data-bind="visible:false">
+
+
+						<div class="row">
+							<label class="form_label" for="first">Castomer Number:</label>
+							<input name="val0" type="text" pattern="^\d+$" id="first" class="input_search0">
+
+						</div>
+						<div class="row">
+							<label class="form_label" for="second">Order Number:</label>
+							<input name="val1" type="text" pattern="^\d+$" id="second" class="input_search1">
+						</div>
+						<div class="row">
+							<label class="form_label" for="third">Line Number:</label>
+							<input name="val2" type="text" pattern="^\d+$" id="third" class="input_search2">
+						</div>
+						<div class="row">
+							<label class="form_label" for="fourth">Device Number:</label>
+							<input name="val3" type="text" pattern="^\d+$" id="fourth" class="input_search3">
+						</div>
+						<div class="row">
+							<label class="form_label"></label>
+							<button class="search_btn" type="submit">Search</button>
+						</div>
+
+					</form>
+					
+					
+
+					
+
 					<div class="wrap_tabs" data-bind="visible:maintainType.showTabs">
 						<nav id="tabs_small" class="tabs_div">
 							<ul class="tabs_list">
@@ -110,6 +156,31 @@
 						</nav>
 					</div>
 				</div>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
 
 
 				<!-- Accordion implementation -->
@@ -473,13 +544,13 @@
 			<a href="#maintenance">maintenance</a>-->
 		
 		
-		
-		
-		
 		<script src="scripts/app/controllers/data.service.js"></script>
 		<script src="scripts/app/ViewModels/AppViewModel.js"></script>
 		<script src="scripts/app/controllers/common.module.js"></script>
 		<script src="scripts/app/controllers/routecontroller.js"></script>
+		
+		
+
 
 
 
