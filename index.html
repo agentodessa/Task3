@@ -62,12 +62,21 @@
 
 				
 				
-				<!--Template for form row-->
-				<script type="text/html" id="formRow-template">
+				<!--Template for InputForm row-->
+				<script type="text/html" id="formInputRow-template">
 					<div class="row">
-						<label class="form_label" data-bind="attr:{ for:tierLevel },text:descriptiveName"></label>
+						<label class="form_label" data-bind="attr:{ for:tierLevel }, text:descriptiveName"></label>
 						<input name="val0" pattern="^\d+$" id="first"
-							   data-bind="tag:inputFieldType,attr:{type: type,id:tierLevel,class:tierLevel}">
+						       data-bind="attr:{type: type, id:tierLevel, class:tierLevel}">
+					</div>
+				</script>	
+				
+				
+				<!--Template for SelectForm row-->
+				<script type="text/html" id="formSelectRow-template">
+					<div class="row">
+						<label class="form_label" data-bind="attr:{ for:tierLevel }, text:descriptiveName"></label>
+						<select class="select_type" data-bind="options: dataArray "></select>
 					</div>
 				</script>	
 				<!-- --------------------------------------------------------- -->
@@ -77,11 +86,8 @@
 				<div class="wrap_form_and_tabs" data-bind="visible: maintainType.showForm">
 					<div class="wrap_form" data-bind="visible: maintainType.showForm">
 						<label class="search_type"></label>
-						<form class="search_form" data-bind="template:{name:'formRow-template',foreach: formFieldsArray }">
+						<form class="search_form" data-bind="template:{ name:'formInputRow-template',foreach: formFieldsArray }">
 							
-							
-							
-						
 						</form>
 
 					</div>
@@ -97,7 +103,7 @@
 					
 
 					
-					<form class="search_form" data-bind="visible:false">
+					<!--<form class="search_form" data-bind="visible:false">
 
 
 						<div class="row">
@@ -122,22 +128,33 @@
 							<button class="search_btn" type="submit">Search</button>
 						</div>
 
-					</form>
+					</form>-->
 					
+					
+					<!-- Table template -->
+					
+					<script type="text/html" id="formTab-template">
+						<li><a class="tab_link" data-bind="attr: { href: link}, text: name"></a></li>
+					</script>
 					
 
-					
-
-					<div class="wrap_tabs" data-bind="visible:maintainType.showTabs">
+					<div class="wrap_tabs" data-bind=" visible:1">
 						<nav id="tabs_small" class="tabs_div">
-							<ul class="tabs_list">
-								<li><a href="#fragment-customer" class="tab_link">Customer</a></li>
-								<li><a href="#fragment-order" class="tab_link">Order</a></li>
-								<li><a href="#fragment-line" class="tab_link">Line</a></li>
-								<li><a href="#fragment-device" class="tab_link">Device</a></li>
+							<ul class="tabs_list" data-bind=" template:{name:'formTab-template',foreach:formTabsArray}">
 							</ul>
-							<div id="fragment-customer">
-								<table class="customer_table"></table>
+							
+							<!-- Table tabs template -->
+							
+							
+							<script type="text/html" id="table-template">
+								<tr><td data-bind="data: $data"></td><td data-bind="text: $parent[$data]"></td></tr>
+							</script>	
+							
+							
+
+
+							<div id="fragment-customer" >
+								<table class="customer_table" data-bind=" template:{name:'table-template', foreach: formTabsArrayContent}"></table>
 							</div>
 							<div id="fragment-order">
 								<table class="order_table"></table>

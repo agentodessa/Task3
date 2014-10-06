@@ -59,6 +59,11 @@
 				console.log(data);
 				switch (page) {
 					case 'All sources':
+						app.retrieveTierDetails.done(function (retrievedData) {
+
+							//pushs
+							app.viewModel.formFieldsArray = retrievedData;
+						});
 						app.maintainTypeView && app.maintainTypeView.renderWithoutParams(page, params, data);
 
 						break;

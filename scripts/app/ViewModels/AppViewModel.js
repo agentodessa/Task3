@@ -26,55 +26,89 @@ var AppViewModel= function() {
 		}
 	});
 
-	self.formFieldsArray = ko.observableArray([{
-		"tierLevel": "TIER_1",
-		"type": "ALPHANUMERIC",
-		"shortName": "Customer",
-		"name": "CUSTOMER",
-		"descriptiveName": "Customer Number",
-		"hoverHelpInfo": "This is a customers account number.  Such as '1123676'.",
-		"disabledUntilPreviousTierSet": false,
-		"allowSearchSeriesGroup": false,
-		"allowStartEndDate": true,
-		"inputFieldType": "INPUT"
-	},
-	{
-		"tierLevel": "TIER_2",
-		"type": "ALPHANUMERIC",
-		"shortName": "Order",
-		"name": "ORDER_NUM",
-		"descriptiveName": "Order Number",
-		"hoverHelpInfo": "This is an order number.",
-		"disabledUntilPreviousTierSet": false,
-		"allowSearchSeriesGroup": false,
-		"allowStartEndDate": false,
-		"inputFieldType": "INPUT"
-	},
-	{
-		"tierLevel": "TIER_3",
-		"type": "NUMERIC",
-		"shortName": "Line",
-		"name": "ORDER_LINE_NUM",
-		"descriptiveName": "Order Line Number",
-		"hoverHelpInfo": "This is an order line number (1-999).",
-		"disabledUntilPreviousTierSet": true,
-		"allowSearchSeriesGroup": false,
-		"allowStartEndDate": false,
-		"inputFieldType": "INPUT"
-	},
-	{
-		"tierLevel": "TIER_4",
-		"type": "NUMERIC",
-		"shortName": "Device",
-		"name": "MOBILE_DEVICE_NUMBER",
-		"descriptiveName": "Mobile Device Number",
-		"hoverHelpInfo": "This is a mobile device number (1-999).",
-		"disabledUntilPreviousTierSet": true,
-		"allowSearchSeriesGroup": false,
-		"allowStartEndDate": false,
-		"inputFieldType": "INPUT"
-	}
+	self.formFieldsArray = ko.observableArray([
+	//	{
+	//	"tierLevel": "TIER_1",
+	//	"type": "ALPHANUMERIC",
+	//	"shortName": "Customer",
+	//	"name": "CUSTOMER",
+	//	"descriptiveName": "Customer Number",
+	//	"hoverHelpInfo": "This is a customers account number.  Such as '1123676'.",
+	//	"disabledUntilPreviousTierSet": false,
+	//	"allowSearchSeriesGroup": false,
+	//	"allowStartEndDate": true,
+	//	"inputFieldType": "INPUT"
+	//},
+	//{
+	//	"tierLevel": "TIER_2",
+	//	"type": "ALPHANUMERIC",
+	//	"shortName": "Order",
+	//	"name": "ORDER_NUM",
+	//	"descriptiveName": "Order Number",
+	//	"hoverHelpInfo": "This is an order number.",
+	//	"disabledUntilPreviousTierSet": false,
+	//	"allowSearchSeriesGroup": false,
+	//	"allowStartEndDate": false,
+	//	"inputFieldType": "INPUT"
+	//},
+	//{
+	//	"tierLevel": "TIER_3",
+	//	"type": "NUMERIC",
+	//	"shortName": "Line",
+	//	"name": "ORDER_LINE_NUM",
+	//	"descriptiveName": "Order Line Number",
+	//	"hoverHelpInfo": "This is an order line number (1-999).",
+	//	"disabledUntilPreviousTierSet": true,
+	//	"allowSearchSeriesGroup": false,
+	//	"allowStartEndDate": false,
+	//	"inputFieldType": "INPUT"
+	//},
+	//{
+	//	"tierLevel": "TIER_4",
+	//	"type": "NUMERIC",
+	//	"shortName": "Device",
+	//	"name": "MOBILE_DEVICE_NUMBER",
+	//	"descriptiveName": "Mobile Device Number",
+	//	"hoverHelpInfo": "This is a mobile device number (1-999).",
+	//	"disabledUntilPreviousTierSet": true,
+	//	"allowSearchSeriesGroup": false,
+	//	"allowStartEndDate": false,
+	//	"inputFieldType": "INPUT"
+	//}
 
+	]);
+
+	self.fillForm = ko.computed({
+		read: function () {
+
+		},
+		write: function () {
+
+		},
+		owner: self
+	});
+
+	self.formTabsArray = ko.observableArray([
+	{ name: "Customer", link: "#fragment-customer" },
+	{ name: "Order", link: "#fragment-order" },
+	{ name: "Line", link: "#fragment-line" },
+	{ name: "Device", link: "#fragment-device" }]);
+
+	self.formTabsArrayContent = ko.observableArray([
+	
+			{
+				"Order:": "1000",
+				"Comp:": "01",
+				"Date:": "",
+				"Status:": "X",
+				"Type:": "M",
+				"Value:": "45.8",
+				"Quote:": "7777",
+				"Active:": "Y",
+				"SM1:": "X123",
+				"SM2:": "X456",
+				"Team:": ""
+			}
 	]);
 
 

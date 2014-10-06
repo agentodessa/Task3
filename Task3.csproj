@@ -32,6 +32,7 @@
     <Content Include="scripts\app\controllers\routecontroller.js" />
     <Content Include="scripts\app\controllers\validate.controller.js" />
     <Content Include="scripts\app\ViewModels\AppViewModel.js" />
+    <Content Include="scripts\app\ViewModels\PageTabsViewModel.js" />
     <Content Include="scripts\app\ViewModels\ShowPageViewModel.js" />
     <Content Include="scripts\app\views\views.js" />
     <Content Include="scripts\common\backbone\backbone.js" />
@@ -125,6 +126,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
+      <UserProperties JSon_2retrieveTierDetailsSlam_1json__JSONSchema="D:\Repos\Task3\JSon\retrieveTierDetailsMobile.json" />
     </VisualStudio>
   </ProjectExtensions>
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
