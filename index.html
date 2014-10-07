@@ -66,8 +66,7 @@
 				<script type="text/html" id="formInputRow-template">
 					<div class="row">
 						<label class="form_label" data-bind="attr:{ for:tierLevel }, text:descriptiveName"></label>
-						<input name="val0" pattern="^\d+$" id="first"
-						       data-bind="attr:{type: type, id:tierLevel, class:tierLevel}">
+						<input name="val0" pattern="^\d+$" id="first" data-bind="attr:{type: type, id:tierLevel, class:tierLevel}">
 					</div>
 				</script>	
 				
@@ -76,7 +75,7 @@
 				<script type="text/html" id="formSelectRow-template">
 					<div class="row">
 						<label class="form_label" data-bind="attr:{ for:tierLevel }, text:descriptiveName"></label>
-						<select class="select_type" data-bind="options: dataArray "></select>
+						<select class="" data-bind=""></select>
 					</div>
 				</script>	
 				<!-- --------------------------------------------------------- -->
@@ -86,8 +85,17 @@
 				<div class="wrap_form_and_tabs" data-bind="visible: maintainType.showForm">
 					<div class="wrap_form" data-bind="visible: maintainType.showForm">
 						<label class="search_type"></label>
-						<form class="search_form" data-bind="template:{ name:'formInputRow-template',foreach: formFieldsArray }">
-							
+						<form class="search_form" >
+							<div data-bind="template:{ name:'formInputRow-template',foreach: inputsArray }">
+
+							</div>
+							<div data-bind="template:{ name:'formSelectRow-template',foreach: selectsArray }">
+
+							</div>
+							<div class="row">
+								<label class="form_label"></label>
+								<button class="search_btn" type="submit">Search</button>
+							</div>
 						</form>
 
 					</div>
@@ -149,12 +157,10 @@
 							<script type="text/html" id="table-template">
 								<tr><td data-bind="data: $data"></td><td data-bind="text: $parent[$data]"></td></tr>
 							</script>	
-							
-							
 
-
+							<!-- ----------------------------------------- -->
 							<div id="fragment-customer" >
-								<table class="customer_table" data-bind=" template:{name:'table-template', foreach: formTabsArrayContent}"></table>
+								<table class="customer_table" data-bind=" template:{ name:'table-template', foreach: formTabsArrayContent}"></table>
 							</div>
 							<div id="fragment-order">
 								<table class="order_table"></table>

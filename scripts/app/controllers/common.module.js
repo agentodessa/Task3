@@ -16,7 +16,8 @@
 						app.validateTier().done(function (validdata) {
 							console.log(data);
 							console.log(validdata);
-							app.maintainTypeView && app.maintainTypeView.render(page, params, data, validdata);
+							app.viewModel.fillTabsContent(validdata);
+							//app.maintainTypeView && app.maintainTypeView.render(page, params, data, validdata);
 						});
 
 						break;
@@ -30,7 +31,8 @@
 						app.validateTierMobile().done(function (validdata) {
 							console.log(data);
 							console.log(validdata);
-							app.maintainTypeView && app.maintainTypeView.render(page, params, data, validdata);
+							app.viewModel.fillTabsContent(validdata);
+							//app.maintainTypeView && app.maintainTypeView.render(page, params, data, validdata);
 
 						});
 						break;
@@ -44,7 +46,9 @@
 						app.validateTierSlam().done(function (validdata) {
 							console.log(data);
 							console.log(validdata);
-							app.maintainTypeView && app.maintainTypeView.render(page, params, data, validdata);
+
+							app.viewModel.fillTabsContent(validdata);
+							//app.maintainTypeView && app.maintainTypeView.render(page, params, data, validdata);
 
 						});
 						break;
@@ -59,21 +63,30 @@
 				console.log(data);
 				switch (page) {
 					case 'All sources':
-						app.retrieveTierDetails.done(function (retrievedData) {
+						app.retrieveTierDetails().done(function (retrievedData) {
 
-							//pushs
-							app.viewModel.formFieldsArray = retrievedData;
+							
+							app.viewModel.fillControlsArrays(retrievedData);
 						});
 						app.maintainTypeView && app.maintainTypeView.renderWithoutParams(page, params, data);
 
 						break;
 
 					case 'Mobile':
+						app.retrieveTierDetailsMobile().done(function (retrievedData) {
+
+							
+							app.viewModel.fillControlsArrays(retrievedData);
+						});
 						app.maintainTypeView && app.maintainTypeView.renderWithoutParams(page, params, data);
 
 						break;
 					case 'SLAM':
+						app.retrieveTierDetailsSlam().done(function (retrievedData) {
 
+							
+							app.viewModel.fillControlsArrays(retrievedData);
+						});
 						app.maintainTypeView && app.maintainTypeView.renderWithoutParams(page, params, data);
 
 						break;

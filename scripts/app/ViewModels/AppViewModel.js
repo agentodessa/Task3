@@ -2,21 +2,17 @@
 
 var AppViewModel= function() {
 	var self = this;
-
-
-
-
 	self.showMaintain = ko.observable(false);
 	self.showUpdownload = ko.observable(false);
 	self.showReports = ko.observable(false);
 	self.showMaintenance = ko.observable(false);
 
 	self.pageTabsArray = ko.observableArray([
-	{ name: "Maintain commissions", link: "#maintain" },
-	{ name: "Upload download", link: "#updownload" },
-	{ name: "Reports", link: "#reports" },
-	{ name: "Maintenance", link: "#maintenance" }]);
-
+		{ name: "Maintain commissions", link: "#maintain" },
+		{ name: "Upload download", link: "#updownload" },
+		{ name: "Reports", link: "#reports" },
+		{ name: "Maintenance", link: "#maintenance" }
+	]);
 
 
 	self.dataArray = ko.observableArray(["Choose type"]);
@@ -26,121 +22,75 @@ var AppViewModel= function() {
 		}
 	});
 
-	self.formFieldsArray = ko.observableArray([
-	//	{
-	//	"tierLevel": "TIER_1",
-	//	"type": "ALPHANUMERIC",
-	//	"shortName": "Customer",
-	//	"name": "CUSTOMER",
-	//	"descriptiveName": "Customer Number",
-	//	"hoverHelpInfo": "This is a customers account number.  Such as '1123676'.",
-	//	"disabledUntilPreviousTierSet": false,
-	//	"allowSearchSeriesGroup": false,
-	//	"allowStartEndDate": true,
-	//	"inputFieldType": "INPUT"
-	//},
-	//{
-	//	"tierLevel": "TIER_2",
-	//	"type": "ALPHANUMERIC",
-	//	"shortName": "Order",
-	//	"name": "ORDER_NUM",
-	//	"descriptiveName": "Order Number",
-	//	"hoverHelpInfo": "This is an order number.",
-	//	"disabledUntilPreviousTierSet": false,
-	//	"allowSearchSeriesGroup": false,
-	//	"allowStartEndDate": false,
-	//	"inputFieldType": "INPUT"
-	//},
-	//{
-	//	"tierLevel": "TIER_3",
-	//	"type": "NUMERIC",
-	//	"shortName": "Line",
-	//	"name": "ORDER_LINE_NUM",
-	//	"descriptiveName": "Order Line Number",
-	//	"hoverHelpInfo": "This is an order line number (1-999).",
-	//	"disabledUntilPreviousTierSet": true,
-	//	"allowSearchSeriesGroup": false,
-	//	"allowStartEndDate": false,
-	//	"inputFieldType": "INPUT"
-	//},
-	//{
-	//	"tierLevel": "TIER_4",
-	//	"type": "NUMERIC",
-	//	"shortName": "Device",
-	//	"name": "MOBILE_DEVICE_NUMBER",
-	//	"descriptiveName": "Mobile Device Number",
-	//	"hoverHelpInfo": "This is a mobile device number (1-999).",
-	//	"disabledUntilPreviousTierSet": true,
-	//	"allowSearchSeriesGroup": false,
-	//	"allowStartEndDate": false,
-	//	"inputFieldType": "INPUT"
-	//}
+	//Form controls arrays
+	self.inputsArray = ko.observableArray([]);
+	self.selectsArray = ko.observableArray([]);
 
-	]);
 
-	self.fillForm = ko.computed({
-		read: function () {
+	self.fillControlsArrays = function(data) {
 
-		},
-		write: function () {
-
-		},
-		owner: self
-	});
-
-	self.formTabsArray = ko.observableArray([
-	{ name: "Customer", link: "#fragment-customer" },
-	{ name: "Order", link: "#fragment-order" },
-	{ name: "Line", link: "#fragment-line" },
-	{ name: "Device", link: "#fragment-device" }]);
-
-	self.formTabsArrayContent = ko.observableArray([
-	
-			{
-				"Order:": "1000",
-				"Comp:": "01",
-				"Date:": "",
-				"Status:": "X",
-				"Type:": "M",
-				"Value:": "45.8",
-				"Quote:": "7777",
-				"Active:": "Y",
-				"SM1:": "X123",
-				"SM2:": "X456",
-				"Team:": ""
+		self.inputsArray().length = 0;
+		self.selectsArray().length = 0;
+		var temp = data.response.definitions;
+		for (var key in temp) {
+			if (temp[key].inputFieldType == "INPUT") {
+				self.inputsArray.push(temp[key]);
+			} else {
+				self.selectsArray.push(temp[key]);
 			}
+
+		}
+		console.info(self.inputsArray());
+		console.info(self.selectsArray());
+	};
+
+
+//Discriptive tabs
+	self.formTabsArray = ko.observableArray([
+		{ name: "Customer", link: "#fragment-customer" },
+		{ name: "Order", link: "#fragment-order" },
+		{ name: "Line", link: "#fragment-line" },
+		{ name: "Device", link: "#fragment-device" }
 	]);
 
+	self.formTabsArrayContent = ko.observableArray([]);
 
 
+	self.fillTabsContent = function (data) {
+
+		var temp = data.response.tiers;
+		for (var key in temp) {
+			console.log(temp);
+		}
+	}
 
 
 	self.showTabPage = function(navigation) {
 		switch (navigation) {
-			case 1:
-				self.showMaintain(true);
-				self.showUpdownload(false);
-				self.showReports(false);
-				self.showMaintenance(false);
-				break;
-			case 2:
-				self.showMaintain(false);
-				self.showUpdownload(true);
-				self.showReports(false);
-				self.showMaintenance(false);
-				break;
-			case 3:
-				self.showMaintain(false);
-				self.showUpdownload(false);
-				self.showReports(true);
-				self.showMaintenance(false);
-				break;
-			case 4:
-				self.showMaintain(false);
-				self.showUpdownload(false);
-				self.showReports(false);
-				self.showMaintenance(true);
-				break;
+		case 1:
+			self.showMaintain(true);
+			self.showUpdownload(false);
+			self.showReports(false);
+			self.showMaintenance(false);
+			break;
+		case 2:
+			self.showMaintain(false);
+			self.showUpdownload(true);
+			self.showReports(false);
+			self.showMaintenance(false);
+			break;
+		case 3:
+			self.showMaintain(false);
+			self.showUpdownload(false);
+			self.showReports(true);
+			self.showMaintenance(false);
+			break;
+		case 4:
+			self.showMaintain(false);
+			self.showUpdownload(false);
+			self.showReports(false);
+			self.showMaintenance(true);
+			break;
 		default:
 		}
 	}
@@ -149,7 +99,7 @@ var AppViewModel= function() {
 		showForm: ko.observable(false),
 		showTabs: ko.observable(false),
 		showAccordion: ko.observable(false)
-}
+	}
 
 };
 
