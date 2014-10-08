@@ -57,13 +57,14 @@ var AppViewModel= function() {
 
 
 	self.fillTabsContent = function (data) {
-
+		self.formTabsArrayContent().length = 0;
 		var temp = data.response.tiers;
 		for (var key in temp) {
-			console.log(temp);
+			self.formTabsArrayContent.push(temp[key]);
+			console.info(temp[key].displayDetails);
+			//console.info(temp[key]);
 		}
 	}
-
 
 	self.showTabPage = function(navigation) {
 		switch (navigation) {

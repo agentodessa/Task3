@@ -148,33 +148,34 @@
 
 					<div class="wrap_tabs" data-bind=" visible:1">
 						<nav id="tabs_small" class="tabs_div">
-							<ul class="tabs_list" data-bind=" template:{name:'formTab-template',foreach:formTabsArray}">
+							<ul class="tabs_list" data-bind=" template:{ name:'formTab-template',foreach: formTabsArray}">
 							</ul>
 							
 							<!-- Table tabs template -->
 							
 							
 							<script type="text/html" id="table-template">
-								<tr><td data-bind="data: $data"></td><td data-bind="text: $parent[$data]"></td></tr>
+
+								<tr data-bind="with: $data.displayDetails ">
+									<td data-bind="text: $data"></td>
+									<td data-bind="text: $data"></td>
+								</tr>
+
 							</script>	
 
 							<!-- ----------------------------------------- -->
 							<div id="fragment-customer" >
-								<table class="customer_table" data-bind=" template:{ name:'table-template', foreach: formTabsArrayContent}"></table>
+								<table class="customer_table" data-bind=" template:{ name:'table-template', foreach: formTabsArrayContent }"></table>
 							</div>
 							<div id="fragment-order">
-								<table class="order_table"></table>
+								<table class="customer_table" data-bind=" template:{ name:'table-template', foreach: formTabsArrayContent }"></table>
 							</div>
 
 							<div id="fragment-line">
-								<p>
-									e dfsfsthe value is an object, then effect, delay, duration, and easing properties may be provided. If the effect property contains the name of a jQuery method, then that method will be used; otherwise it is assumed to be the name of a jQuery UI effect. When using a jQuery UI effect that supports additional settings, you may include those settings in the object and they will be passed to the effect. If duration or easing is omitted, then the default values will be used. If effect is omitted, then "fadeOut" will be used. If delay is omitted, then no delay is used.
-								</p>
+								<table class="customer_table" data-bind=" template:{ name:'table-template', foreach: formTabsArrayContent }"></table>
 							</div>
 							<div id="fragment-device">
-								<p>
-									Object: If the value is an object, then effect, delay, duration, and easing properties may be provided. If the effect property contains the name of a jQuery method, then that method will be used; otherwise it is assumed to be the name of a jQuery UI effect. When using a jQuery UI effect that supports additional settings, you may include those settings in the object and they will be passed to the effect. If duration or easing is omitted, then the default values will be used. If effect is omitted, then "fadeOut" will be used. If delay is omitted, then no delay is used.
-								</p>
+								<table class="customer_table" data-bind=" template:{ name:'table-template', foreach: formTabsArrayContent }"></table>
 							</div>
 						</nav>
 					</div>
