@@ -325,11 +325,11 @@
 .ui-accordion-header {
 	margin: 10px 40px;
 	width: auto;
-	height: 38px;
+	line-height: 2em;
 	border: 1px solid #dddddd;
 	border-radius: 5px;
 	color: #1190cf;
-	vertical-align: central;
+	padding-left: 40px;
 }
 .ui-accordion-content {
 	margin: 0 40px;

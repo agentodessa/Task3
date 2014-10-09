@@ -13,8 +13,38 @@ var AppViewModel= function() {
 		{ name: "Reports", link: "#reports" },
 		{ name: "Maintenance", link: "#maintenance" }
 	]);
+	self.showTabPage = function (navigation) {
+		switch (navigation) {
+			case 1:
+				self.showMaintain(true);
+				self.showUpdownload(false);
+				self.showReports(false);
+				self.showMaintenance(false);
+				break;
+			case 2:
+				self.showMaintain(false);
+				self.showUpdownload(true);
+				self.showReports(false);
+				self.showMaintenance(false);
+				break;
+			case 3:
+				self.showMaintain(false);
+				self.showUpdownload(false);
+				self.showReports(true);
+				self.showMaintenance(false);
+				break;
+			case 4:
+				self.showMaintain(false);
+				self.showUpdownload(false);
+				self.showReports(false);
+				self.showMaintenance(true);
+				break;
+			default:
+		}
+	}
 
 
+	//Bind select
 	self.dataArray = ko.observableArray(["Choose type"]);
 	app.getSourceType().done(function(data) {
 		for (var key in data.response.sources) {
@@ -52,55 +82,52 @@ var AppViewModel= function() {
 		{ name: "Line", link: "#fragment-line" },
 		{ name: "Device", link: "#fragment-device" }
 	]);
-
+	//Common arrays
+	self.validDataForForm = ko.observableArray([]);
 	self.formTabsArrayContent = ko.observableArray([]);
 
-
+	//Bind tabs content
 	self.fillTabsContent = function (data) {
+		self.validDataForForm().length = 0;
 		self.formTabsArrayContent().length = 0;
+
+
 		var temp = data.response.tiers;
 		for (var key in temp) {
-			self.formTabsArrayContent.push(temp[key]);
-			console.info(temp[key].displayDetails);
-			//console.info(temp[key]);
+
+			self.validDataForForm.push(temp[key]);
+			var tempMass = [];
+
+			for (var prop in temp[key].displayDetails) {
+
+				tempMass.push([prop, temp[key].displayDetails[prop]]);
+			}
+			self.formTabsArrayContent.push(tempMass);
+
 		}
+		console.log(self.formTabsArrayContent());
+		self.maintainType.showTabs(true);
+		self.maintainType.showAccordion(true);
 	}
 
-	self.showTabPage = function(navigation) {
-		switch (navigation) {
-		case 1:
-			self.showMaintain(true);
-			self.showUpdownload(false);
-			self.showReports(false);
-			self.showMaintenance(false);
-			break;
-		case 2:
-			self.showMaintain(false);
-			self.showUpdownload(true);
-			self.showReports(false);
-			self.showMaintenance(false);
-			break;
-		case 3:
-			self.showMaintain(false);
-			self.showUpdownload(false);
-			self.showReports(true);
-			self.showMaintenance(false);
-			break;
-		case 4:
-			self.showMaintain(false);
-			self.showUpdownload(false);
-			self.showReports(false);
-			self.showMaintenance(true);
-			break;
-		default:
-		}
-	}
 
 	self.maintainType = {
 		showForm: ko.observable(false),
 		showTabs: ko.observable(false),
 		showAccordion: ko.observable(false)
 	}
+
+
+	self.selectTableRows = ko.pureComputed({
+		read:function() {
+			
+		},
+		write:function() {
+			
+		},
+		owner:this
+	});
+
 
 };
 
