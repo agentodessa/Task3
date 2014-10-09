@@ -8,14 +8,13 @@
 				switch (page) {
 					case 'All sources':
 						app.retrieveAllocationsByTier().done(function (accordionData) {
-							console.log(accordionData);
+
 						});
 						app.retrieveTierDetails().done(function (validdata) {
-							console.log(validdata);
+
 						});
 						app.validateTier().done(function (validdata) {
-							console.log(data);
-							console.log(validdata);
+
 							app.viewModel.fillTabsContent(validdata);
 							//app.maintainTypeView && app.maintainTypeView.render(page, params, data, validdata);
 						});
@@ -23,14 +22,13 @@
 						break;
 					case 'Mobile':
 						app.retrieveAllocationsByTier().done(function (accordionData) {
-							console.log(accordionData);
+
 						});
 						app.retrieveTierDetails().done(function (validdata) {
-							console.log(validdata);
+
 						});
 						app.validateTierMobile().done(function (validdata) {
-							console.log(data);
-							console.log(validdata);
+
 							app.viewModel.fillTabsContent(validdata);
 							//app.maintainTypeView && app.maintainTypeView.render(page, params, data, validdata);
 
@@ -38,14 +36,13 @@
 						break;
 					case 'SLAM':
 						app.retrieveAllocationsByTier().done(function (accordionData) {
-							console.log(accordionData);
+
 						});
 						app.retrieveTierDetails().done(function (validdata) {
-							console.log(validdata);
+
 						});
 						app.validateTierSlam().done(function (validdata) {
-							console.log(data);
-							console.log(validdata);
+
 
 							app.viewModel.fillTabsContent(validdata);
 							//app.maintainTypeView && app.maintainTypeView.render(page, params, data, validdata);
@@ -60,7 +57,7 @@
 
 		} else {
 			app.getSourceType().done(function (data) {
-				console.log(data);
+
 				switch (page) {
 					case 'All sources':
 						app.retrieveTierDetails().done(function (retrievedData) {

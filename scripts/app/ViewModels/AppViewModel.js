@@ -75,7 +75,7 @@ var AppViewModel= function() {
 	};
 
 
-//Discriptive tabs
+	//Discriptive tabs
 	self.formTabsArray = ko.observableArray([
 		{ name: "Customer", link: "#fragment-customer" },
 		{ name: "Order", link: "#fragment-order" },
