@@ -18,13 +18,13 @@ $(document).ready(function() {
 //Form submit
 	$(".search_form").submit(function(event) {
 		event.preventDefault();
-		console.info($(".search_form input").length);
+		//console.info($(".search_form input").length);
 
 
 //$(".input_search0").val() && $(".input_search1").val() &&
 		//	$(".input_search2").val() && $(".input_search3").val() != ""
 
-
+		//console.log($(".search_form div").children());
 		if (true) {
 			var oldHash = window.location.hash.split('?')[0];
 			var queryparams = "";

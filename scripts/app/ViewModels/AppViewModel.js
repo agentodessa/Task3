@@ -61,17 +61,23 @@ var AppViewModel= function() {
 
 		self.inputsArray().length = 0;
 		self.selectsArray().length = 0;
+
+
 		var temp = data.response.definitions;
 		for (var key in temp) {
 			if (temp[key].inputFieldType == "INPUT") {
+
 				self.inputsArray.push(temp[key]);
-			} else {
+
+			} else if(temp[key].inputFieldType == "SELECT"){
 				self.selectsArray.push(temp[key]);
 			}
 
-		}
+	}
 		console.info(self.inputsArray());
 		console.info(self.selectsArray());
+		console.info(self.inputsArray().length);
+		console.info(self.selectsArray().length);
 	};
 
 
@@ -116,6 +122,18 @@ var AppViewModel= function() {
 		showTabs: ko.observable(false),
 		showAccordion: ko.observable(false)
 	}
+
+	self.tableContentArray = ko.observableArray([]);
+
+	self.fillTableContentAray = function(tableData) {
+
+
+		var tempTableContent = tableData.response.results[0].tiers[0].allocations;
+		console.info(tempTableContent);
+
+	};
+
+
 
 
 	self.selectTableRows = ko.pureComputed({

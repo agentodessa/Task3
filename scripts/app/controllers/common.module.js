@@ -8,7 +8,7 @@
 				switch (page) {
 					case 'All sources':
 						app.retrieveAllocationsByTier().done(function (accordionData) {
-
+							app.viewModel.fillTableContentAray(accordionData);
 						});
 						app.retrieveTierDetails().done(function (validdata) {
 
@@ -22,7 +22,7 @@
 						break;
 					case 'Mobile':
 						app.retrieveAllocationsByTier().done(function (accordionData) {
-
+							app.viewModel.fillTableContentAray(accordionData);
 						});
 						app.retrieveTierDetails().done(function (validdata) {
 
@@ -36,7 +36,7 @@
 						break;
 					case 'SLAM':
 						app.retrieveAllocationsByTier().done(function (accordionData) {
-
+							app.viewModel.fillTableContentAray(accordionData);
 						});
 						app.retrieveTierDetails().done(function (validdata) {
 

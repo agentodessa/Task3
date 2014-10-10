@@ -58,9 +58,9 @@
 				</div>
 				
 				
-				
+				<!-- Style for cheked link  -->
 
-				
+				<!--,style:{'background-color': 'white',color:'black'}-->     
 				
 				<!--Template for InputForm row-->
 				<script type="text/html" id="formInputRow-template">
@@ -73,7 +73,7 @@
 				
 				<!--Template for SelectForm row-->
 				<script type="text/html" id="formSelectRow-template">
-					<div class="row">
+					<div class="row" data-bind="visible:$data.tierLevel">
 						<label class="form_label" data-bind="attr:{ for:tierLevel }, text:descriptiveName"></label>
 						<select class="" data-bind=""></select>
 					</div>
@@ -188,7 +188,11 @@
 				
 				
 				
-				
+				<script type="text/html" id="accordiontTableRow-template">
+					<tr data-bind="">
+						<td data-bind="text:$data"></td>
+					</tr>
+				</script>
 				
 
 
