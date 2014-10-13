@@ -43,7 +43,7 @@
 		<script type="text/html" id="pageTab-template">
 			<li><a class="nav_link" data-bind="attr: { href: link}, text: name"></a></li>
 		</script>
-
+		 
 		<div class="main_page">
 			<!-- Navigation -->
 			<nav class="page_navigate">
@@ -60,7 +60,7 @@
 				
 				<!-- Style for cheked link  -->
 
-				<!--,style:{'background-color': 'white',color:'black'}-->     
+				<!--, if:active?style:{'background-color': 'white',color:'black'}-->     
 				
 				<!--Template for InputForm row-->
 				<script type="text/html" id="formInputRow-template">
@@ -86,12 +86,8 @@
 					<div class="wrap_form" data-bind="visible: maintainType.showForm">
 						<label class="search_type"></label>
 						<form class="search_form" >
-							<div data-bind="template:{ name:'formInputRow-template',foreach: inputsArray }">
-
-							</div>
-							<div data-bind="template:{ name:'formSelectRow-template',foreach: selectsArray }">
-
-							</div>
+							<div data-bind="template:{ name:'formInputRow-template',foreach: inputsArray }"></div>
+							<div data-bind="template:{ name:'formSelectRow-template',foreach: selectsArray }"></div>
 							<div class="row">
 								<label class="form_label"></label>
 								<button class="search_btn" type="submit">Search</button>

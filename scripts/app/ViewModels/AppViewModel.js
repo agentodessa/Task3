@@ -8,10 +8,10 @@ var AppViewModel= function() {
 	self.showMaintenance = ko.observable(false);
 
 	self.pageTabsArray = ko.observableArray([
-		{ name: "Maintain commissions", link: "#maintain" },
-		{ name: "Upload download", link: "#updownload" },
-		{ name: "Reports", link: "#reports" },
-		{ name: "Maintenance", link: "#maintenance" }
+		{ name: "Maintain commissions", link: "#maintain", active:true},
+		{ name: "Upload download", link: "#updownload", active: true },
+		{ name: "Reports", link: "#reports", active: true },
+		{ name: "Maintenance", link: "#maintenance", active: true }
 	]);
 	self.showTabPage = function (navigation) {
 		switch (navigation) {
@@ -59,8 +59,8 @@ var AppViewModel= function() {
 
 	self.fillControlsArrays = function(data) {
 
-		self.inputsArray().length = 0;
-		self.selectsArray().length = 0;
+		self.inputsArray([]);
+		self.selectsArray([]);
 
 
 		var temp = data.response.definitions;

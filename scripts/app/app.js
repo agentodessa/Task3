@@ -15,6 +15,16 @@ $(document).ready(function() {
 	});
 
 
+	$(".nav_link").click(function() {
+		$(".page_navigate a").css({
+			backgroundColor: '#323232',
+			color: "white"
+		});
+		$(this).css({
+			backgroundColor: 'white',
+			color:"black"
+		});
+	});
 //Form submit
 	$(".search_form").submit(function(event) {
 		event.preventDefault();
