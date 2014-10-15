@@ -22,10 +22,10 @@ $(document).ready(function() {
 		});
 		$(this).css({
 			backgroundColor: 'white',
-			color:"black"
+			color: "black"
 		});
 	});
-//Form submit
+	//Form submit
 	$(".search_form").submit(function(event) {
 		event.preventDefault();
 		//console.info($(".search_form input").length);
@@ -58,7 +58,7 @@ $(document).ready(function() {
 	}
 
 
-//Select search type
+	//Select search type
 	$(".select_type").change(function() {
 		var selectedOption = $(".select_type option:selected");
 		if (selectedOption.text() != "Choose type") {
@@ -120,7 +120,6 @@ $(document).ready(function() {
 		$(".uploadFile").attr('placeholder', filename);
 	});
 
-	$("#tabs_small").tabs();
 	$("#accordion").accordion();
 
 

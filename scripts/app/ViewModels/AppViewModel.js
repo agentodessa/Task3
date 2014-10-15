@@ -8,42 +8,42 @@ var AppViewModel= function() {
 	self.showMaintenance = ko.observable(false);
 
 	self.pageTabsArray = ko.observableArray([
-		{ name: "Maintain commissions", link: "#maintain", active:true},
+		{ name: "Maintain commissions", link: "#maintain", active: true },
 		{ name: "Upload download", link: "#updownload", active: true },
 		{ name: "Reports", link: "#reports", active: true },
 		{ name: "Maintenance", link: "#maintenance", active: true }
 	]);
-	self.showTabPage = function (navigation) {
+	self.showTabPage = function(navigation) {
 		switch (navigation) {
-			case 1:
-				self.showMaintain(true);
-				self.showUpdownload(false);
-				self.showReports(false);
-				self.showMaintenance(false);
-				break;
-			case 2:
-				self.showMaintain(false);
-				self.showUpdownload(true);
-				self.showReports(false);
-				self.showMaintenance(false);
-				break;
-			case 3:
-				self.showMaintain(false);
-				self.showUpdownload(false);
-				self.showReports(true);
-				self.showMaintenance(false);
-				break;
-			case 4:
-				self.showMaintain(false);
-				self.showUpdownload(false);
-				self.showReports(false);
-				self.showMaintenance(true);
-				break;
-			default:
+		case 1:
+			self.showMaintain(true);
+			self.showUpdownload(false);
+			self.showReports(false);
+			self.showMaintenance(false);
+			break;
+		case 2:
+			self.showMaintain(false);
+			self.showUpdownload(true);
+			self.showReports(false);
+			self.showMaintenance(false);
+			break;
+		case 3:
+			self.showMaintain(false);
+			self.showUpdownload(false);
+			self.showReports(true);
+			self.showMaintenance(false);
+			break;
+		case 4:
+			self.showMaintain(false);
+			self.showUpdownload(false);
+			self.showReports(false);
+			self.showMaintenance(true);
+			break;
+		default:
 		}
 	}
 
-
+	self.stateMashine
 	//Bind select
 	self.dataArray = ko.observableArray(["Choose type"]);
 	app.getSourceType().done(function(data) {
@@ -69,11 +69,11 @@ var AppViewModel= function() {
 
 				self.inputsArray.push(temp[key]);
 
-			} else if(temp[key].inputFieldType == "SELECT"){
+			} else if (temp[key].inputFieldType == "SELECT") {
 				self.selectsArray.push(temp[key]);
 			}
 
-	}
+		}
 		console.info(self.inputsArray());
 		console.info(self.selectsArray());
 		console.info(self.inputsArray().length);
@@ -83,10 +83,10 @@ var AppViewModel= function() {
 
 	//Discriptive tabs
 	self.formTabsArray = ko.observableArray([
-		{ name: "Customer", link: "#fragment-customer" },
-		{ name: "Order", link: "#fragment-order" },
-		{ name: "Line", link: "#fragment-line" },
-		{ name: "Device", link: "#fragment-device" }
+		{ name: "Customer", link: "#fragment-customer",tabContent: ko.observableArray([])},
+		{ name: "Order", link: "#fragment-order",tabContent: ko.observableArray([])},
+		{ name: "Line", link: "#fragment-line", tabContent: ko.observableArray([])},
+		{ name: "Device", link: "#fragment-device", tabContent: ko.observableArray([])}
 	]);
 	//Common arrays
 	self.validDataForForm = ko.observableArray([]);
@@ -94,20 +94,25 @@ var AppViewModel= function() {
 
 	//Bind tabs content
 	self.fillTabsContent = function (data) {
-		self.validDataForForm().length = 0;
-		self.formTabsArrayContent().length = 0;
+
+		self.validDataForForm([]);
+		self.formTabsArrayContent([]);
 
 
 		var temp = data.response.tiers;
+
 		for (var key in temp) {
 
 			self.validDataForForm.push(temp[key]);
+
 			var tempMass = [];
 
 			for (var prop in temp[key].displayDetails) {
-
+				
 				tempMass.push([prop, temp[key].displayDetails[prop]]);
 			}
+
+
 			self.formTabsArrayContent.push(tempMass);
 
 		}
@@ -125,7 +130,8 @@ var AppViewModel= function() {
 
 	self.tableContentArray = ko.observableArray([]);
 
-	self.fillTableContentAray = function(tableData) {
+
+	self.fillTableContentArray = function(tableData) {
 
 
 		var tempTableContent = tableData.response.results[0].tiers[0].allocations;
@@ -134,16 +140,14 @@ var AppViewModel= function() {
 	};
 
 
-
-
 	self.selectTableRows = ko.pureComputed({
-		read:function() {
-			
+		read: function() {
+
 		},
-		write:function() {
-			
+		write: function() {
+
 		},
-		owner:this
+		owner: this
 	});
 
 
