@@ -98,37 +98,34 @@
 					
 					<!-- --------------------------------------------------------- -->
 					
-					
+					<!-- Table tabs template -->
+					<script type="text/html" id="table-template">
+
+						<table class="customer_table">
+							<tr data-bind="foreach: $data.tabContent">
+								<td data-bind="text: $data"></td>
+							</tr>
+						</table>
+					</script>
 					
 					<!-- Form tab template -->
 					
 					<script type="text/html" id="formTab-template">
 						
 						<li><a class="tab_link" data-bind=" text: name, visible: tabContent"></a></li>
-						
+
 					</script>
 					
 					
 
-					<script type="text/html" id="table-template">
-
-						<table class="customer_table">
-							<tr data-bind="foreach: $data">
-								<td data-bind="text: $data"></td>
-							</tr>
-						</table>
-
-					</script>
 					
 					
 					
 					<div class="wrap_tabs" data-bind="visible: maintainType.showTabs">
 						<nav id="tabs_small" class="tabs_div">
-							
-							<!-- Table tabs template -->
 
 							<div class="tabs_list" data-bind=" template:{ name:'formTab-template',foreach: formTabsArray}"></div>
-
+							<div data-bind=" template:{ name:'table-template',foreach: formTabsArray}"></div>
 						</nav>
 					</div>
 				</div>
@@ -138,20 +135,7 @@
 				
 				
 				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
+
 				
 				
 				

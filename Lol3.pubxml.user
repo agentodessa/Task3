@@ -22,7 +22,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/17/2014 15:18:14</publishTime>
     </File>
     <File Include="bin/Task3.dll">
-      <publishTime>10/01/2014 12:20:35</publishTime>
+      <publishTime>10/16/2014 12:45:28</publishTime>
     </File>
     <File Include="css/jquery-ui.css">
       <publishTime>08/21/2014 11:42:47</publishTime>
@@ -31,7 +31,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/03/2014 17:32:51</publishTime>
     </File>
     <File Include="css/style.css">
-      <publishTime>09/26/2014 15:55:55</publishTime>
+      <publishTime>10/16/2014 12:44:01</publishTime>
     </File>
     <File Include="images/close_btn.png">
       <publishTime>09/10/2014 10:17:12</publishTime>
@@ -43,7 +43,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/25/2014 15:34:43</publishTime>
     </File>
     <File Include="index.html">
-      <publishTime>10/01/2014 12:07:06</publishTime>
+      <publishTime>10/15/2014 18:42:14</publishTime>
     </File>
     <File Include="indexold.html">
       <publishTime>09/30/2014 12:42:00</publishTime>
@@ -61,13 +61,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/02/2014 16:37:20</publishTime>
     </File>
     <File Include="JSon/lookupCoworker.json">
-      <publishTime>09/02/2014 16:37:20</publishTime>
+      <publishTime>10/10/2014 12:35:30</publishTime>
     </File>
     <File Include="JSon/lookupCoworkerPagination.json">
-      <publishTime>09/02/2014 16:37:20</publishTime>
+      <publishTime>10/10/2014 12:36:02</publishTime>
     </File>
     <File Include="JSon/lookupCustomer.json">
-      <publishTime>09/02/2014 16:37:20</publishTime>
+      <publishTime>10/10/2014 12:30:27</publishTime>
     </File>
     <File Include="JSon/lookupCustomerPagination.json">
       <publishTime>09/02/2014 16:37:20</publishTime>
@@ -124,10 +124,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/21/2014 15:46:55</publishTime>
     </File>
     <File Include="scripts/app/app.js">
-      <publishTime>09/30/2014 12:41:59</publishTime>
+      <publishTime>10/16/2014 12:43:23</publishTime>
     </File>
     <File Include="scripts/app/controllers/common.module.js">
-      <publishTime>09/30/2014 12:40:41</publishTime>
+      <publishTime>10/15/2014 15:58:40</publishTime>
     </File>
     <File Include="scripts/app/controllers/data.service.js">
       <publishTime>09/25/2014 17:10:53</publishTime>
@@ -136,7 +136,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/25/2014 17:55:55</publishTime>
     </File>
     <File Include="scripts/app/controllers/routecontroller.js">
-      <publishTime>10/01/2014 12:17:38</publishTime>
+      <publishTime>10/15/2014 15:59:16</publishTime>
     </File>
     <File Include="scripts/app/controllers/validate.controller.js">
       <publishTime>09/26/2014 12:03:32</publishTime>
@@ -147,8 +147,14 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="scripts/app/routers/router.js">
       <publishTime>08/28/2014 18:14:27</publishTime>
     </File>
+    <File Include="scripts/app/ViewModels/AppViewModel.js">
+      <publishTime>10/15/2014 18:57:17</publishTime>
+    </File>
     <File Include="scripts/app/ViewModels/GetSourcesViewModel.js">
       <publishTime>10/01/2014 12:07:27</publishTime>
+    </File>
+    <File Include="scripts/app/ViewModels/PageTabsViewModel.js">
+      <publishTime>10/03/2014 16:25:09</publishTime>
     </File>
     <File Include="scripts/app/ViewModels/ShowPageViewModel.js">
       <publishTime>09/30/2014 18:30:29</publishTime>

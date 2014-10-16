@@ -1,23 +1,24 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-	<meta charset="utf-8" />
-	<title>CDW</title>
-	<link rel="shortcut icon" href="/images/Logo.png" type="image/x-icon">
-	<link rel="stylesheet" href="css/normalize.css" type="text/css" />
-	<link rel="stylesheet" href="css/style.css" type="text/css" />
-	<script type="text/javascript" src="scripts/common/jquery/jquery-1.11.1.js"></script>
-	<script src="scripts/common/underscore/underscore.js"></script>
-	<script src="scripts/common/backbone/backbone.js"></script>
-	<script src="scripts/common/backbone/backbone.queryparams.js"></script>
-	<script src="scripts/common/knockout/knockout-3.2.0.debug.js"></script>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="minimum-scale=1, width=device-width, maximum-scale=1, user-scalable=no" />
 
-	<meta name="viewport" content="minimum-scale=1, width=device-width, maximum-scale=1, user-scalable=no" />
-	<script src="//localhost:3000/livereload.js"></script>
-	
+		<title>CDW</title>
+		<link rel="shortcut icon" href="/images/Logo.png" type="image/x-icon">
+		<link rel="stylesheet" href="css/normalize.css" type="text/css" />
+		<link rel="stylesheet" href="css/style.css" type="text/css" />
+		<script type="text/javascript" src="scripts/common/jquery/jquery-1.11.1.js"></script>
+		<script src="scripts/common/underscore/underscore.js"></script>
+		<script src="scripts/common/backbone/backbone.js"></script>
+		<script src="scripts/common/backbone/backbone.queryparams.js"></script>
+		<script src="scripts/common/knockout/knockout-3.2.0.debug.js"></script>
+		
+		<script src="//localhost:3000/livereload.js"></script>
+		
 
 
-</head>
+	</head>
 	<body>
 		<!-- Login page -->
 		<div class="container">
@@ -36,18 +37,18 @@
 
 			</div>
 		</div>
-		<!-- Navigation -->
+
+		
+		<!--Template for page tab--> 
+		<script type="text/html" id="pageTab-template">
+			<li><a class="nav_link" data-bind="attr: { href: link}, text: name"></a></li>
+		</script>
+		 
 		<div class="main_page">
+			<!-- Navigation -->
 			<nav class="page_navigate">
-				<ul class="nav_list">
-					<li><a class="nav_link" href="#maintain">Maintain commissions</a></li>
-					<li><a class="nav_link" href="#updownload">Upload download</a></li>
-					<li><a class="nav_link" href="#reports">Reports</a></li>
-					<li><a class="nav_link" href="#maintenance">Maintenance</a></li>
-				</ul>
+				<ul class="nav_list" data-bind="template: { name: 'pageTab-template', foreach: pageTabsArray}"></ul>
 			</nav>
-
-
 
 			<!-- First Page -->
 			<div id="maintain" data-bind="visible: showMaintain">
@@ -55,75 +56,121 @@
 					<label class="label_for_type">Choose source type:</label>
 					<select class="select_type" data-bind="options: dataArray "></select>
 				</div>
-				<div class="wrap_form_and_tabs" >
-					<div class="wrap_form" >
+				
+				
+				<!-- Style for cheked link  -->
+
+				<!--, if:active?style:{'background-color': 'white',color:'black'}-->     
+				
+				<!--Template for InputForm row-->
+				<script type="text/html" id="formInputRow-template">
+					<div class="row">
+						<label class="form_label" data-bind="attr:{ for:tierLevel }, text:descriptiveName"></label>
+						<input name="val0" pattern="^\d+$" id="first" data-bind="attr:{type: type, id:tierLevel, class:tierLevel}">
+					</div>
+				</script>	
+				
+				
+				<!--Template for SelectForm row-->
+				<script type="text/html" id="formSelectRow-template">
+					<div class="row" data-bind="visible:$data.tierLevel">
+						<label class="form_label" data-bind="attr:{ for:tierLevel }, text:descriptiveName"></label>
+						<select class="" data-bind=""></select>
+					</div>
+				</script>	
+				<!-- --------------------------------------------------------- -->
+				
+				<!-- Implementation -->
+
+				<div class="wrap_form_and_tabs" data-bind="visible: maintainType.showForm">
+					<div class="wrap_form" data-bind="visible: maintainType.showForm">
 						<label class="search_type"></label>
-						<form class="search_form">
-
-							<div class="row">
-								<label class="form_label" for="first">Castomer Number:</label>
-								<input name="val0" type="text" pattern="^\d+$" id="first" class="input_search0">
-
-							</div>
-							<div class="row">
-								<label class="form_label" for="second">Order Number:</label>
-								<input name="val1" type="text" pattern="^\d+$" id="second" class="input_search1">
-							</div>
-							<div class="row">
-								<label class="form_label" for="third">Line Number:</label>
-								<input name="val2" type="text" pattern="^\d+$" id="third" class="input_search2">
-							</div>
-							<div class="row">
-								<label class="form_label" for="fourth">Device Number:</label>
-								<input name="val3" type="text" pattern="^\d+$" id="fourth" class="input_search3">
-							</div>
+						<form class="search_form" >
+							<div data-bind="template:{ name:'formInputRow-template',foreach: inputsArray }"></div>
+							<div data-bind="template:{ name:'formSelectRow-template',foreach: selectsArray }"></div>
 							<div class="row">
 								<label class="form_label"></label>
 								<button class="search_btn" type="submit">Search</button>
 							</div>
-
 						</form>
 
 					</div>
-					<div class="wrap_tabs" >
-						<nav id="tabs_small" class="tabs_div">
-							<ul class="tabs_list">
-								<li><a href="#fragment-customer" class="tab_link">Customer</a></li>
-								<li><a href="#fragment-order" class="tab_link">Order</a></li>
-								<li><a href="#fragment-line" class="tab_link">Line</a></li>
-								<li><a href="#fragment-device" class="tab_link">Device</a></li>
-							</ul>
-							<div id="fragment-customer">
-								<table class="customer_table"></table>
-							</div>
-							<div id="fragment-order">
-								<table class="order_table"></table>
-							</div>
+					
+					<!-- --------------------------------------------------------- -->
+					
+					
+					
+					<!-- Form tab template -->
+					
+					<script type="text/html" id="formTab-template">
+						
+						<li><a class="tab_link" data-bind=" text: name, visible: tabContent"></a></li>
+						
+					</script>
+					
+					
 
-							<div id="fragment-line">
-								<p>
-									e dfsfsthe value is an object, then effect, delay, duration, and easing properties may be provided. If the effect property contains the name of a jQuery method, then that method will be used; otherwise it is assumed to be the name of a jQuery UI effect. When using a jQuery UI effect that supports additional settings, you may include those settings in the object and they will be passed to the effect. If duration or easing is omitted, then the default values will be used. If effect is omitted, then "fadeOut" will be used. If delay is omitted, then no delay is used.
-								</p>
-							</div>
-							<div id="fragment-device">
-								<p>
-									Object: If the value is an object, then effect, delay, duration, and easing properties may be provided. If the effect property contains the name of a jQuery method, then that method will be used; otherwise it is assumed to be the name of a jQuery UI effect. When using a jQuery UI effect that supports additional settings, you may include those settings in the object and they will be passed to the effect. If duration or easing is omitted, then the default values will be used. If effect is omitted, then "fadeOut" will be used. If delay is omitted, then no delay is used.
-								</p>
-							</div>
+					<script type="text/html" id="table-template">
+
+						<table class="customer_table">
+							<tr data-bind="foreach: $data">
+								<td data-bind="text: $data"></td>
+							</tr>
+						</table>
+
+					</script>
+					
+					
+					
+					<div class="wrap_tabs" data-bind="visible: maintainType.showTabs">
+						<nav id="tabs_small" class="tabs_div">
+							
+							<!-- Table tabs template -->
+
+							<div class="tabs_list" data-bind=" template:{ name:'formTab-template',foreach: formTabsArray}"></div>
+
 						</nav>
 					</div>
 				</div>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				<script type="text/html" id="accordiontTableRow-template">
+						<td data-bind="text:$data"></td>
+				</script>
+				
 
 
 				<!-- Accordion implementation -->
-				<div id="accordion" class="accordion">
+				<div id="accordion" class="accordion" data-bind="visible: maintainType.showAccordion">
 
 					<h3 class="ui-accordion-header">Customer #123456 Joe Doe (Doe Inc) Chicago IL</h3>
 					<div class="ui-accordion-content">
 						<div class="wrap_accordion_content">
 							<table class="element_table">
 								<tr class="table_headers">
-									<td><input type="checkbox" /></td>
+									
+									<td><input type="checkbox" data-bind="checked:true"/></td>
 									<td>Payye type</td>
 									<td>Payye ID</td>
 									<td>Name</td>
@@ -135,20 +182,7 @@
 									<td>Type</td>
 									<td>Maint User</td>
 									<td>Maint Dt/Tm</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox" /></td>
-									<td>Customer</td>
-									<td>753201</td>
-									<td>Greg Smith</td>
-									<td>12/12/2012</td>
-									<td>12/12/2012</td>
-									<td>10</td>
-									<td>-</td>
-									<td>-</td>
-									<td>Revenue</td>
-									<td>Greg 021</td>
-									<td>12/12/2012 17:15</td>
+								
 								</tr>
 								<tr>
 									<td><input type="checkbox" /></td>
@@ -382,7 +416,7 @@
 
 				</div>
 			</div>
-			<div id="updownload" >
+			<div id="updownload" data-bind="visible: showUpdownload()">
 				<div class="wrapper_updownload">
 					<div class="download_file_info">
 						<div><p class="success_text"><strong>Well done!</strong> File successfully uploaded.</p></div>
@@ -416,13 +450,13 @@
 
 			</div>
 
-			<div id="reports" >
+			<div id="reports" data-bind="visible: showReports">
 				<p>
 					e hidden using the specified effect. The value can either be the name of a built-in jQuery animation method, such as "slideUp", or the name of a jQuery UI effect, such as "fold". In either case the effect will be used with the default duration and the default easing.
 					Object: If the value is an object, then effect, delay, duration, and easing properties may be provided. If the effect property contains the name of a jQuery method, then that method will be used; otherwise it is assumed to be the name of a jQuery UI effect. When using a jQuery UI effect that supports additional settings, you may include those settings in the object and they will be passed to the effect. If duration or easing is omitted, then the default values will be used. If effect is omitted, then "fadeOut" will be used. If delay is omitted, then no delay is used.
 				</p>
 			</div>
-			<div id="maintenance" >
+			<div id="maintenance" data-bind="visible: showMaintenance">
 				<p>
 					to true, the panel will fade out with the default duration and the default easing.
 					Number: The panel will fade out with the specified duration and the default easing.
@@ -476,15 +510,15 @@
 			<a href="#maintenance">maintenance</a>-->
 		
 		
-		
-		
-		
-
-
 		<script src="scripts/app/controllers/data.service.js"></script>
-		<script src="scripts/app/ViewModels/GetSourcesViewModel.js"></script>
+		<script src="scripts/app/ViewModels/AppViewModel.js"></script>
 		<script src="scripts/app/controllers/common.module.js"></script>
 		<script src="scripts/app/controllers/routecontroller.js"></script>
+		
+		
+
+
+
 
 
 		<script type="text/javascript" src="scripts/common/jquery/jquery-ui.js"></script>

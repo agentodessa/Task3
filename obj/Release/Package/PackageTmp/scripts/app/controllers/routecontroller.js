@@ -16,28 +16,26 @@
 		},
 		maintain: function() {
 			console.log("Source:maintain");
-			//app.getSourceType().done(function(data) {
-			//	console.log(data);
-			//	app.maintainView && app.maintainView.render(data);
-			//});
-			app.viewModel.showMaintain = ko.observable(true);
+			app.viewModel.showTabPage(1);
 		},
 		updownload: function() {
 			console.log("Source:updownload");
+			app.viewModel.showTabPage(2);
 		},
 
 		reports: function() {
 			console.log("Source:reports");
-			app.reportsView && app.reportsView.render();
+			app.viewModel.showTabPage(3);
 		},
 		maintenance: function() {
 			console.log("Source:maintenance");
-			app.maintenanceView && app.maintenanceView.render();
+			app.viewModel.showTabPage(4);
 		},
 
-		maintaintype: function (page, params) {
+		maintaintype: function(page, params) {
 			console.log("Source:maintain " + " type " + page);
 			app.retrieveDataFromServer(page, params);
+			app.viewModel.maintainType.showForm(true);
 		},
 		error: function() {
 			console.log("ERROR 404");

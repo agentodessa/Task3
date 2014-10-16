@@ -91,41 +91,25 @@ var AppViewModel= function() {
 	self.validDataForForm = ko.observableArray([]);
 	self.formTabsArrayContent = ko.observableArray([]);
 
-
-
 	//Bind tabs content
 	self.fillTabsContent = function (data) {
 
-
 		self.validDataForForm([]);
 		self.formTabsArrayContent([]);
+
+
 		var temp = data.response.tiers;
 
-		var len = self.formTabsArray().length;
-
-
-
-
-
 		for (var key in temp) {
+
 			self.validDataForForm.push(temp[key]);
+
 			var tempMass = [];
+
 			for (var prop in temp[key].displayDetails) {
-
+				
 				tempMass.push([prop, temp[key].displayDetails[prop]]);
-
-				//self.formTabsArrayContent.push([prop, temp[key].displayDetails[prop]]);
 			}
-
-
-
-			//for (var i = 0; i < len; i++) {
-			//	tabContent.push(tempMass[i]);
-			//	//for (var t in self.formTabsArray[i]) {
-
-			//	//	console.log(tempMass[i]);
-			//	//}
-			//}
 
 
 			self.formTabsArrayContent.push(tempMass);
@@ -135,16 +119,6 @@ var AppViewModel= function() {
 		self.maintainType.showTabs(true);
 		self.maintainType.showAccordion(true);
 	}
-
-
-
-
-
-
-
-
-
-
 
 
 	self.maintainType = {
