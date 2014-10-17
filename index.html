@@ -101,9 +101,9 @@
 					<!-- Table tabs template -->
 					<script type="text/html" id="table-template">
 
-						<table class="customer_table">
-							<tr data-bind="foreach: $data.tabContent">
-								<td data-bind="text: $data"></td>
+						<table class="customer_table" data-bind="data: $data.tabContent">
+							<tr>
+								<td data-bind="foreachprop: $root"></td>
 							</tr>
 						</table>
 					</script>
@@ -111,9 +111,7 @@
 					<!-- Form tab template -->
 					
 					<script type="text/html" id="formTab-template">
-						
 						<li><a class="tab_link" data-bind=" text: name, visible: tabContent"></a></li>
-
 					</script>
 					
 					

@@ -2,6 +2,26 @@
 
 var AppViewModel= function() {
 	var self = this;
+
+	ko.bindingHandlers.foreachprop = {
+		transformObject: function (obj) {
+			var properties = [];
+			for (var key in obj) {
+				if (obj.hasOwnProperty(key)) {
+					properties.push({ key: key, value: obj[key] });
+				}
+			}
+			return properties;
+		},
+		init: function (element, valueAccessor, allBindingsAccessor, viewModel, bindingContext) {
+			var value = ko.utils.unwrapObservable(valueAccessor()),
+				properties = ko.bindingHandlers.foreachprop.transformObject(value);
+			ko.applyBindingsToNode(element, { foreach: properties }, bindingContext);
+			return { controlsDescendantBindings: true };
+		}
+	};
+
+
 	self.showMaintain = ko.observable(false);
 	self.showUpdownload = ko.observable(false);
 	self.showReports = ko.observable(false);
@@ -87,6 +107,7 @@ var AppViewModel= function() {
 		{ name: "Line", link: "#fragment-line", tabContent: ko.observableArray([])},
 		{ name: "Device", link: "#fragment-device", tabContent: ko.observableArray([])}
 	]);
+
 	//Common arrays
 	self.validDataForForm = ko.observableArray([]);
 	self.formTabsArrayContent = ko.observableArray([]);
@@ -96,25 +117,32 @@ var AppViewModel= function() {
 	//Bind tabs content
 	self.fillTabsContent = function (data) {
 
-
+		var len = self.formTabsArray().length;
 		self.validDataForForm([]);
 		self.formTabsArrayContent([]);
+		for (var i = 0; i < len; i++) {
+			self.formTabsArray()[i].tabContent([]);
+		}
 		var temp = data.response.tiers;
 
-		var len = self.formTabsArray().length;
 
-
+		//console.log(len);
 
 
 
 		for (var key in temp) {
+
+
 			self.validDataForForm.push(temp[key]);
+
 			var tempMass = [];
+
 			for (var prop in temp[key].displayDetails) {
 
-				tempMass.push([prop, temp[key].displayDetails[prop]]);
+				for (var i = 0; i < len; i++) {
+					self.formTabsArray()[i].tabContent.push([prop, temp[key].displayDetails[prop]]);
+				}
 
-				//self.formTabsArrayContent.push([prop, temp[key].displayDetails[prop]]);
 			}
 
 
@@ -131,7 +159,7 @@ var AppViewModel= function() {
 			self.formTabsArrayContent.push(tempMass);
 
 		}
-		console.log(self.formTabsArrayContent());
+		console.log(self.formTabsArray());
 		self.maintainType.showTabs(true);
 		self.maintainType.showAccordion(true);
 	}
