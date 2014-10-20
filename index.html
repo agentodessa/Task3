@@ -101,17 +101,20 @@
 					<!-- Table tabs template -->
 					<script type="text/html" id="table-template">
 
-						<table class="customer_table" data-bind="data: $data.tabContent">
-							<tr>
-								<td data-bind="foreachprop: $root"></td>
+						<tbody data-bind="foreach: tabContent">
+							<tr >
+							<td data-bind="text: $data"></td>
 							</tr>
-						</table>
+						</tbody>
+
+
 					</script>
 					
 					<!-- Form tab template -->
 					
 					<script type="text/html" id="formTab-template">
 						<li><a class="tab_link" data-bind=" text: name, visible: tabContent"></a></li>
+
 					</script>
 					
 					
@@ -122,8 +125,10 @@
 					<div class="wrap_tabs" data-bind="visible: maintainType.showTabs">
 						<nav id="tabs_small" class="tabs_div">
 
-							<div class="tabs_list" data-bind=" template:{ name:'formTab-template',foreach: formTabsArray}"></div>
-							<div data-bind=" template:{ name:'table-template',foreach: formTabsArray}"></div>
+							<ul class="tabs_list" data-bind=" template:{ name:'formTab-template',foreach: formTabsArray}"></ul>
+							<div >
+								<table class="customer_table" data-bind=" template:{ name:'table-template',foreach: formTabsArray}"></table>
+							</div>
 						</nav>
 					</div>
 				</div>
